@@ -19,7 +19,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //      		timeout: 0,
 //      		easing: 'easeInOutBack'
 //  		});
-			$('#right').cycle()
+			$('#right').cycle();
+			$(".basic").jRating(); // more complex jRating call 
+//			$(".basic").jRating({ step:true, length : 20, // nb of stars
+//				onSuccess : function(){ alert('Success : your rate has been saved :)'); 
+//				} 
+//			});
 	};// @lock
 
 // @region eventManager// @startlock
