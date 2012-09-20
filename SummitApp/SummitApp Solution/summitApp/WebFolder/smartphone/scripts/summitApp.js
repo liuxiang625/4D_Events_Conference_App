@@ -20,7 +20,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //      		easing: 'easeInOutBack'
 //  		});
 			$('#right').cycle();
-			$(".basic").jRating(); // more complex jRating call 
+			//$(".basic").jRating(); // more complex jRating call 
 //			$(".basic").jRating({ step:true, length : 20, // nb of stars
 //				onSuccess : function(){ alert('Success : your rate has been saved :)'); 
 //				} 
