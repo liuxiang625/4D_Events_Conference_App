@@ -10,9 +10,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 //		    (function($) {
-//      //$("#carousel1").carousel();
+//      $("#carousel1").carousel();
 //      //$("#carousel2").carousel({direction: "vertical"});
-//  		})(jQuery);
+//  		})(jQuery);	
 //  		$('#right').cycle({
 //     	 	fx: 'scrollRight',
 //      		next: '#right',

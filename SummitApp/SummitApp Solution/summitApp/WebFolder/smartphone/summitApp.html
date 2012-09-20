@@ -8,41 +8,47 @@
         <meta name="wakanda-version" content="Dev build 0.118679"/>
         <meta name="wakanda-build" content="0.118679"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0"/>
-        
-        
         <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="WAF.config.loadJS" content="/smartphone/scripts/my.js"/>
+        <meta name="WAF.config.loadJS" id="waf-script" content="scripts/summitApp.js"/>
+        <meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.cycle.lite.js"/>
+        <meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.mobile-1.2.0-alpha.1.min.js"/>
         <meta name="WAF.config.loadCSS" id="waf-palette" content="/walib/WAF/widget/palette/css/widget-palette-cupertino.css"/>
         <meta name="WAF.config.loadCSS" content="/smartphone/styles/summitApp.css"/>
-        <meta name="WAF.config.loadCSS" content="/smartphone/styles/jquery.mobile-1.1.1.min[1].css"/>
         <meta name="WAF.config.loadCSS" content="/application.css"/>
         <meta name="WAF.config.loadCSS" content="/smartphone/styles/my.css"/>
         <meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/summitApp.css"/>
+        <meta name="WAF.config.loadCSS" content="/application.css"/>
+        <meta name="WAF.config.loadCSS" content="/smartphone/styles/summitApp_custom.css"/>
+        <meta name="WAF.config.loadCSS" content="/application.css"/>
+        <meta name="WAF.config.loadCSS" content="/smartphone/styles/jquery.mobile-1.2.0-alpha.1.min.css"/>
         <meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
-    		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		<meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.mobile-1.1.1.min[1].js"/>
-		<meta name="WAF.config.loadJS" content="/smartphone/scripts/my.js"/>
-		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/summitApp.js"/>
-		<meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.cycle.lite.js"/>
-</head>
+    </head>
     
     <body id="waf-body" data-workspace-width="320" data-workspace-orientation="portrait" data-workspace-height="480" data-workspace-device="Apple iPhone" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="cupertino" data-platform="desktop" data-lib="WAF" data-apple-meta-tags-status-bar="default" class="cupertino" style="visibility:hidden;">
         <!-- Home -->
         <div id="page0" data-role="page">
             <div data-theme="a" data-role="header">
+                <!--<select id="select-choice-2" data-native-menu="false" data-mini="true">
+					<option value="standard" data-placeholder="true">Quick Route</option>
+					<option value="standard">Home</option>
+            		<option value="rush">Favorites</option>
+					<option value="rush">Search</option>
+        		</select>-->
+                <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>4D Events 2012</h3>
             </div>
             <div style="padding: 15px" data-role="content">
@@ -62,44 +68,41 @@
                     <img style="max-width: 60px; max-height: 60px;padding:10px" src="styles\images\wakanday-square.png"/><h3>Wakanday 2012</h3><p>October 27, San Jose CA, United States</p>
                 </a>
                     </li>
-                    <li data-theme="c">
-                        <a href="#page1" data-transition="slide">
-                   <img style="max-width: 60px; max-height: 60px;padding:20px" src="http://www.4d.com/sites/all/themes/dimention/images/home/logo4D.jpg"/> <h3>About Us</h3>
-                </a>
-                    </li>
                 </ul>
             </div>
-            <div >
-
+            <div>
                 <address style="text-align: center;" data-mce-style="text-align: center;">
-                    <span style="color: rgb(136, 136, 136);" data-mce-style="color: #888888;">Powered By Wakanda</span>
+                    <span data-mce-style="color: #888888;">Our Sponsors:</span>
                 </address>
             </div>
-<div style="height:80px;width:150px;margin:0 auto;margin-left:auto;margin-right:auto;align:center;text-align:center;" id="right" class="pics">
-	<img src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png" width="150" height="80" />
-	<img src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png" width="150" height="80" />
-	<img src="http://www.jseverywhere.org/wp-content/uploads/2012/09/redhat.png" width="150" height="80" />
-</div>
-   <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                <ul>
-                    <li>
-                        <a href="#page0" data-theme="" data-iconpos="bottom" data-icon="home">
-						</a>
-                    </li>
-                    <li>
-                        <a href="#page9" data-theme="" data-iconpos="notext" data-icon="star">
-						</a>
-                    </li>
-                    <li>
-                        <a href="#page10" data-theme="" data-iconpos="notext" data-icon="search">
-						</a>
-                    </li>
-                </ul>
+            <div style="height:150px;width:120px;margin-left:auto;margin-right:auto;align:center;text-align:center;" id="right" class="pics">
+                <a href="#page8"><img width="120" height="50" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png" title="ebay"></a>
+				<a href="#page8"><img class="alignnone wp-image-285" width="141" height="32" alt="" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png" title="pubnub"></a>
+                <a href="#page8"><img src="http://www.jseverywhere.org/wp-content/uploads/2012/09/redhat.png" title="redhat"></a>
+                <a href="#page8"><img width="120px" height="48px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/openshift.png"/></a>
+                <a href="#page8"><img width="115px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/looprecur.png"></a>
+				<a href="#page8"><img width="120px" height="24px" src="http://www.jseverywhere.org/wp-content/themes/Destination/images/oreilly.png"/></a>
+				<a href="#page8"><img width="96px" height="96px"  src="styles\images\4d_logo_round.png"/></a>
+                <a href="#page8"><img width="120px" height="40px"src="http://www.jseverywhere.org/wp-content/themes/Destination/images/wakanda.png"/></a>
             </div>
         </div>
         <!-- Days -->
         <div id="page1" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>4D Summit 2012</h3>
                 <a href="#page0" data-transition="slide" data-role="button" data-direction="reverse" class="ui-btn-left">
            Home
@@ -121,7 +124,8 @@
                         <a href="#page3" data-transition="slide">
                             <h3>Thursday 10/25/2012</h3><p>4D Summit keynotes  breakout sessions</p>
                         </a>
-                    </li><!--<li role="heading" data-role="list-divider">JS.everywhere Conference</li>
+                    </li>
+                    <!--<li role="heading" data-role="list-divider">JS.everywhere Conference</li>
                     <li data-theme="c">
                         <a href="#page3" data-transition="slide">
                             <h3>Friday 10/26/2012</h3><p>JS.everywhere(2012) Conference</p>
@@ -133,30 +137,25 @@
                         </a>
                     </li>-->
                 </ul>
-                <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                    <ul>
-                        <li>
-                            <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page9" data-theme="" data-icon="star">
-                    Favorites
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- TimeSlot -->
         <div id="page3" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>10/24/2012</h3>
                 <a href="#page1" data-transition="slide" data-role="button" data-direction="reverse" class="ui-btn-left">
                     Days
@@ -206,30 +205,25 @@
                         <p style="margin-bottom:0"> Web, Modernization, Best Practices</p></a>
                     </li>
                 </ul>
-                <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                    <ul>
-                        <li>
-                            <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page9" data-theme="" data-icon="star">
-                    Favorites
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- Sessions -->
         <div id="page5" data-theme="d" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>8:30AM-9:15AM</h3>
                 <a href="#page3" data-transition="slide" data-role="button" data-direction="reverse" class="ui-btn-left">
                     Times
@@ -260,30 +254,25 @@
                         </a>
                     </li>
                 </ul>
-                <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                    <ul>
-                        <li>
-                            <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page9" data-theme="" data-icon="star">
-                    Favorites
-                </a>
-                        </li>
-                        <li>
-                            <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- Session Detail -->
         <div id="page6" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3></h3>
                 <a href="#page5" data-transition="slide" data-role="button" data-direction="reverse" class="ui-btn-left">
                     Back
@@ -312,9 +301,10 @@
                         <label for="textarea1">
                             <b>Description</b>
                         </label>
-                        <textarea readonly="readonly" placeholder="" id="textarea1" data-mini="true">Learn how to design an HTML5 application which supports people with disabilities,knowwhy its a good business decision.</textarea>
+                        <textarea readonly="readonly" placeholder="" id="textarea1" data-mini="true">Learn how to design an HTML5 application which supports people with disabilities,knowwhyits a good business decision.</textarea>
                     </fieldset>
-                </div><!--<div id="notation">
+                </div>
+                <!--<div id="notation">
                     <form>
                         <label for="select-choice-0" class="select">
                             <p>
@@ -333,30 +323,25 @@
                     Give review to this seesion 
                 </a>
             </div>
-            <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                <ul>
-                    <li>
-                        <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page9" data-theme="" data-icon="star">
-                    Favorite
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- Presenter Profile -->
         <div id="page7" data-role="page">
             <div data-theme="a" data-role="header">
-                <h3>Profile</h3>
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <h3>Speaker Profile</h3>
                 <a href="#page6" data-transition="slide" data-role="button" data-direction="reverse" class="ui-btn-left">
                     Back
                 </a>
@@ -409,26 +394,24 @@
                             Visit Presenter's Website
                 </a>
             </div>
-			<div data-theme="a" data-role="tabbar" data-iconpos="top">
-                <ul>
-                    <li>
-                        <a href="#page0" data-theme="" data-icon="home">
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page9" data-theme="" data-icon="star">
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page10" data-theme="" data-icon="search">
-                </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- Sponsor -->
         <div id="page8" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>Our Sponsors</h3>
             </div>
             <div style="padding: 15px" data-role="content">
@@ -440,7 +423,7 @@
                     </p>
                 </div>
                 <div style=" text-align:center">
-                    <img style="width: 120px; height: 60px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png"/>
+                    <img style="width: 100px; height: 50px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png"/>
                 </div>
                 <hr style="width: 80%; margin: 10 auto;"/>
                 <div>
@@ -458,12 +441,12 @@
                     </div>
                     <div class="ui-block-b">
                         <div style=" text-align:center">
-                            <img style="width: 80px; height: 50px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/openshift.png"/>
+                            <img style="width: 100px; height: 50px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/openshift.png"/>
                         </div>
                     </div>
                     <div class="ui-block-c">
                         <div style=" text-align:center">
-                            <img style="width: 70px; height: 50px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png"/>
+                            <img style="width: 100px; height: 50px" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png"/>
                         </div>
                     </div>
                 </div>
@@ -474,7 +457,7 @@
                     </p>
                 </div>
                 <div style=" text-align:center">
-                    <img style="width: 100px; height: 50px" src="http://2011.wakanday.org/wp-content/themes/Destination/images/oreilly.png"/>
+                    <img style="width: 180px; height: 37px" src="http://2011.wakanday.org/wp-content/themes/Destination/images/oreilly.png"/>
                 </div>
                 <hr style="width: 80%; margin: 10 auto"/>
                 <div>
@@ -485,12 +468,12 @@
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <div style=" text-align:center">
-                            <img style="width: 60px; height: 60px" src="http://2011.wakanday.org/wp-content/themes/Destination/images/logo4D.jpg"/>
+                            <img  src="http://2011.wakanday.org/wp-content/themes/Destination/images/logo4D.jpg"/>
                         </div>
                     </div>
                     <div class="ui-block-b">
                         <div style=" text-align:center">
-                            <img style="width: 120px; height: 60px" src="http://2011.wakanday.org/wp-content/themes/Destination/images/wakanda.png"/>
+                            <img  src="http://2011.wakanday.org/wp-content/themes/Destination/images/wakanda.png"/>
                         </div>
                     </div>
                 </div>
@@ -499,11 +482,25 @@
         <!-- favorites -->
         <div id="page9" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>My Favorites</h3>
             </div>
             <div style="padding: 15px" data-role="content">
                 <ul data-split-icon="star" data-role="listview" data-inset="false" data-divider-theme="b">
-					 <li data-theme="c">
+                    <li data-theme="c">
                         <a href="#page1" data-transition="slide">
                     <h3>Accessible Design with HTML5</h3><p>Raj Lal</p>
                 </a>
@@ -525,29 +522,24 @@
                     </li>
                 </ul>
             </div>
-            <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                <ul>
-                    <li>
-                        <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page9" data-theme="" data-icon="star">
-                    Favorite
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- Search -->
         <div id="page10" data-role="page">
             <div data-theme="a" data-role="header">
+				 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
+                <div id="popupMenu" data-role="popup" data-overlay-theme="b">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                        <li>
+                            <a href="#page0">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page9">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#page10">Search</a>
+                        </li>
+                    </ul>
+                </div>
                 <h3>Search</h3>
             </div>
             <div style="padding: 15px" data-role="content">
@@ -562,30 +554,11 @@
                     <li role="heading" data-role="list-divider">0 Speakers found</li>
                 </ul>
             </div>
-            <div data-theme="a" data-role="tabbar" data-iconpos="top">
-                <ul>
-                    <li>
-                        <a href="#page0" data-theme="" data-icon="home">
-                    Home
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page9" data-theme="" data-icon="star">
-                    Favorite
-                </a>
-                    </li>
-                    <li>
-                        <a href="#page10" data-theme="" data-icon="search">
-                    Search
-                </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <script>
             //App custom javascript
         </script>
-		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+        <script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
     </body>
 
 </html>
