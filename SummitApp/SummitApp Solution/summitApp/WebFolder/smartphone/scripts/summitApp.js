@@ -9,6 +9,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		$(".loadTimes").click(function(){ 
+			ds.
+		});
+
 //		    (function($) {
 //      $("#carousel1").carousel();
 //      //$("#carousel2").carousel({direction: "vertical"});

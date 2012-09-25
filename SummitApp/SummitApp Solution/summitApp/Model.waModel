@@ -36,9 +36,9 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="E4DE022E3A784081BC08D314E2521240" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="publicOnServer" uuid="E4DE022E3A784081BC08D314E2521240" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="private" uuid="670DB6247878434EA60CEAA17E8D291F" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" uuid="670DB6247878434EA60CEAA17E8D291F" fieldPos="2" type="string"/>
 
 	<attributes name="location" kind="storage" scope="public" uuid="BBE5F9A71FAB5E47A67E587B8E447CA3" fieldPos="3" type="string"/>
 
@@ -49,6 +49,8 @@
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="event"/>
 
 	<attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/>
+
+	<attributes name="activitites" scope="public" reversePath="true" path="event" type="ActivitiesCollection" kind="relatedEntities"/>
 
 </dataClasses>
 
@@ -88,8 +90,6 @@
 
 	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="5B75AED156E05B46AD3CAFBCD47E44F8" fieldPos="3" path="Event"/>
 
-	<attributes name="title" kind="storage" scope="public" uuid="F9978FF8D64FC941A4BB2DC5B88B4DA4" fieldPos="4" type="string"/>
-
 	<attributes name="room" kind="storage" scope="public" uuid="E3F4A05F048A214C8435099A0D39A15C" fieldPos="5" type="string"/>
 
 	<attributes name="time" kind="storage" scope="public" uuid="60307728CB92494586894AA8C51770B4" fieldPos="6" type="string"/>
@@ -98,9 +98,9 @@
 
 	<attributes name="sessionSurveys" kind="relatedEntities" scope="public" type="SessionSurveyCollection" reversePath="true" path="session"/>
 
-	<attributes name="sessionDate" scope="public" uuid="CA6EB689D15D1146BC85C268445F382A" fieldPos="8" type="date" kind="storage"/>
+	<attributes name="sessionDate" kind="storage" scope="public" uuid="CA6EB689D15D1146BC85C268445F382A" fieldPos="8" type="date"/>
 
-	<attributes name="sponsored" scope="public" uuid="4BF0EEC73AF82C4D8380B779997A3BBF" fieldPos="9" type="bool" kind="storage"/>
+	<attributes name="sponsored" kind="storage" scope="public" uuid="4BF0EEC73AF82C4D8380B779997A3BBF" fieldPos="9" type="bool"/>
 
 </dataClasses>
 
@@ -128,7 +128,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="363" Y="500"/>
+			<position ____objectunic="true" X="481" Y="404"/>
 </panel>
 </extraProperties>
 
@@ -152,7 +152,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="28" Y="484"/>
+			<position ____objectunic="true" X="32" Y="327"/>
 </panel>
 </extraProperties>
 
@@ -169,6 +169,32 @@
 	<attributes name="contactInfo" kind="storage" scope="public" uuid="2E8F4D63A6241846A4F36604842FB2A1" fieldPos="6" type="string"/>
 
 	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" uuid="E24AA50FF8C7AB45A5B7228F29BCE9CF" fieldPos="7" path="Session"/>
+
+</dataClasses>
+
+<dataClasses collectionName="ActivitiesCollection" className="Activities" uuid="65120E7076ECCC4F917AD0ED0E02E999" tablePos="8">
+
+	<extraProperties ____objectunic="true" panelColor="#76923C">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="90" Y="603"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" type="long" uuid="C0B92FF0F7567B468C55D3CE8A05530F" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
+
+	<attributes name="name" scope="public" uuid="63C3248BF570BE429668F714125A2B32" fieldPos="2" type="string" kind="storage"/>
+
+	<attributes name="time" scope="public" uuid="03440F2563616A4795F69DBDBC819611" fieldPos="3" type="string" kind="storage"/>
+
+	<attributes name="room" scope="public" uuid="A218A78A7E433C4EBEDBA5F5B8F5FFB0" fieldPos="4" type="string" kind="storage"/>
+
+	<attributes name="event" kind="relatedEntity" type="Event" uuid="30DEF23262F51547871DC8C98FA2C867" fieldPos="5" path="Event" scope="public"/>
+
+	<attributes name="activityDate" scope="public" uuid="A23DA59E54692B4695D1931E5B2342FD" fieldPos="6" type="date" kind="storage"/>
 
 </dataClasses>
 </EntityModelCatalog>
