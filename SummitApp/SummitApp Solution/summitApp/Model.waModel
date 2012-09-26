@@ -2,6 +2,30 @@
 
 <dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
 
+<dataClasses name="Activities" className="Activities" collectionName="ActivitiesCollection" scope="public" uuid="65120E7076ECCC4F917AD0ED0E02E999" tablePos="8">
+
+	<extraProperties ____objectunic="true" panelColor="#76923C">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="90" Y="603"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="C0B92FF0F7567B468C55D3CE8A05530F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="63C3248BF570BE429668F714125A2B32" fieldPos="2" type="string"/>
+
+	<attributes name="time" kind="storage" scope="public" uuid="03440F2563616A4795F69DBDBC819611" fieldPos="3" type="string"/>
+
+	<attributes name="room" kind="storage" scope="public" uuid="A218A78A7E433C4EBEDBA5F5B8F5FFB0" fieldPos="4" type="string"/>
+
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="30DEF23262F51547871DC8C98FA2C867" fieldPos="5" path="Event"/>
+
+	<attributes name="activityDate" kind="storage" scope="public" uuid="A23DA59E54692B4695D1931E5B2342FD" fieldPos="6" type="date"/>
+
+</dataClasses>
+
 <dataClasses name="Answer" className="Answer" collectionName="AnswerCollection" scope="public" uuid="9C816FEE1FF09549A642E1A0B8C0067A" tablePos="7">
 
 	<extraProperties ____objectunic="true" panelColor="#76923C">
@@ -50,7 +74,7 @@
 
 	<attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/>
 
-	<attributes name="activitites" scope="public" reversePath="true" path="event" type="ActivitiesCollection" kind="relatedEntities"/>
+	<attributes name="activitites" kind="relatedEntities" scope="public" type="ActivitiesCollection" reversePath="true" path="event"/>
 
 </dataClasses>
 
@@ -94,7 +118,7 @@
 
 	<attributes name="time" kind="storage" scope="public" uuid="60307728CB92494586894AA8C51770B4" fieldPos="6" type="string"/>
 
-	<attributes name="presenter" kind="relatedEntity" scope="public" type="Speaker" uuid="E1B684C8BACE954291C76C35909A51E4" fieldPos="7" path="Speaker"/>
+	<attributes name="presenter" kind="relatedEntity" scope="public" type="Speaker" uuid="E1B684C8BACE954291C76C35909A51E4" fieldPos="4" path="Speaker"/>
 
 	<attributes name="sessionSurveys" kind="relatedEntities" scope="public" type="SessionSurveyCollection" reversePath="true" path="session"/>
 
@@ -152,7 +176,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="32" Y="327"/>
+			<position ____objectunic="true" X="40" Y="364"/>
 </panel>
 </extraProperties>
 
@@ -169,32 +193,6 @@
 	<attributes name="contactInfo" kind="storage" scope="public" uuid="2E8F4D63A6241846A4F36604842FB2A1" fieldPos="6" type="string"/>
 
 	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" uuid="E24AA50FF8C7AB45A5B7228F29BCE9CF" fieldPos="7" path="Session"/>
-
-</dataClasses>
-
-<dataClasses collectionName="ActivitiesCollection" className="Activities" uuid="65120E7076ECCC4F917AD0ED0E02E999" tablePos="8">
-
-	<extraProperties ____objectunic="true" panelColor="#76923C">
-
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
-
-			<position ____objectunic="true" X="90" Y="603"/>
-
-		</panel>
-
-	</extraProperties>
-
-	<attributes name="ID" kind="storage" type="long" uuid="C0B92FF0F7567B468C55D3CE8A05530F" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
-
-	<attributes name="name" scope="public" uuid="63C3248BF570BE429668F714125A2B32" fieldPos="2" type="string" kind="storage"/>
-
-	<attributes name="time" scope="public" uuid="03440F2563616A4795F69DBDBC819611" fieldPos="3" type="string" kind="storage"/>
-
-	<attributes name="room" scope="public" uuid="A218A78A7E433C4EBEDBA5F5B8F5FFB0" fieldPos="4" type="string" kind="storage"/>
-
-	<attributes name="event" kind="relatedEntity" type="Event" uuid="30DEF23262F51547871DC8C98FA2C867" fieldPos="5" path="Event" scope="public"/>
-
-	<attributes name="activityDate" scope="public" uuid="A23DA59E54692B4695D1931E5B2342FD" fieldPos="6" type="date" kind="storage"/>
 
 </dataClasses>
 </EntityModelCatalog>
