@@ -2,7 +2,7 @@
 
 <dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
 
-<dataClasses name="Activities" className="Activities" collectionName="ActivitiesCollection" scope="public" uuid="65120E7076ECCC4F917AD0ED0E02E999" tablePos="8">
+<dataClasses name="Activities" className="Activities" collectionName="ActivitiesCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#76923C">
 
@@ -12,21 +12,23 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="C0B92FF0F7567B468C55D3CE8A05530F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="public" uuid="63C3248BF570BE429668F714125A2B32" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" type="string"/>
 
-	<attributes name="time" kind="storage" scope="public" uuid="03440F2563616A4795F69DBDBC819611" fieldPos="3" type="string"/>
+	<attributes name="startTime" kind="storage" scope="public" type="string"/>
 
-	<attributes name="room" kind="storage" scope="public" uuid="A218A78A7E433C4EBEDBA5F5B8F5FFB0" fieldPos="4" type="string"/>
+	<attributes name="room" kind="storage" scope="public" type="string"/>
 
-	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="30DEF23262F51547871DC8C98FA2C867" fieldPos="5" path="Event"/>
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
 
-	<attributes name="activityDate" kind="storage" scope="public" uuid="A23DA59E54692B4695D1931E5B2342FD" fieldPos="6" type="date"/>
+	<attributes name="activityDate" kind="storage" scope="public" type="date"/>
+
+	<attributes name="endTime" scope="public" uuid="E2E09E118B34B64AB831BFEA2FE64945" fieldPos="1" type="string" kind="storage"/>
 
 </dataClasses>
 
-<dataClasses name="Answer" className="Answer" collectionName="AnswerCollection" scope="public" uuid="9C816FEE1FF09549A642E1A0B8C0067A" tablePos="7">
+<dataClasses name="Answer" className="Answer" collectionName="AnswerCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#76923C">
 
@@ -36,21 +38,21 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="5B9AE39BAD7E4B40BF9631C056B8E03C" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="session" kind="relatedEntity" scope="public" type="Session" uuid="A545A7CDC4DD774F9A7B7676F9A6C46A" fieldPos="2" path="Session"/>
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
 
-	<attributes name="question" kind="relatedEntity" scope="public" type="Question" uuid="501A63175ABE314BB4BF2BB356D0BE2C" fieldPos="3" path="Question"/>
+	<attributes name="question" kind="relatedEntity" scope="public" type="Question" path="Question"/>
 
-	<attributes name="comment" kind="storage" scope="public" uuid="D69A6C3E0438194CB1217C9AD7387249" fieldPos="4" type="string"/>
+	<attributes name="comment" kind="storage" scope="public" type="string"/>
 
-	<attributes name="rate" kind="storage" scope="public" uuid="E2D1A5B24411964BBF7F5B2799426CF2" fieldPos="5" type="long"/>
+	<attributes name="rate" kind="storage" scope="public" type="long"/>
 
-	<attributes name="answer" kind="storage" scope="public" uuid="7B49C997902ABB4E8163D634510A3450" fieldPos="6" type="string"/>
+	<attributes name="answer" kind="storage" scope="public" type="string"/>
 
 </dataClasses>
 
-<dataClasses name="Event" className="Event" collectionName="EventCollection" scope="public" uuid="B860C1211EFF4A86B5B96371791A8D16" tablePos="1">
+<dataClasses name="Event" className="Event" collectionName="EventCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#B7DDE8">
 
@@ -60,25 +62,25 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="publicOnServer" uuid="E4DE022E3A784081BC08D314E2521240" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="publicOnServer" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="public" uuid="670DB6247878434EA60CEAA17E8D291F" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" type="string"/>
 
-	<attributes name="location" kind="storage" scope="public" uuid="BBE5F9A71FAB5E47A67E587B8E447CA3" fieldPos="3" type="string"/>
+	<attributes name="location" kind="storage" scope="public" type="string"/>
 
-	<attributes name="startDate" kind="storage" scope="public" uuid="77B43D8F39FE8143BD639F32751BFCEE" fieldPos="4" type="date"/>
+	<attributes name="startDate" kind="storage" scope="public" type="date"/>
 
-	<attributes name="endDate" kind="storage" scope="public" uuid="CB031DD1E4709C41AE45C5D93C670040" fieldPos="5" type="date"/>
+	<attributes name="endDate" kind="storage" scope="public" type="date"/>
 
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="event"/>
 
 	<attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/>
 
-	<attributes name="activitites" kind="relatedEntities" scope="public" type="ActivitiesCollection" reversePath="true" path="event"/>
+	<attributes name="activities" kind="relatedEntities" scope="public" type="ActivitiesCollection" reversePath="true" path="event"/>
 
 </dataClasses>
 
-<dataClasses name="Question" className="Question" collectionName="QuestionCollection" scope="public" uuid="77158C7895EBB94F819B59EEA6B2F9A0" tablePos="6">
+<dataClasses name="Question" className="Question" collectionName="QuestionCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#D7E3BC">
 
@@ -88,17 +90,17 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="34FEADEA760C6C488181D6EC247F986B" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="sessionSurvey" kind="relatedEntity" scope="public" type="SessionSurvey" uuid="994246A875CBDB4AA6E40C0E481F3253" fieldPos="2" path="SessionSurvey"/>
+	<attributes name="sessionSurvey" kind="relatedEntity" scope="public" type="SessionSurvey" path="SessionSurvey"/>
 
-	<attributes name="question" kind="storage" scope="public" uuid="99CD940DA259174B8DF3F68D16FA448F" fieldPos="3" type="string"/>
+	<attributes name="question" kind="storage" scope="public" type="string"/>
 
 	<attributes name="answers" kind="relatedEntities" scope="public" type="AnswerCollection" reversePath="true" path="question"/>
 
 </dataClasses>
 
-<dataClasses name="Session" className="Session" collectionName="SessionCollection" scope="public" uuid="48E78A81DA934CB4865EF8C740E2EE2B" tablePos="2">
+<dataClasses name="Session" className="Session" collectionName="SessionCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#B8CCE4">
 
@@ -108,27 +110,29 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="D2589E8A82D24917B8B3DE37F3A5FC67" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="public" uuid="BDEDE0B595E54E879666D375D83AA5E7" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" type="string"/>
 
-	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="5B75AED156E05B46AD3CAFBCD47E44F8" fieldPos="3" path="Event"/>
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
 
-	<attributes name="room" kind="storage" scope="public" uuid="E3F4A05F048A214C8435099A0D39A15C" fieldPos="5" type="string"/>
+	<attributes name="room" kind="storage" scope="public" type="string"/>
 
-	<attributes name="time" kind="storage" scope="public" uuid="60307728CB92494586894AA8C51770B4" fieldPos="6" type="string"/>
+	<attributes name="startTime" kind="storage" scope="public" type="string"/>
 
-	<attributes name="presenter" kind="relatedEntity" scope="public" type="Speaker" uuid="E1B684C8BACE954291C76C35909A51E4" fieldPos="4" path="Speaker"/>
+	<attributes name="presenter" kind="relatedEntity" scope="public" type="Speaker" path="Speaker"/>
 
 	<attributes name="sessionSurveys" kind="relatedEntities" scope="public" type="SessionSurveyCollection" reversePath="true" path="session"/>
 
-	<attributes name="sessionDate" kind="storage" scope="public" uuid="CA6EB689D15D1146BC85C268445F382A" fieldPos="8" type="date"/>
+	<attributes name="sessionDate" kind="storage" scope="public" type="date"/>
 
-	<attributes name="sponsored" kind="storage" scope="public" uuid="4BF0EEC73AF82C4D8380B779997A3BBF" fieldPos="9" type="bool"/>
+	<attributes name="sponsored" kind="storage" scope="public" type="bool"/>
+
+	<attributes name="endTime" scope="public" uuid="FFC50F7996788D4B9A5C2B54600C45D9" fieldPos="1" type="string" kind="storage"/>
 
 </dataClasses>
 
-<dataClasses name="SessionSurvey" className="SessionSurvey" collectionName="SessionSurveyCollection" scope="public" uuid="FF08A545394FCE48980D356DFEA04B25" tablePos="5">
+<dataClasses name="SessionSurvey" className="SessionSurvey" collectionName="SessionSurveyCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
 
@@ -138,15 +142,15 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="8DD8B2C94A5BCE40B12F3DA81A4BE93B" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="session" kind="relatedEntity" scope="public" type="Session" uuid="47CD65AC8778F844BA5959810113719F" fieldPos="2" path="Session"/>
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
 
 	<attributes name="questions" kind="relatedEntities" scope="public" type="QuestionCollection" reversePath="true" path="sessionSurvey"/>
 
 </dataClasses>
 
-<dataClasses name="Speaker" className="Speaker" collectionName="SpeakerCollection" scope="public" uuid="4285569A9C0CEB4497FD6794C10F17BE" tablePos="3">
+<dataClasses name="Speaker" className="Speaker" collectionName="SpeakerCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#B2A2C7">
 
@@ -156,21 +160,21 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="22654A1106A8EC4DA33C830C9F646A3F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="public" uuid="598E763D4A9DE54182348ED0187E09D9" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" type="string"/>
 
-	<attributes name="title" kind="storage" scope="public" uuid="0BBC0BB1A84EF54FAFA5D12EE05BAAA6" fieldPos="4" type="string"/>
+	<attributes name="title" kind="storage" scope="public" type="string"/>
 
-	<attributes name="company" kind="storage" scope="public" uuid="057D7C6DEB61204987C70EFE1F241130" fieldPos="5" type="string"/>
+	<attributes name="company" kind="storage" scope="public" type="string"/>
 
-	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="969D1BECF252E441941097694AA48999" fieldPos="3" path="Event"/>
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
 
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="presenter"/>
 
 </dataClasses>
 
-<dataClasses name="Sponsor" className="Sponsor" collectionName="SponsorCollection" scope="public" uuid="F13DC7A62F9E05439A1907E162ADB804" tablePos="4">
+<dataClasses name="Sponsor" className="Sponsor" collectionName="SponsorCollection" scope="public">
 
 	<extraProperties ____objectunic="true" panelColor="#8DB3E2">
 
@@ -180,19 +184,19 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="0D7DD118AB77824FB57D588B500474C4" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="name" kind="storage" scope="public" uuid="1AC5805DAABA7B489B49C527DD615FD0" fieldPos="2" type="string"/>
+	<attributes name="name" kind="storage" scope="public" type="string"/>
 
-	<attributes name="event" kind="relatedEntity" scope="public" type="Event" uuid="496F31B3E2B20E4282EBD2043B738ABB" fieldPos="3" path="Event"/>
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
 
-	<attributes name="sponsorClass" kind="storage" scope="public" uuid="DD72EB6F33CF46418105BC539FC5C27B" fieldPos="4" type="string"/>
+	<attributes name="sponsorClass" kind="storage" scope="public" type="string"/>
 
-	<attributes name="description" kind="storage" scope="public" uuid="DA21DC4B523678478420353DE0062960" fieldPos="5" type="string"/>
+	<attributes name="description" kind="storage" scope="public" type="string"/>
 
-	<attributes name="contactInfo" kind="storage" scope="public" uuid="2E8F4D63A6241846A4F36604842FB2A1" fieldPos="6" type="string"/>
+	<attributes name="contactInfo" kind="storage" scope="public" type="string"/>
 
-	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" uuid="E24AA50FF8C7AB45A5B7228F29BCE9CF" fieldPos="7" path="Session"/>
+	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" path="Session"/>
 
 </dataClasses>
 </EntityModelCatalog>

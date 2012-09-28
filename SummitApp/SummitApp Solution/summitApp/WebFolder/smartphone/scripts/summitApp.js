@@ -9,53 +9,59 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-		var eventCollections;
 		ds.Event.all({
-			orderBy:"startDate",
-			autoExpand: "sessions",
-			onSuccess:function(event) {	
-				var count = event.entityCollection.length;
-//				eventCollections = event.entityCollection;
-//				console.log(eventCollections.length);
-				$(".loadDays").click(function(){ 
-			    	console.log(this.id);
-			    	daysPageGeneration(event.entityCollection,this.id);
-			    });
-//				event.entityCollection.forEach({
-//				onSuccess: function(event2) {
-//					//myHTML += '<p>' + escapeHTML(event2.entity.name.getValue()) + '</p>';
-//				},
-//				atTheEnd: function(end) {
-//					var stop = new Date();
-//					var executionTime = stop - start;
-//					$('#container2').html(myHTML);
-//					$$('richText9').setValue(executionTime+ "ms");	
-//				}
-//			});		
-		}}); 
-		console.log(eventCollections);
-		function daysPageGeneration(eventCollections,day){
-			eventCollections.query("name = :1 | name %% :1", day, {
-	                autoExpand: "sessions", 
-	                onSuccess: function(event) { 
-	                	//console.log(event.entityCollection.length);
-	                	event.entityCollection.forEach({
-	                        onSuccess: function(ev) {
-	                        	var startDate = ev.entity.startDate.getValue();
-	                        	var endDate = ev.entity.endDate.getValue();
-    							$('#daysListView').empty().listview('refresh');
-	                        	$('#daysListView').append('<li data-theme="c">' + '<a class="loadTimes" href="#page3" data-transition="slide">'+ '<h3>'+ getTheDay(startDate) + " " + formatDate(startDate) +'</h3><p>4D Summit Pre-Class</p>' + '</li>').listview('refresh');
-	                        	while(startDate < endDate){
-	                        		startDate.setDate(startDate.getDate() + 1);
-		                        	//console.log(Math.round((ev.entity.endDate.getValue() - ev.entity.startDate.getValue()) / (1000*60*60*24)));
-		                        	$('#daysListView').append('<li data-theme="c">' + '<a class="loadTimes" href="#page3" data-transition="slide">'+ '<h3>'+ getTheDay(startDate) + " " + formatDate(startDate) +'</h3><p>4D Summit keynotes  breakout sessions</p>' + '</li>').listview('refresh');
- 
-								}
-	                        }
-	                    })
-	          		}
-	          })
-		}
+    orderBy: "startDate",
+    autoExpand: "sessions",
+    onSuccess: function(eventsCollectionEvent) {
+        var count = eventsCollectionEvent.entityCollection.length;
+        $(".loadDays").click(function() { //Click event handler of Event listitem
+            console.log(this.id);
+            daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
+        });
+    }
+});
+
+function daysPageGeneration(eventCollections, day) { //Load days of event if more than one
+    eventCollections.query("name = :1 | name %% :1", day, {
+        autoExpand: "sessions,activities",
+        onSuccess: function(event) {
+            event.entityCollection.forEach({
+                onSuccess: function(eventItemEvent) {
+                    var startDate = eventItemEvent.entity.startDate.getValue();
+                    var endDate = eventItemEvent.entity.endDate.getValue();
+                    $('#daysListView').empty().listview('refresh');
+                    $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit Pre-Class</p>' + '</li>').listview('refresh');
+                    while (startDate < endDate) {
+                        startDate.setDate(startDate.getDate() + 1);
+                        //console.log(Math.round((ev.entity.endDate.getValue() - ev.entity.startDate.getValue()) / (1000*60*60*24)));
+                        $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit keynotes  breakout sessions</p>' + '</li>').listview('refresh');
+                    }
+                    var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
+                    var activitiesCollectionRel = eventItemEvent.entity.activities.relEntityCollection;
+                    //console.log(sessionsCollectionRel);
+                    sessionsCollectionRel.orderBy("sessionDate asc");
+                    sessionsCollectionRel.query("startDate = :1 | startDate %% :1", this.id, {
+                        autoExpand: "sessionSurveys",
+                        onSuccess: function(sessionsEvent) {
+                        	var sessionsCollctionArray = sessionsEvent.entityCollection.toArray();
+                        	console.log(sessionsEvent.entityCollection);
+                        	console.log(sessionsCollctionArray);
+                        	activitiesCollectionRel.query("startDate = :1 | startDate %% :1", this.id, {
+                        		onSuccess: function(activitiesEvent) {
+                        			$(".loadTimsSlots").live('click', function() {
+                        			var activitiesCollectionArray =  activitiesEvent.entityCollection.toArray();
+                    				console.log(this.id);
+                   					console.log(activitiesCollectionArray);
+                    				});   
+                        		}
+                        	});
+                        }
+                    });             	
+                }
+            })
+    	}
+    })
+}
 //		$(".loadDays").click(function(){ 
 //			  console.log(this.id);
 //			  WAF.ds.Event.query("name = :1 | name %% :1", this.id, {
@@ -79,49 +85,34 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //	          		}
 //	          })
 //		});
-		$('.goBack').click(function(){
-			if($('#daysListView li').size() > 1){	
-				$.mobile.changePage("#page1", { transition: "slide",reverse:true});
-			}
-			else {
-				$.mobile.changePage("#page0", { transition: "slide",reverse:true});
-			}
-				
-		})
-		function formatDate(date) {// ultility to formate date to mm/dd/yyyy
-			return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear()
-		};
-		function getTheDay(date)
-		{
 
-			weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-			return weekday[date.getDay()];
-		}
-//		$(".loadTimes").click(function(){ 
-//			  console.log(this.id);
-//			  WAF.ds.Event.query("fullName = :1", WAF.directory.currentUser().fullName, {
-//	                autoExpand: "pTO_RequestCollection",
-//	                onSuccess: function(event) {
-//	          		}
-//	          })
-//		});
+$('.goBack').click(function() {
+    if ($('#daysListView li').size() > 1) {
+        $.mobile.changePage("#page1", {
+            transition: "slide",
+            reverse: true
+        });
+    }
+    else {
+        $.mobile.changePage("#page0", {
+            transition: "slide",
+            reverse: true
+        });
+    }
 
-//		    (function($) {
-//      $("#carousel1").carousel();
-//      //$("#carousel2").carousel({direction: "vertical"});
-//  		})(jQuery);	
-//  		$('#right').cycle({
-//     	 	fx: 'scrollRight',
-//      		next: '#right',
-//      		timeout: 0,
-//      		easing: 'easeInOutBack'
-//  		});
-			$('#right').cycle();
-			//$(".basic").jRating(); // more complex jRating call 
-//			$(".basic").jRating({ step:true, length : 20, // nb of stars
-//				onSuccess : function(){ alert('Success : your rate has been saved :)'); 
-//				} 
-//			});
+})
+
+function formatDate(date) { // ultility to formate date to mm/dd/yyyy
+    return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear()
+};
+
+function getTheDay(date) {
+
+    weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    return weekday[date.getDay()];
+}
+
+$('#right').cycle();
 	};// @lock
 
 // @region eventManager// @startlock
