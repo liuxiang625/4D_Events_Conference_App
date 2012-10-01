@@ -13,7 +13,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
     orderBy: "startDate",
     autoExpand: "sessions",
     onSuccess: function(eventsCollectionEvent) {
-        $(".loadDays").click(function() { //Click event handler of Event listitem
+        $(".loadDays").live('click', function() { //Click event handler of Event listitem
             daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
         });
     }
@@ -21,7 +21,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
     eventCollections.query("name = :1 | name %% :1", eventName, {
-        autoExpand: "sessions,activities",
+        autoExpand: "sessions",
         onSuccess: function(event) {
             event.entityCollection.forEach({
                 onSuccess: function(eventItemEvent) {
@@ -36,25 +36,32 @@ function daysPageGeneration(eventCollections, eventName) { //Load days of event 
                     }
                     var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
                     sessionsCollectionRel.orderBy("sessionDate asc");
-                    var activitiesCollectionRel = eventItemEvent.entity.activities.relEntityCollection;
-                    activitiesCollectionRel.orderBy("activityDate asc");
                     console.log(sessionsCollectionRel);
                     var sessionsArray = [];
                     var activitiesArray = [];
-                    var date = new Date("10/23/2012");
-                    sessionsCollectionRel.query("sessionDate >= :1 AND sessionDate <= :2", new Date("10/23/12"), new Date("10/24/12"));
-                    console.log(sessionsCollectionRel);
-//                    $(".loadTimsSlots").live('click', function() {
-//                        var currentDate = this.id;
-//                        if (sessionsCollectionRel.length > 0) {
-//                            sessionsCollectionRel.forEach({
-//                                onSuccess: function(sessionRelevent) {
-//                                    var sessionDate = formatDate(sessionRelevent.entity.sessionDate.getValue());
-//                                    if (sessionDate == currentDate) {
-//                                        sessionsArray.push(sessionRelevent.entity);
-//                                    }
-//                                },
-//                                atTheEnd: function(end) {
+                    //var date = new Date("10/23/2012");
+                    //sessionsCollectionRel.query("sessionDate >= :1 AND sessionDate <= :2", new Date("10/23/12"), new Date("10/24/12"));
+                   // console.log(sessionsCollectionRel);
+                    $(".loadTimsSlots").live('click', function() {
+                    	sessionsArray.length = 0;
+                        var currentDate = this.id;
+                        console.log("Current Date: " + currentDate);
+                        
+                        if (sessionsCollectionRel.length > 0) {
+                        	$('#timSlotListView').empty().listview('refresh');
+                        	var sessionTimes = [];
+                            sessionsCollectionRel.forEach({
+                                onSuccess: function(sessionRelevent) {
+                                    var sessionDate = formatDate(sessionRelevent.entity.sessionDate.getValue());
+                                    var sessionTime = sessionRelevent.entity.startTime.getValue() + "- " + sessionRelevent.entity.endTime.getValue();
+                                    if (sessionDate == currentDate & sessionTimes.indexOf(sessionTime) == -1) {
+                                    	sessionTimes.push(sessionTime);
+                                        //sessionsArray.push(sessionRelevent.entity);
+                                        $('#timSlotListView').append('<li data-theme="c">' + '<a id="' + sessionRelevent.entity.name + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p></p>' + '</li>').listview('refresh');
+                                    	//console.log("session Date: " + sessionDate);
+                                    }
+                                },
+                                atTheEnd: function(end) {
 //                                    if (activitiesCollectionRel.length > 0) {
 //                                        activitiesCollectionRel.forEach({
 //                                            onSuccess: function(activityRelevent) {
@@ -65,14 +72,14 @@ function daysPageGeneration(eventCollections, eventName) { //Load days of event 
 //                                            }
 //                                        })
 //                                    }
-//                                    console.log(sessionsArray.length);
+                                    	console.log(sessionsArray.length);
 //                                    console.log(activitiesArray.length);
 //                                    var $element = $('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit Pre-Class</p>' + '</li>');
 //                                    $('#timSlotListView').empty().listview('refresh');
-//                                }
-//                            })
-//                        }
-//                    });
+                                }
+                            })
+                        }
+                    });
                 }
             })
         }
