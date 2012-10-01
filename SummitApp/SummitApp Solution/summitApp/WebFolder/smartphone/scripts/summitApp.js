@@ -47,8 +47,10 @@ function daysPageGeneration(eventCollections, eventName) { //Load days of event 
                         var currentDate = this.id;
                         console.log("Current Date: " + currentDate);
                         
-                        if (sessionsCollectionRel.length > 0) {
-                        	$('#timSlotListView').empty().listview('refresh');
+                        if (sessionsCollectionRel.length > 0 ) {
+//                        	if($('#timSlotListView').hasClass('ui-listview')){
+                        		($('#timSlotListView').hasClass('ui-listview')?$('#timSlotListView').empty().listview('refresh'):$('#timSlotListView').empty());
+//                        	}
                         	var sessionTimes = [];
                             sessionsCollectionRel.forEach({
                                 onSuccess: function(sessionRelevent) {
@@ -57,7 +59,7 @@ function daysPageGeneration(eventCollections, eventName) { //Load days of event 
                                     if (sessionDate == currentDate & sessionTimes.indexOf(sessionTime) == -1) {
                                     	sessionTimes.push(sessionTime);
                                         //sessionsArray.push(sessionRelevent.entity);
-                                        $('#timSlotListView').append('<li data-theme="c">' + '<a id="' + sessionRelevent.entity.name + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p></p>' + '</li>').listview('refresh');
+                                        ($('#timSlotListView').hasClass('ui-listview')?$('#timSlotListView').append('<li data-theme="c">' + '<a id="' + sessionRelevent.entity.name + '" class="" href="#page5" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p></p>' + '</li>').listview('refresh'):$('#timSlotListView').append('<li data-theme="c">' + '<a id="' + sessionRelevent.entity.name + '" class="" href="#page5" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p></p>' + '</li>'));
                                     	//console.log("session Date: " + sessionDate);
                                     }
                                 },
