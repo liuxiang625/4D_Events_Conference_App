@@ -13,16 +13,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
     orderBy: "startDate",
     autoExpand: "sessions",
     onSuccess: function(eventsCollectionEvent) {
-        var count = eventsCollectionEvent.entityCollection.length;
         $(".loadDays").click(function() { //Click event handler of Event listitem
-            console.log(this.id);
             daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
         });
     }
 });
 
-function daysPageGeneration(eventCollections, day) { //Load days of event if more than one
-    eventCollections.query("name = :1 | name %% :1", day, {
+function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
+    eventCollections.query("name = :1 | name %% :1", eventName, {
         autoExpand: "sessions,activities",
         onSuccess: function(event) {
             event.entityCollection.forEach({
@@ -37,29 +35,47 @@ function daysPageGeneration(eventCollections, day) { //Load days of event if mor
                         $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit keynotes  breakout sessions</p>' + '</li>').listview('refresh');
                     }
                     var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
-                    var activitiesCollectionRel = eventItemEvent.entity.activities.relEntityCollection;
-                    //console.log(sessionsCollectionRel);
                     sessionsCollectionRel.orderBy("sessionDate asc");
-                    sessionsCollectionRel.query("startDate = :1 | startDate %% :1", this.id, {
-                        autoExpand: "sessionSurveys",
-                        onSuccess: function(sessionsEvent) {
-                        	var sessionsCollctionArray = sessionsEvent.entityCollection.toArray();
-                        	console.log(sessionsEvent.entityCollection);
-                        	console.log(sessionsCollctionArray);
-                        	activitiesCollectionRel.query("startDate = :1 | startDate %% :1", this.id, {
-                        		onSuccess: function(activitiesEvent) {
-                        			$(".loadTimsSlots").live('click', function() {
-                        			var activitiesCollectionArray =  activitiesEvent.entityCollection.toArray();
-                    				console.log(this.id);
-                   					console.log(activitiesCollectionArray);
-                    				});   
-                        		}
-                        	});
-                        }
-                    });             	
+                    var activitiesCollectionRel = eventItemEvent.entity.activities.relEntityCollection;
+                    activitiesCollectionRel.orderBy("activityDate asc");
+                    console.log(sessionsCollectionRel);
+                    var sessionsArray = [];
+                    var activitiesArray = [];
+                    var date = new Date("10/23/2012");
+                    sessionsCollectionRel.query("sessionDate >= :1 AND sessionDate <= :2", new Date("10/23/12"), new Date("10/24/12"));
+                    console.log(sessionsCollectionRel);
+//                    $(".loadTimsSlots").live('click', function() {
+//                        var currentDate = this.id;
+//                        if (sessionsCollectionRel.length > 0) {
+//                            sessionsCollectionRel.forEach({
+//                                onSuccess: function(sessionRelevent) {
+//                                    var sessionDate = formatDate(sessionRelevent.entity.sessionDate.getValue());
+//                                    if (sessionDate == currentDate) {
+//                                        sessionsArray.push(sessionRelevent.entity);
+//                                    }
+//                                },
+//                                atTheEnd: function(end) {
+//                                    if (activitiesCollectionRel.length > 0) {
+//                                        activitiesCollectionRel.forEach({
+//                                            onSuccess: function(activityRelevent) {
+//                                            	var activityDate = formatDate(activityRelevent.entity.activityDate.getValue());
+//                                                if (activityDate == currentDate) {
+//                                                    activitiesArray.push(activityRelevent.entity);
+//                                                }
+//                                            }
+//                                        })
+//                                    }
+//                                    console.log(sessionsArray.length);
+//                                    console.log(activitiesArray.length);
+//                                    var $element = $('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit Pre-Class</p>' + '</li>');
+//                                    $('#timSlotListView').empty().listview('refresh');
+//                                }
+//                            })
+//                        }
+//                    });
                 }
             })
-    	}
+        }
     })
 }
 //		$(".loadDays").click(function(){ 
