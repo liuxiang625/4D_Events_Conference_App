@@ -842,3 +842,11 @@
 2012-10-01 09:51:06 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 411 ms)
 2012-10-01 09:51:06 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
 2012-10-01 09:51:06 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 7 ms)
+2012-10-01 15:58:05 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-01 15:58:06 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 407 ms)
+2012-10-01 15:58:06 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-01 15:58:06 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 7 ms)
+2012-10-01 16:44:32 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-01 16:44:32 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 407 ms)
+2012-10-01 16:44:32 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-01 16:44:32 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
