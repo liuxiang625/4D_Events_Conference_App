@@ -11,7 +11,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		$.mobile.changePage($("#page0"), "none");
 		ds.Event.all({
-		    orderBy: "startDate",
 		    autoExpand: "sessions",
 		    onSuccess: function(eventsCollectionEvent) {
 		        $(".loadDays").live('click', function() { //Click event handler of Event listitem
@@ -36,72 +35,94 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#page3" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit keynotes  breakout sessions</p></li>').listview('refresh');
 		                    }
 		                    var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
-		                    sessionsCollectionRel.orderBy("startTime asc");
-		                    var sessionsArray = [];
-		                    $(".loadTimsSlots").live('click', function() {
-		                        sessionsArray.length = 0;
+		                    sessionsCollectionRel.orderBy("startTime", {
+		                   		onSuccess: function(event) { // handle anything special here
+		                        	var sortedSessionsCollection = event.entityCollection;
+		                    		timeSlotPageGeneration(sortedSessionsCollection);
+		                        }
+		                    });
+		                    
+		                }
+		            })
+		        }
+		    })
+		}
+
+		function timeSlotPageGeneration(sortedSessionsCollection){
+			$(".loadTimsSlots").live('click', function() {
 		                        var currentDate = this.id;
-		                        if (sessionsCollectionRel.length > 0) {
+		                        if (sortedSessionsCollection.length > 0) {
 		                            //Check if listView is initialized, if not listview('refresh') causes error.
 		                            ($('#timSlotListView').hasClass('ui-listview') ? $('#timSlotListView').empty().listview('refresh') : $('#timSlotListView').empty());
 		                            var sessionTimes = [];
 		                            var tagsSet = {};
 		                            var sessionIDSet = {};
 		                            $('#dayPageHead h3').text(currentDate);
-		                            sessionsCollectionRel.forEach({
-		                                onSuccess: function(sessionRelevent) {
-		                                    var sessionItem = sessionRelevent.entity;
-		                                    var sessionDate = formatDate(sessionItem.sessionDate.getValue());
-		                                    var sessionTime = sessionItem.startTime.getValue() + "- " + sessionItem.endTime.getValue();
-		                                    var sessionFirstTag = "";
-		                                   	if (sessionItem.tags.getValue()){
-		                	                    sessionFirstTag =  sessionItem.tags.getValue().match(/,/)?sessionItem.tags.getValue().split(',')[0]:sessionItem.tags.getValue();
-		                	                    if(sessionTimes.indexOf(sessionTime) != -1) {
-		                	                    	if ( typeof sessionIDSet[sessionTime] === "undefined" ) sessionIDSet[sessionTime] = [];
-		                	                    	sessionIDSet[sessionTime].push(sessionItem.ID.getValue());
-		                	                    	( typeof tagsSet[sessionTime] === "undefined" )?tagsSet[sessionTime] ="":tagsSet[sessionTime] = tagsSet[sessionTime].concat(' ' + sessionFirstTag);
-		                	                    }
-		         							}											
-		                                    if (sessionDate == currentDate & sessionTimes.indexOf(sessionTime) == -1) {
-		                                        sessionTimes.push(sessionTime);		                                        
-		                                        if (sessionItem.isActivity.getValue()) {
-		                                            ($('#timSlotListView').hasClass('ui-listview') ? $('#timSlotListView').append('<li role="heading" data-role="list-divider" class="loadSessions"><h3>' + sessionTime + '  ' + sessionItem.ID.getValue() + '</h3></li>').listview('refresh') : $('#timSlotListView').append('<li role="heading" data-role="list-divider" class="loadSessions"><h3>' + sessionTime + '  ' + sessionItem.ID.getValue() + ' ' + sessionItem.room.getValue() + '</h3></li>'));
+		                                    sortedSessionsCollection.forEach({
+		                                        onSuccess: function(sessionRelevent) {
+		                                            var sessionItem = sessionRelevent.entity;
+		                                            var sessionDate = formatDate(sessionItem.sessionDate.getValue());
+		                                            var sessionTime = sessionItem.startTime.getValue() + "- " + sessionItem.endTime.getValue();
+		                                            var sessionFirstTag = "";
+		                                            if (sessionItem.tags.getValue()) {
+		                                                sessionFirstTag = sessionItem.tags.getValue().match(/,/) ? sessionItem.tags.getValue().split(',')[0] : sessionItem.tags.getValue();
+		                                                if (sessionTimes.indexOf(sessionTime) != -1) {
+		                                                    if (typeof sessionIDSet[sessionTime] === "undefined") sessionIDSet[sessionTime] = [];
+		                                                    sessionIDSet[sessionTime].push(sessionItem.ID.getValue());
+		                                                    var seperator;
+		                                                    tagsSet[sessionTime].length >0?seperator = ',':seperator = "";
+		                                                    (typeof tagsSet[sessionTime] === "undefined") ? tagsSet[sessionTime] = "" : tagsSet[sessionTime] = tagsSet[sessionTime].concat(seperator + ' ' + sessionFirstTag);
+		                                                }
+		                                            }
+		                                            if (sessionDate == currentDate & sessionTimes.indexOf(sessionTime) == -1) {
+		                                                sessionTimes.push(sessionTime);
+		                                                if (sessionItem.isActivity.getValue()) {
+		                                                    ($('#timSlotListView').hasClass('ui-listview') ? $('#timSlotListView').append('<li role="heading" data-role="list-divider" ><h3>' + sessionTime + '  ' + sessionItem.name.getValue() + '</h3></li>').listview('refresh') : $('#timSlotListView').append('<li role="heading" data-role="list-divider" ><h3>' + sessionTime + '  ' + sessionItem.name.getValue() + ' ' + sessionItem.room.getValue() + '</h3></li>'));
+		                                                }
+		                                                else {
+		                                                    ($('#timSlotListView').hasClass('ui-listview') ? $('#timSlotListView').append('<li data-theme="c" ><a class="loadSessions" id="' + sessionItem.ID.getValue() + '" class="" href="#page5" data-transition="slide" >' + '<h3>' + sessionTime + '</h3><p class="' + sessionTime + '">' + sessionFirstTag + '</p></li>').listview('refresh') : $('#timSlotListView').append('<li data-theme="c" >' + '<a class="loadSessions" id="' + sessionItem.ID.getValue() + '" class="" href="#page5" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p  class="' + sessionTime + '">' + sessionFirstTag + '</p></li>'));
+		                                                    if (typeof tagsSet[sessionTime] === "undefined") tagsSet[sessionTime] = "";
+		                                                    var seperator;
+		                                                    tagsSet[sessionTime].length >0?seperator = ',':seperator = "";
+		                                                    tagsSet[sessionTime] = tagsSet[sessionTime].concat(seperator + ' ' + sessionFirstTag);
+		                                                    tagsSet[sessionItem.ID.getValue()] = sessionTime;
+		                                                    sessionIDSet[sessionItem.ID.getValue()] = sessionTime;
+		                                                    if (typeof sessionIDSet[sessionTime] === "undefined") sessionIDSet[sessionTime] = [];
+		                                                    sessionIDSet[sessionTime].push(sessionItem.ID.getValue());
+		                                                }
+		                                            }
+		                                        },
+		                                        atTheEnd: function(end) {
+		                                            //Replace the tag paragraph in displayed li item with concated all sessions tags
+		                                            for (var key in tagsSet) {
+		                                                if (key.match(/\d{1,2}[:-]\d{2}([:-]\d{2,3})*/)) {
+		                                                    var idToAddTags = getKeyForValue(tagsSet, key);
+		                                                    console.log(idToAddTags + ': ' + tagsSet[key]);
+		                                                    $('#' + idToAddTags + " p").text(tagsSet[key]);
+		                                                }
+		                                            }
+		                                            console.log(tagsSet);
+		                                            $(".loadSessions").live('click', function() {
+		                                                //alert(this.id+'-----'+sessionIDSet[this.id]+"---" + sessionIDSet[sessionIDSet[this.id]]);
+		                                                console.log(sessionIDSet[sessionIDSet[this.id]]);
+		                                                sortedSessionsCollection.query("ID in :1",sessionIDSet[sessionIDSet[this.id]],{
+		                                                	onSuccess: function(sessionsInTimeEvent){
+		                                                		$('#sessionsListView').empty().listview('refresh');
+		                                                		var sessionsInTimeCollection = sessionsInTimeEvent.entityCollection;
+		                                                		 console.log(sessionsInTimeCollection.length);
+		                                                		 sessionsInTimeCollection.forEach({
+		                                        					onSuccess: function(sessionsEvent) {
+		                                        						$('#sessionsListView').append(constructSessionListItem(sessionsEvent.entity)).listview('refresh');
+		                                        					}
+		                                        				})
+		                                                	}	
+		                                                });
+		                                            });
 		                                        }
-		                                        else {
-		                                        	($('#timSlotListView').hasClass('ui-listview') ? $('#timSlotListView').append('<li data-theme="c" class="loadSessions"><a id="' + sessionItem.ID.getValue() + '" class="" href="#page5" data-transition="slide" >' + '<h3>' + sessionTime + '</h3><p class="'+ sessionTime + '">'+  sessionFirstTag +'</p></li>').listview('refresh') : $('#timSlotListView').append('<li data-theme="c" class="loadSessions">' + '<a id="' + sessionItem.ID.getValue() + '" class="" href="#page5" data-transition="slide">' + '<h3>' + sessionTime + '</h3><p  class="'+ sessionTime + '">'+  sessionFirstTag +'</p></li>'));
-													if ( typeof tagsSet[sessionTime] === "undefined" ) tagsSet[sessionTime] ="";
-													tagsSet[sessionTime] = tagsSet[sessionTime].concat(' ' + sessionFirstTag);
-													tagsSet[sessionItem.ID.getValue()] = sessionTime;
-													sessionIDSet[sessionItem.ID.getValue()] = sessionTime;
-													if ( typeof sessionIDSet[sessionTime] === "undefined" ) sessionIDSet[sessionTime] = [];
-													sessionIDSet[sessionTime].push(sessionItem.ID.getValue());
-		                                        } 
-		                                    }
-		                                },
-		                                atTheEnd: function(end) {
-		                                	//Replace the tag paragraph in displayed li item with concated all sessions tags
-		                                    console.log(tagsSet);
-		                                    console.log(sessionIDSet);
-		                                    for (var key in tagsSet) {
-		       									 if (key.match(/\d{1,2}[:-]\d{2}([:-]\d{2,3})*/)) {
-		            								var idToAddTags = getKeyForValue(tagsSet, key);
-		            								console.log(idToAddTags + ': ' + tagsSet[key]);
-		            								$('#' + idToAddTags+" p").text(tagsSet[key]);
-		        								}
-		   									 }
-		   									 $(".loadSessions").live('click', function() {
-		   									 	alert("Sessions!");
-		   									 });
+		                                    }) 
 		                                }
-		                            })
-		                        }
-		                    });
-		                }
-		            })
-		        }
-		    })
+		                           	});
 		}
-		
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
 		        if (jsonObjet.hasOwnProperty(key) && typeof(key) !== 'function') {
@@ -109,7 +130,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        }
 		    }
 		}
-		
+		function constructSessionListItem (entity) {
+			console.log( entity.speaker);
+			if(entity.speaker) var sessionSpeakerName = entity.speaker.name.getValue();
+			return '<li data-theme="c"><a href="#page6" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Location: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
+
+		}
 		$('.goBack').click(function() {
 		    if ($('#daysListView li').size() > 1) {
 		        $.mobile.changePage("#page1", {

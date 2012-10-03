@@ -9,10 +9,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="777" Y="530"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -35,10 +33,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="25" Y="20"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="publicOnServer" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -63,10 +59,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="750" Y="247"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -85,10 +79,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="387" Y="21"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -112,7 +104,9 @@
 
 	<attributes name="isActivity" kind="storage" scope="public" type="bool"/>
 
-	<attributes name="tags" scope="public" uuid="E2D6264AD55B554AA458B731150928BA" fieldPos="1" type="string" kind="storage"/>
+	<attributes name="tags" kind="storage" scope="public" type="string"/>
+
+	<attributes name="description" scope="public" uuid="97B391082C124D4399263F0F00104FFF" fieldPos="1" type="string" kind="storage"/>
 
 </dataClasses>
 
@@ -123,10 +117,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="735" Y="34"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -143,10 +135,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="487" Y="486"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
@@ -169,10 +159,8 @@
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="40" Y="364"/>
-
-		</panel>
-
-	</extraProperties>
+</panel>
+</extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
 
