@@ -106,7 +106,9 @@
 
 	<attributes name="tags" kind="storage" scope="public" type="string"/>
 
-	<attributes name="description" scope="public" uuid="97B391082C124D4399263F0F00104FFF" fieldPos="1" type="string" kind="storage"/>
+	<attributes name="description" kind="storage" scope="public" type="string"/>
+
+	<attributes name="presenterName" scope="public" path="presenter.name" type="string" kind="alias"/>
 
 </dataClasses>
 

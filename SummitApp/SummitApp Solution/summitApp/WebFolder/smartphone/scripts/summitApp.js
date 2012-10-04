@@ -21,16 +21,21 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$(".loadSessionDetail").live('click', function() { //on() is not working in this context
 		    console.log(this.id);
 		    ds.Session.find("ID = :1", this.id, {
-		    	autoExpand: "presenter",
-		    	onSuccess: function(sessionDetailEvent) {
-		    		var session = sessionDetailEvent.entity;
-		    		var sessionName = session.name.getValue();
-		    		var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue(); 
-		    		$('#sessionDetailPageHead h3').text(sessionName);
-		    		$('#sessionDetail h3').text(sessionName);
-		    		$('#sessionDetail p').text(sessionDetail);
-		    		$('#sessionDetail #sessionDescription ').text(session.description.getValue());
-		    	}
+		        onSuccess: function(sessionDetailEvent) {
+		            var session = sessionDetailEvent.entity;
+		            var sessionName = session.name.getValue();
+		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
+		            $('#sessionDetailPageHead h3').text(sessionName);
+		            $('#sessionDetail h3').text(sessionName);
+		            $('#sessionDetail p').text(sessionDetail);
+		            $('.sessionDetailParagraph').append('<a href="#" id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
+		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
+		            $('#speakersListView').empty().listview('refresh');
+		            $('#speakersListView').append('<li data-theme="c">' + '<a id="" class="loadTimsSlots" href="#page7" data-transition="slide">Speaker: ' + session.presenterName.getValue() + '</a></li>').listview('refresh');
+		            $(".likeCurrentSession").live('click', function() {
+		                $(this).attr({'data-theme': 'e'});
+		            });
+		        }
 		    });
 		});
 		
@@ -139,6 +144,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                                }
 		                           	});
 		}
+
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
 		        if (jsonObjet.hasOwnProperty(key) && typeof(key) !== 'function') {
@@ -147,7 +153,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    }
 		}
 		function constructSessionListItem (entity) {
-			if(entity.presenter.relEntity) var sessionSpeakerName = entity.presenter.name.getValue();
+			if(entity.presenterName) var sessionSpeakerName = entity.presenterName.getValue();
 			return '<li data-theme="c"><a href="#page6" id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
 
 		}

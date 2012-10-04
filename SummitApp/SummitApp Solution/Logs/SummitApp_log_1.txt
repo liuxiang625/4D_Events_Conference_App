@@ -997,3 +997,11 @@
 2012-10-04 12:04:27 [com.wakanda-software.SummitApp.ugmg] ERROR - [15] , HTTP connection handler
 2012-10-04 12:04:27 [com.wakanda-software.SummitApp.iasv] ERROR - [1009] Cannot load users and groups directory, HTTP connection handler
 2012-10-04 12:04:27 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 1 ms), HTTP connection handler
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the project
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Project closed (duration: 0 ms)
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the project
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Project closed (duration: 0 ms)
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 408 ms)
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-04 16:06:16 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
