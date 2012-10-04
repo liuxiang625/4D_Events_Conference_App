@@ -1,0 +1,11 @@
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 0)
+2012-10-04 12:08:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 0)

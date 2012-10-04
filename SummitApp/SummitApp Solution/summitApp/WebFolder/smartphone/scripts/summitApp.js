@@ -18,7 +18,23 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        });
 		    }
 		});
-
+		$(".loadSessionDetail").live('click', function() { //on() is not working in this context
+		    console.log(this.id);
+		    ds.Session.find("ID = :1", this.id, {
+		    	autoExpand: "presenter",
+		    	onSuccess: function(sessionDetailEvent) {
+		    		var session = sessionDetailEvent.entity;
+		    		var sessionName = session.name.getValue();
+		    		var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue(); 
+		    		$('#sessionDetailPageHead h3').text(sessionName);
+		    		$('#sessionDetail h3').text(sessionName);
+		    		$('#sessionDetail p').text(sessionDetail);
+		    		$('#sessionDetail #sessionDescription ').text(session.description.getValue());
+		    	}
+		    });
+		});
+		
+		
 		function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
 		    eventCollections.query("name = :1 | name %% :1", eventName, {
 		        autoExpand: "sessions",
@@ -43,7 +59,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    });
 		                    
 		                }
-		            })
+		            });
+		            //entittyCollection.length >1?$.mobile.changePage("#page1"):$.mobile.changePage("#page3");
 		        }
 		    })
 		}
@@ -101,15 +118,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                                                    $('#' + idToAddTags + " p").text(tagsSet[key]);
 		                                                }
 		                                            }
-		                                            console.log(tagsSet);
+		                                            //console.log(tagsSet);
 		                                            $(".loadSessions").live('click', function() {
+		                                            	$('#sessionsPageHead h3').text('Session in ' + sessionIDSet[this.id]);
 		                                                //alert(this.id+'-----'+sessionIDSet[this.id]+"---" + sessionIDSet[sessionIDSet[this.id]]);
-		                                                console.log(sessionIDSet[sessionIDSet[this.id]]);
 		                                                sortedSessionsCollection.query("ID in :1",sessionIDSet[sessionIDSet[this.id]],{
 		                                                	onSuccess: function(sessionsInTimeEvent){
 		                                                		$('#sessionsListView').empty().listview('refresh');
 		                                                		var sessionsInTimeCollection = sessionsInTimeEvent.entityCollection;
-		                                                		 console.log(sessionsInTimeCollection.length);
 		                                                		 sessionsInTimeCollection.forEach({
 		                                        					onSuccess: function(sessionsEvent) {
 		                                        						$('#sessionsListView').append(constructSessionListItem(sessionsEvent.entity)).listview('refresh');
@@ -131,9 +147,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    }
 		}
 		function constructSessionListItem (entity) {
-			console.log( entity.speaker);
-			if(entity.speaker) var sessionSpeakerName = entity.speaker.name.getValue();
-			return '<li data-theme="c"><a href="#page6" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Location: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
+			if(entity.presenter.relEntity) var sessionSpeakerName = entity.presenter.name.getValue();
+			return '<li data-theme="c"><a href="#page6" id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
 
 		}
 		$('.goBack').click(function() {

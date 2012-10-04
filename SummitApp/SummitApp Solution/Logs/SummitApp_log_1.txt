@@ -943,3 +943,57 @@
 2012-10-03 14:49:12 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 407 ms)
 2012-10-03 14:49:12 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
 2012-10-03 14:49:12 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
+2012-10-03 17:43:45 [com.wakanda-software.SummitApp] INFO - Stopping the solution
+2012-10-03 17:43:45 [com.wakanda-software.SummitApp.summitApp] INFO - Stopping the project
+2012-10-03 17:43:47 [com.wakanda-software.SummitApp.summitApp] INFO - Project stopped (duration: 2028 ms)
+2012-10-03 17:43:47 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Stopping the project
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project stopped (duration: 2028 ms)
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp] INFO - Solution stopped (duration: 4058 ms)
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp] INFO - Closing the solution
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the project
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 409 ms)
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.summitApp] INFO - Project closed (duration: 411 ms)
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Closing the project
+2012-10-03 17:43:49 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project closed (duration: 3 ms)
+2012-10-03 17:43:50 [com.wakanda-software.SummitApp] INFO - Solution closed (duration: 819 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Opening the solution
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Users and groups directory opened (duration: 35 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 29 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 46 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Opening the project
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project opened (duration: 5 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 118 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Starting the solution
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the project
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the HTTP server
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - HTTP server started (duration: 12 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Project started (duration: 72 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the project
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the HTTP server
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - HTTP server started (duration: 15 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project started (duration: 46 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Executing the bootstrap(s)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.summitApp] INFO - Bootstrap(s) executed (duration: 4 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 12 ms)
+2012-10-04 10:20:25 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 135 ms)
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp] INFO - Opening the solution, HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory, HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project, HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 0 ms), HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp.xbox] ERROR - [604] Cannot delete "Directory.cacheUAG" (C:\Users\xliu\Documents\GitHub\4D_Events_Conference_App\SummitApp\SummitApp Solution\Directory.cacheUAG), HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp.ugmg] ERROR - [15] , HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp.iasv] ERROR - [1009] Cannot load users and groups directory, HTTP connection handler
+2012-10-04 12:00:38 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 1 ms), HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp] INFO - Opening the solution, HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory, HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project, HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 0 ms), HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp.xbox] ERROR - [604] Cannot delete "Directory.cacheUAG" (C:\Users\xliu\Documents\GitHub\4D_Events_Conference_App\SummitApp\SummitApp Solution\Directory.cacheUAG), HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp.ugmg] ERROR - [15] , HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp.iasv] ERROR - [1009] Cannot load users and groups directory, HTTP connection handler
+2012-10-04 12:04:27 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 1 ms), HTTP connection handler
