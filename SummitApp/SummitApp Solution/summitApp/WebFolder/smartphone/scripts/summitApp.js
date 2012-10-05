@@ -24,16 +24,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        onSuccess: function(sessionDetailEvent) {
 		            var session = sessionDetailEvent.entity;
 		            var sessionName = session.name.getValue();
+		            var speakerName = session.presenterName.getValue();
 		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
 		            $('#sessionDetailPageHead h3').text(sessionName);
 		            $('#sessionDetail h3').text(sessionName);
 		            $('#sessionDetail p').text(sessionDetail);
-		            $('.sessionDetailParagraph').append('<a href="#" id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
+		            $('.sessionDetailParagraph').append('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
 		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
 		            $('#speakersListView').empty().listview('refresh');
-		            $('#speakersListView').append('<li data-theme="c">' + '<a id="" class="loadTimsSlots" href="#page7" data-transition="slide">Speaker: ' + session.presenterName.getValue() + '</a></li>').listview('refresh');
-		            $(".likeCurrentSession").live('click', function() {
-		                $(this).attr({'data-theme': 'e'});
+		            $('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speakerName +'" class="loadTimsSlots" href="#page7" data-transition="slide">Speaker: ' + speakerName + '</a></li>').listview('refresh');
+		            //Assume there is one speaker per session;
+		            ds.Speaker.find("name = :1", speakerName, {
+		            	autoExpand: "sessions",
+		            	onSuccess: function(speakerEvent) {
+		            		var speaker = speakerEvent.entity;
+		            		 $('#speakerName').text(speaker.name.getValue());
+		            	}
+		            	
+		            });
+		            $(".likeCurrentSession").live('tap', function() {
+		            	console.log($(this).attr('data-theme'));
+		                ($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'b'}).trigger('refresh');
 		            });
 		        }
 		    });
