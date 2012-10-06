@@ -108,7 +108,7 @@
 
 	<attributes name="description" kind="storage" scope="public" type="string"/>
 
-	<attributes name="presenterName" scope="public" path="presenter.name" type="string" kind="alias"/>
+	<attributes name="presenterName" kind="alias" scope="public" type="string" path="presenter.name"/>
 
 </dataClasses>
 
@@ -151,6 +151,10 @@
 	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
 
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="presenter"/>
+
+	<attributes name="speakerBio" scope="public" uuid="047BECBA9C5E6044AAF478E1DDE9F076" fieldPos="1" type="string" kind="storage"/>
+
+	<attributes name="speakerPicURL" scope="public" uuid="3E37AE742560F349BF7331A9923FDF40" fieldPos="2" type="string" kind="storage"/>
 
 </dataClasses>
 
