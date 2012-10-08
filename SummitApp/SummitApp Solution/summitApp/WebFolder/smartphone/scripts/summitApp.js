@@ -18,7 +18,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
     		localStorageAvailable = false;
   		}
   		
-  		if (localStorage.getItem($.mobile.activePage[0].id) != null)
+  		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
         {
             var listViewItem = localStorage.getItem($.mobile.activePage[0].id);
             $('.listViewContainer').empty();
@@ -27,12 +27,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
             $('.listViewContainer').listview('refresh');
         }
 		//preload all sponsor pics:
-		var imageArray = ['styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/logo4D.jpg'];// Array of images:
-		// Add hidden element
-		var hidden = $('body').append('<div style="height:60px;width:150px;margin-left:auto;margin-right:auto;align:center;text-align:center;display:none" id="allSponsors" class="pics"/>').children('#img-cache');
-		// Add images to hidden element.
-		$.each(imageArray, function (i, val) {
-  			$('<img/>').attr('src', val).appendTo('#allSponsors');
+		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
+		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
+		$.each(allSponsorsImageArray, function (i, val) {
+  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
+		});
+		$.each(allSponsorsImageArray, function (i, val) {
+  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
 		});
 		//$.mobile.changePage($("#page0"), "none");
 		ds.Event.all({
@@ -236,7 +237,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 
 		$('#allSponsors').cycle();
-		$('#eventSponsors').cycle();
+		$('#summitSponsors').cycle();
 	};// @lock
 
 // @region eventManager// @startlock
