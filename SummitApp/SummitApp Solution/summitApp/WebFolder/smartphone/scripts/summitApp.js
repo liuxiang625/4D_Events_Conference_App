@@ -9,7 +9,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-
+		$(document).bind("pagechange", onPageChange);
+		function onPageChange(event, data) {
+			var toPageId = data.toPage.attr("id");
+			console.log("Current Page ID: " + toPageId);
+		}
+		var dayDescription = {
+			'10/23/2012':'4D Summit Pre-Class',
+			'10/24/2012':'4D Summit keynotes  breakout sessions',
+			'10/25/2012':'4D Summit keynotes  breakout sessions',
+			'10/26/2012':'JS.everyWhere(2012)',
+			'10/27/2012':'Wakandaay 2012'	
+		}
 
 
 		var localStorageAvailable = true;
@@ -21,10 +32,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
   		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
         {
             var listViewItem = localStorage.getItem($.mobile.activePage[0].id);
-            $('.listViewContainer').empty();
-            $('.listViewContainer').append(listViewItem);
+            $('.listViewContainer:visible').empty();
+            $('.listViewContainer:visible').append(listViewItem);
             //listViewItem.listview();
-            $('.listViewContainer').listview('refresh');
+            $('.listViewContainer:visible').listview('refresh');
         }
 		//preload all sponsor pics:
 		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
@@ -36,102 +47,70 @@ WAF.onAfterInit = function onAfterInit() {// @lock
   			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
 		});
 		//$.mobile.changePage($("#page0"), "none");
+		
+		var allEventsCollection = {
+			eventCollections:{},
+			available:false
+		};
+		var sesssionCollection = {
+			sessionEntityCollection:{},
+			available:false
+		};
+		var sessionIDSet = {};
 		ds.Event.all({
 		    autoExpand: "sessions",
 		    onSuccess: function(eventsCollectionEvent) {
-		        $(".loadDays").live('click', function() { //tap event handler of Event listitem
-		            daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
+		    	allEventsCollection.eventCollections = eventsCollectionEvent.entityCollection;
+		            allEventsCollection.available= true;
+		    }
+		});
+		$(".loadDays").live('click', function() { //tap event handler of Event listitem
+		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
+		    if (allEventsCollection.available && allEventsCollection.eventCollections.length > 0) {
+		        allEventsCollection.eventCollections.query("name = :1 | name %% :1", this.id, {
+		            autoExpand: "sessions",
+		            onSuccess: function(event) {
+		                event.entityCollection.forEach({
+		                    onSuccess: function(eventItemEvent) {
+		                        var startDate = eventItemEvent.entity.startDate.getValue();
+		                        var endDate = eventItemEvent.entity.endDate.getValue();
+		                        $('#eventPageHead h3').text(this.id);
+		                        $('#daysListView').empty();
+		                        $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p>' + '</li>');
+		                        while (startDate < endDate) {
+		                            startDate.setDate(startDate.getDate() + 1);
+		                            $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p></li>');
+		                        }
+		                        if (localStorageAvailable) localStorage.setItem("page1", $('#daysListView').html());
+		                        var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
+		                        sessionsCollectionRel.orderBy("startTime", {
+		                            onSuccess: function(event) { // handle anything special here
+		                                sesssionCollection.sessionEntityCollection = event.entityCollection;
+		                                sesssionCollection.available = true;
+		                            }
+		                        });
+		                        if ($('#daysListView').hasClass('ui-listview')) $('#daysListView').listview('refresh');
+		                    }
+		                });
+		                $.mobile.changePage("#page1", {
+		                    transition: "slide"
+		                });
+		            }
 		        });
 		    }
 		});
-		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
-		    ds.Session.find("ID = :1", this.id, {
-		        onSuccess: function(sessionDetailEvent) {
-		            var session = sessionDetailEvent.entity;
-		            var sessionName = session.name.getValue();
-		            var speakerName = session.presenterName.getValue();
-		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
-		            //$('#sessionDetailPageHead h3').text(sessionName);
-		            $('#sessionDetail h3').text(sessionName);
-		            $('#sessionDetail p').text(sessionDetail);
-		            $('.sessionDetailParagraph').append('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
-		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
-		            $('#speakersListView').empty();
-		            $('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speakerName +'"  href="#page7" data-transition="slide">Speaker: ' + speakerName + '</a></li>');
-		            //Assume there is one speaker per session;
-		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
-		            $.mobile.changePage("#page6", {transition: "slide"});
-		            ds.Speaker.find("name = :1", speakerName, {
-		            	autoExpand: "sessions",
-		            	onSuccess: function(speakerEvent) {
-		            		var speaker = speakerEvent.entity;
-		            		 $('#speakerName').text(speaker.name.getValue());
-		            		 $('#speakerTitle').text(speaker.title.getValue()+', '+speaker.company.getValue());
-		            		 (speaker.speakerBio.getValue())?$('#speakerBio').text(speaker.speakerBio.getValue()):$('#speakerBio').text("No speaker biography yet");
-		            		 (speaker.speakerPicURL.getValue())?('#speakerPic').attr("src",speaker.speakerPicURL.getValue()):$('#speakerPic').attr("src","styles/images/profilePicPlaceHolder.gif");
-							 $('#speakerSessionsList').empty();
-							 $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
-							 sessionsCollectionRel = speaker.sessions.relEntityCollection;
-							 sessionsCollectionRel.forEach({ // browse PTO reqeusts
-	                         	onSuccess: function(sessionEvent) {
-	                         		var sessionOfCurrentSpeaker = sessionEvent.entity; 
-	                            	$('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
-	                            }
-	                         })
-							 if($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
-		            	}
-		            	
-		            });
-		            $(".likeCurrentSession").live('tap', function() {
-		                ($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'b'}).trigger('refresh');
-		            });
-		        }
-		    });
-		});
 		
-		
-		function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
-		    eventCollections.query("name = :1 | name %% :1", eventName, {
-		        autoExpand: "sessions",
-		        onSuccess: function(event) {
-		            event.entityCollection.forEach({
-		                onSuccess: function(eventItemEvent) {
-		                    var startDate = eventItemEvent.entity.startDate.getValue();
-		                    var endDate = eventItemEvent.entity.endDate.getValue();
-		                    $('#eventPageHead h3').text(eventName);
-		                    $('#daysListView').empty();
-		                    $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit Pre-Class</p>' + '</li>');
-		                    while (startDate < endDate) {
-		                        startDate.setDate(startDate.getDate() + 1);
-		                        $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>4D Summit keynotes  breakout sessions</p></li>');
-		                    }
-		                    if(localStorageAvailable)  localStorage.setItem( "page1", $('#daysListView').html());
-		                    var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
-		                    sessionsCollectionRel.orderBy("startTime", {
-		                   		onSuccess: function(event) { // handle anything special here
-		                        	var sortedSessionsCollection = event.entityCollection;
-		                    		timeSlotPageGeneration(sortedSessionsCollection);
-		                        }
-		                    });
-		                  if($('#daysListView').hasClass('ui-listview')) $('#daysListView').listview('refresh');  
-		                }
-		            });
-		            $.mobile.changePage("#page1", {transition: "slide"});
-		        }
-		    })
-		}
-
-		function timeSlotPageGeneration(sortedSessionsCollection) {
 		    $(".loadTimsSlots").live('tap', function() {
 		        var currentDate = this.id;
-		        if (sortedSessionsCollection.length > 0) {
+//		        if (currentDate == "JS.everywhere") currentDate = '10/26/2012';
+//		        else if (currentDate == "Wakanday") currentDate = '10/27/2012'
+		        if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0) {
 		            //Check if listView is initialized, if not listview('refresh') causes error.
 		            $('#timSlotListView').empty();
 		            var sessionTimes = [];
 		            var tagsSet = {};
-		            var sessionIDSet = {};
 		            $('#dayPageHead h3').text(currentDate);
-		            sortedSessionsCollection.forEach({
+		            sesssionCollection.sessionEntityCollection.forEach({
 		                onSuccess: function(sessionRelevent) {
 		                    var sessionItem = sessionRelevent.entity;
 		                    var sessionDate = formatDate(sessionItem.sessionDate.getValue());
@@ -173,14 +152,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            $('#' + idToAddTags + " p").text(tagsSet[key]);
 		                        }
 		                    }
+		                    if (localStorageAvailable) localStorage.setItem("page3", $('#timSlotListView').html());
 		                    if ($('#timSlotListView').hasClass('ui-listview')) $('#timSlotListView').listview('refresh');
 		                    $.mobile.changePage("#page3", {transition: "slide"});
 
 		                }
 		            });
-		            $(".loadSessions").live('tap', function() {
+
+		        }
+		    });
+		$(".loadSessions").live('tap', function() {
+			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
-		                sortedSessionsCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
+		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
 		                    onSuccess: function(sessionsInTimeEvent) {
 		                        $('#sessionsListView').empty();
 		                        var sessionsInTimeCollection = sessionsInTimeEvent.entityCollection;
@@ -190,13 +174,67 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            }
 		                        });
 		                        if ($('#sessionsListView').hasClass('ui-listview')) $('#sessionsListView').listview('refresh');
+		                        if (localStorageAvailable) localStorage.setItem("page5", $('#sessionsListView').html());
 		                        $.mobile.changePage("#page5", {transition: "slide"});
+		                    },
+		                    onError: function(error) {
+		                    	console.log(error['error'][0].message);
 		                    }
 		                });
+		     }
+		});
+		
+		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
+		    ds.Session.find("ID = :1", this.id, {
+		        onSuccess: function(sessionDetailEvent) {
+		            var session = sessionDetailEvent.entity;
+		            var sessionName = session.name.getValue();
+		            var speakerName = session.presenterName.getValue();
+		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
+		            //$('#sessionDetailPageHead h3').text(sessionName);
+		            $('#sessionDetail h3').text(sessionName);
+		            $('#sessionDetail p').text(sessionDetail);
+		            $('.sessionDetailParagraph').append('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
+		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
+		            $('#speakersListView').empty();
+		            $('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speakerName +'"  href="#page7" data-transition="slide">Speaker: ' + speakerName + '</a></li>');
+		            //Assume there is one speaker per session;
+		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
+		            $.mobile.changePage("#page6", {transition: "slide"});
+		            ds.Speaker.find("name = :1", speakerName, {
+		            	autoExpand: "sessions",
+		            	onSuccess: function(speakerEvent) {
+		            		var speaker = speakerEvent.entity;
+		            		 $('#speakerName').text(speaker.name.getValue());
+		            		 $('#speakerTitle').text(speaker.title.getValue()+', '+speaker.company.getValue());
+		            		 (speaker.speakerBio.getValue())?$('#speakerBio').text(speaker.speakerBio.getValue()):$('#speakerBio').text("No speaker biography yet");
+		            		 (speaker.speakerPicURL.getValue())?('#speakerPic').attr("src",speaker.speakerPicURL.getValue()):$('#speakerPic').attr("src","styles/images/profilePicPlaceHolder.gif");
+							 $('#speakerSessionsList').empty();
+							 $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
+							 sessionsCollectionRel = speaker.sessions.relEntityCollection;
+							 sessionsCollectionRel.forEach({ // browse PTO reqeusts
+	                         	onSuccess: function(sessionEvent) {
+	                         		var sessionOfCurrentSpeaker = sessionEvent.entity; 
+	                            	$('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
+	                            }
+	                         })
+							 if($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
+		            	}
+		            	
 		            });
+
 		        }
 		    });
+		});
+		
+		$(".likeCurrentSession").live('tap', function() {
+			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'b'}).trigger('refresh');
+		});
+		function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
+		   
 		}
+
+
 
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
@@ -210,21 +248,21 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			return '<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
 
 		}
-		$('.goBack').live('tap', function() {
-		    if ($('#daysListView li').size() > 1) {
-		        $.mobile.changePage("#page1", {
-		            transition: "slide",
-		            reverse: true
-		        });
-		    }
-		    else {
-		        $.mobile.changePage("#page0", {
-		            transition: "slide",
-		            reverse: true
-		        });
-		    }
+//		$('.goBack').live('tap', function() {
+//		    if ($('#daysListView li').size() > 1) {
+//		        $.mobile.changePage("#page1", {
+//		            transition: "slide",
+//		            reverse: true
+//		        });
+//		    }
+//		    else {
+//		        $.mobile.changePage("#page0", {
+//		            transition: "slide",
+//		            reverse: true
+//		        });
+//		    }
 
-		})
+//		})
 
 		 function formatDate(date) { // ultility to formate date to mm/dd/yyyy
 		    return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear()
