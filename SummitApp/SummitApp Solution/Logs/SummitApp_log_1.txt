@@ -1135,3 +1135,19 @@
 2012-10-09 10:02:31 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
 2012-10-09 10:02:31 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
 2012-10-09 10:02:31 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 126 ms)
+2012-10-09 15:14:14 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-09 15:14:15 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 409 ms)
+2012-10-09 15:14:15 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-09 15:14:15 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 10 ms)
+2012-10-09 15:22:57 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-09 15:22:57 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 401 ms)
+2012-10-09 15:22:57 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-09 15:22:57 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
+2012-10-09 16:00:36 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-09 16:00:37 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 403 ms)
+2012-10-09 16:00:37 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-09 16:00:37 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 9 ms)
+2012-10-09 16:01:03 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-09 16:01:03 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 401 ms)
+2012-10-09 16:01:03 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-09 16:01:03 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 9 ms)

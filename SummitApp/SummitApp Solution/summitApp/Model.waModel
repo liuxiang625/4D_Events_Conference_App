@@ -8,7 +8,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="777" Y="530"/>
+			<position ____objectunic="true" X="824" Y="454"/>
 </panel>
 </extraProperties>
 
@@ -110,6 +110,10 @@
 
 	<attributes name="presenterName" kind="alias" scope="public" type="string" path="presenter.name"/>
 
+	<attributes name="allPresenters" scope="public" reversePath="true" path="session" type="PresentersCollection" kind="relatedEntities"/>
+
+	<attributes name="allSpeakers" scope="public" reversePath="false" path="allPresenters.speaker" type="Speaker" kind="relatedEntities"/>
+
 </dataClasses>
 
 <dataClasses name="SessionSurvey" className="SessionSurvey" collectionName="SessionSurveyCollection" scope="public">
@@ -136,7 +140,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="487" Y="486"/>
+			<position ____objectunic="true" X="529" Y="530"/>
 </panel>
 </extraProperties>
 
@@ -152,9 +156,13 @@
 
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="presenter"/>
 
-	<attributes name="speakerBio" scope="public" uuid="047BECBA9C5E6044AAF478E1DDE9F076" fieldPos="1" type="string" kind="storage"/>
+	<attributes name="speakerBio" kind="storage" scope="public" type="string"/>
 
-	<attributes name="speakerPicURL" scope="public" uuid="3E37AE742560F349BF7331A9923FDF40" fieldPos="2" type="string" kind="storage"/>
+	<attributes name="speakerPicURL" kind="storage" scope="public" type="string"/>
+
+	<attributes name="allPresenters" scope="public" reversePath="true" path="speaker" type="PresentersCollection" kind="relatedEntities"/>
+
+	<attributes name="allSessions" scope="public" type="Session" kind="relatedEntities" reversePath="false" path="allPresenters.session"/>
 
 </dataClasses>
 
@@ -164,7 +172,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="40" Y="364"/>
+			<position ____objectunic="true" X="30" Y="329"/>
 </panel>
 </extraProperties>
 
@@ -181,6 +189,30 @@
 	<attributes name="contactInfo" kind="storage" scope="public" type="string"/>
 
 	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+</dataClasses>
+
+<dataClasses collectionName="PresentersCollection" className="Presenters" uuid="0299189FA421854791EEB14F5F659CA1" tablePos="1">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="279" Y="619"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" type="long" uuid="512A3173E59A9542B2CC4A932C400F25" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
+
+	<attributes name="session" scope="public" uuid="A830BED8AFE33645B068681C0599E260" fieldPos="2" path="Session" type="Session" kind="relatedEntity"/>
+
+	<attributes name="speaker" scope="public" uuid="4A10BEBA0BC35344A42A78F4AFC82B00" fieldPos="3" path="Speaker" type="Speaker" kind="relatedEntity"/>
+
+	<attributes name="sessionName" scope="public" path="session.name" type="string" kind="alias"/>
+
+	<attributes name="speakerName" scope="public" path="speaker.name" type="string" kind="alias"/>
 
 </dataClasses>
 </EntityModelCatalog>
