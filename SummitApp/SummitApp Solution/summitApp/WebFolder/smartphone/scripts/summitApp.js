@@ -1,9 +1,9 @@
 ﻿
-var pageFirstInit = true;
+var pageNotInit = true;
 $(document).live('pageinit',function(event){//Force the app to go home after force refresh the page on browser
 	if(pageFirstInit){
 		$.mobile.changePage($('#page0'));
-		pageFirstInit = false;
+		pageNotInit = false;
 	}	
 })
 
@@ -86,8 +86,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            
 		    }
 		});
-		$(".loadDays").live('vclick', function() { //tap event handler of Event listitem
+		$(".loadDays").live('touchstart mousedown', function() { //tap event handler of Event listitem
 		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
+		    var clickedButton = $(this);
+		    clickedButton.addClass("ui-btn-active");
+//		    setTimeout(function() { 
+//            	$.unblockUI({ 
+//                	onUnblock: function(){ alert('Load next page failed'); } 
+//            	}); 
+//        	}, 2000);
+		    //Block UI while loading next page. 
 		    $.blockUI({
 		    	 message: null,
 		    	  overlayCSS: {
@@ -104,10 +112,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        var endDate = eventItemEvent.entity.endDate.getValue();
 		                        $('#eventPageHead h3').text(this.id);
 		                        $('#daysListView').empty();
-		                        $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p>' + '</li>');
+		                        $('#daysListView').append('<li data-theme="c">' + '<a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p>' + '</li>');
 		                        while (startDate < endDate) {
 		                            startDate.setDate(startDate.getDate() + 1);
-		                            $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p></li>');
+		                            $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p></li>');
 		                        }
 		                        //if (localStorageAvailable) localStorage.setItem("page1", $('#daysListView').html());
 		                        var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
@@ -120,17 +128,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        if ($('#daysListView').hasClass('ui-listview')) $('#daysListView').listview('refresh');
 		                    }
 		                });
+		                clickedButton.removeClass("ui-btn-active ui-state-persist");
 		                $.mobile.changePage("#page1", {
 		                    transition: "slide"
 		                });
 		                $.unblockUI();
+		               
 		            }
 		        });
 		    }
 		});
 		
-		    $(".loadTimsSlots").live('tap', function() {
+		    $(".loadTimsSlots").live('touchstart mousedown', function() {
+		    	$.blockUI({
+		    		message: null,
+		    	  		overlayCSS: {
+		    	  	 	opacity: 0
+		    	  	}
+		   		});
 		        var currentDate = this.id;
+		        var clickedButton = $(this);
+		    	clickedButton.addClass("ui-btn-active");
 //		        if (currentDate == "JS.everywhere") currentDate = '10/26/2012';
 //		        else if (currentDate == "Wakanday") currentDate = '10/27/2012'
 		        if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0) {
@@ -183,6 +201,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    }
 		                    //if (localStorageAvailable) localStorage.setItem("page3", $('#timSlotListView').html());
 		                    if ($('#timSlotListView').hasClass('ui-listview')) $('#timSlotListView').listview('refresh');
+		                    clickedButton.removeClass("ui-btn-active ui-state-persist");
+		                    $.unblockUI();
 		                    $.mobile.changePage("#page3", {transition: "slide"});
 
 		                }
@@ -190,7 +210,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 		        }
 		    });
-		$(".loadSessions").live('tap', function() {
+		$(".loadSessions").live('touchstart mousedown', function() {
+			$.blockUI({
+		    	 message: null,
+		    	  overlayCSS: {
+		    	  	 opacity: 0
+		    	  }
+		    });
+			var clickedButton = $(this);
+		    clickedButton.addClass("ui-btn-active");
 			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
 		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
@@ -204,6 +232,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        });
 		                        if ($('#sessionsListView').hasClass('ui-listview')) $('#sessionsListView').listview('refresh');
 		                        //if (localStorageAvailable) localStorage.setItem("page5", $('#sessionsListView').html());
+		                        clickedButton.removeClass("ui-btn-active ui-state-persist");
+		                        $.unblockUI();
 		                        $.mobile.changePage("#page5", {transition: "slide"});
 		                    },
 		                    onError: function(error) {
@@ -213,7 +243,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		     }
 		});
 		
-		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
+		$(".loadSessionDetail").live('touchstart mousedown', function() { //on() is not working in this context
+			$.blockUI({
+		    	 message: null,
+		    	  overlayCSS: {
+		    	  	 opacity: 0
+		    	  }
+		    });
+			var clickedButton = $(this);
+		    clickedButton.addClass("ui-btn-active");
 		    ds.Session.find("ID = :1", this.id, {
 		        onSuccess: function(sessionDetailEvent) {
 		            var session = sessionDetailEvent.entity;
@@ -227,8 +265,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
 		            $('#speakersListView').empty();
 		            $('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speakerName +'"  href="#page7" data-transition="slide">Speaker: ' + speakerName + '</a></li>');
-		            //Assume there is one speaker per session;
+		   			clickedButton.removeClass("ui-btn-active ui-state-persist");         
+					//Assume there is one speaker per session;
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
+		            $.unblockUI();
 		            $.mobile.changePage("#page6", {transition: "slide"});
 		            ds.Speaker.find("name = :1", speakerName, {
 		            	autoExpand: "sessions",
@@ -256,14 +296,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    });
 		});
 		
-		$(".likeCurrentSession").live('tap', function() {
+		$(".likeCurrentSession").live('touchstart mousedown', function() {
 			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'b'}).trigger('refresh');
 		});
-		function daysPageGeneration(eventCollections, eventName) { //Load days of event if more than one
-		   
-		}
-
-
 
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
