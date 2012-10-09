@@ -14,6 +14,7 @@
         <meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.cycle.lite.js"/>
         <meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.mobile-1.2.0-alpha.1.min.js"/>
         <meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.rateit.js"/>
+		<meta name="WAF.config.loadJS" content="/smartphone/scripts/jquery.blockUI.js"/>
         <meta name="WAF.config.loadCSS" id="waf-palette" content="/walib/WAF/widget/palette/css/widget-palette-cupertino.css"/>
         <meta name="WAF.config.loadCSS" content="/smartphone/styles/summitApp.css"/>
         <meta name="WAF.config.loadCSS" content="/smartphone/styles/my.css"/>
@@ -49,22 +50,22 @@
             <div style="padding: 15px" data-role="content">
                 <ul data-role="listview" data-inset="false" data-divider-theme="b">
                     <li data-theme="c">
-                        <a id="4D Summit 2012"  data-transition="slide" class="loadDays">
+                        <a id="4D Summit 2012" data-transition="slide" class="loadDays">
                      <img style="max-height: 70px; max-width: 70px;position: absolute;padding:10px" src="styles\images\conference_seal_art_sv_60.png"/> <h1> 4D Summit 2012</h1><p>October 23 - 25, San Jose CA</p>
                 </a>
                     </li>
                     <li data-theme="c">
-                        <a id="JS.everywhere"  data-transition="slide" class="loadDays">
+                        <a id="JS.everywhere" data-transition="slide" class="loadDays">
                     <img style="max-width: 60px; max-height: 60px;padding:10px" src="styles\images\jseverywhere.png"/> <h3> JS.everywhere(2012)</h3><p> October 26, San Jose CA</p>
                 </a>
                     </li>
                     <li data-theme="c">
-                        <a id="Wakanday"  data-transition="slide" class="loadDays">
+                        <a id="Wakanday" data-transition="slide" class="loadDays">
                     <img style="max-width: 60px; max-height: 60px;padding:10px" src="styles\images\wakanday-square.png"/><h3>Wakanday 2012</h3><p>October 27, San Jose CA</p>
                 </a>
                     </li>
 					<li data-theme="c">
-				<h3 data-mce-style="text-align: center;" style="text-align: center;margin-top:0px;margin-bottom:0px"> Our Sponsors:</h3>
+				<h3 style="text-align: center;margin-top:0px;margin-bottom:0px" data-mce-style="text-align: center;"> Our Sponsors:</h3>
 				<div style="height:60px;width:150px;margin-left:auto;margin-right:auto;align:center;text-align:center;" id="allSponsors" class="pics">
 				<!--<img width="150" title="ebay" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png"/>
                 <img width="150" title="pubnub" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png" height="35" class="alignnone wp-image-285" alt=""/>
@@ -89,7 +90,7 @@
         </div>
         <!-- Days -->
         <div id="page1" data-role="page">
-            <div id="eventPageHead" "data-theme="a" data-role="header">
+            <div id="eventPageHead" data-theme="a" data-role="header">
                 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
                 <div id="popupMenu" data-role="popup" data-overlay-theme="b">
                     <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
@@ -106,18 +107,18 @@
 					
                 </div>
                 <h3>4D Summit 2012</h3>
-                <a href="#page0" data-transition="slide" data-role="button"  data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
+                <a href="#page0" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
            Home
         </a>
             </div>
-            <div  style="padding: 15px" data-role="content">
-                <ul id="daysListView" class="listViewContainer" data-role="listview" data-inset="false" data-divider-theme="d">
+            <div style="padding: 15px" data-role="content">
+                <ul id="daysListView" data-role="listview" data-inset="false" data-divider-theme="d" class="listViewContainer">
                 </ul>
 				<ul style="margin-top:13px" data-role="listview" data-inset="false" data-divider-theme="b">
                    
 					<li data-theme="c">
                         <a id="" href="#page1" data-transition="slide" class="">
-				<h3 data-mce-style="text-align: center;" style="text-align: center;margin-top:0px;margin-bottom:0px"> 4D Summit Sponsors:</h3>
+				<h3 style="text-align: center;margin-top:0px;margin-bottom:0px" data-mce-style="text-align: center;"> 4D Summit Sponsors:</h3>
 				<div style="height:60px;width:150px;margin-left:auto;margin-right:auto;align:center;text-align:center;" id="summitSponsors" class="pics">
 				<!--<img width="150" title="ebay" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/ebay.png"/>
                 <img width="150" title="pubnub" src="http://www.jseverywhere.org/wp-content/uploads/2012/09/pubnub.png" height="35" class="alignnone wp-image-285" alt=""/>
@@ -138,7 +139,7 @@
             <div id="dayPageHead" data-theme="a" data-role="header">
                 <a href="#popupMenu" data-transition="fade" data-role="button" data-rel="popup" data-inline="true" class="ui-btn-right">Links</a>
                 <div id="popupMenu" data-role="popup" data-overlay-theme="b">
-                    <ul  style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
+                    <ul style="width:180px;" data-theme="a" data-role="listview" data-inset="true">
                         <li>
                             <a href="#page0">Home</a>
                         </li>
@@ -151,12 +152,12 @@
                     </ul>
                 </div>
                 <h3>10/24/2012</h3>
-                <a href="#page1"  data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse"  class=" ui-btn-left ">
+                <a href="#page1" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class=" ui-btn-left ">
                     Days
                 </a>
             </div>
             <div style="padding: 15px" data-role="content">
-                <ul  class="listViewContainer" id="timSlotListView" data-role="listview" data-inset="false" data-divider-theme="d">
+                <ul id="timSlotListView" data-role="listview" data-inset="false" data-divider-theme="d" class="listViewContainer">
                 </ul>
             </div>
         </div>
@@ -178,12 +179,12 @@
                     </ul>
                 </div>
                 <h3>8:30AM-9:15AM</h3>
-                <a href="#page3" data-transition="slide" data-role="button" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">
+                <a href="#page3" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
                     Times
                 </a>
             </div>
             <div style="padding: 15px" data-role="content">
-                <ul class="listViewContainer" id="sessionsListView" data-role="listview" data-inset="false" data-divider-theme="d">
+                <ul id="sessionsListView" data-role="listview" data-inset="false" data-divider-theme="d" class="listViewContainer">
                     <li data-theme="c">
                         <a href="#page6" data-transition="slide">
 							<h1>Accessible Design with HTML5</h1>
@@ -230,15 +231,15 @@
                     </ul>
                 </div>
                 <h3>Session Detail</h3>
-                <a href="#page5" data-transition="slide" data-role="button" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">
+                <a href="#page5" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
                     Sessions
                 </a>
             </div>
-            <div id="sessionDetail" style="padding: 15px" data-role="content">
+            <div style="padding: 15px" id="sessionDetail" data-role="content">
                 <div>
                     <h3 style="margin-bottom:0px">Accessible Design with HTML5</h3>
-                    <p class="sessionDetailParagraph" style="margin-top:0px">Oct 26, 9:45 AM, Room 1
-                        <a href="#" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" ></a>
+                    <p style="margin-top:0px" class="sessionDetailParagraph">Oct 26, 9:45 AM, Room 1
+                        <a href="#" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star"></a>
                     </p>
                     <ul id="speakersListView" data-role="listview" data-inset="true" data-divider-theme="d">
                         <li data-theme="c">
@@ -247,7 +248,7 @@
                         </a>
                         </li>
                     </ul>
-                    <div id="sessionDescription" >Learn how to design an HTML5 application which supports people with disabilities,know
+                    <div id="sessionDescription">Learn how to design an HTML5 application which supports people with disabilities,know
                         why it's a good business decision.
                     </div>
                     <a href="#page11" data-transition="pop" data-theme="" data-role="button">
@@ -274,20 +275,20 @@
                     </ul>
                 </div>
                 <h3>Speaker's' Profile</h3>
-                <a href="#page6" data-transition="slide" data-role="button" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">
+                <a href="#page6" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
                     Back
                 </a>
             </div>
             <div style="padding: 15px" data-role="content">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <div  style="">
-                            <img id="speakerPic" style="width: 120px; height: 120px" src="http://2011.wakanday.org/wp-content/uploads/2011/07/crockford-180x180.png"/>
+                        <div style="">
+                            <img style="width: 120px; height: 120px" src="http://2011.wakanday.org/wp-content/uploads/2011/07/crockford-180x180.png" id="speakerPic"/>
                         </div>
                     </div>
                     <div class="ui-block-b">
-                        <div  >
-                            <p id="speakerName" style="font-size: Medium;">
+                        <div>
+                            <p style="font-size: Medium;" id="speakerName">
                                 <!--<span  style="font-size: Medium;">
                                     <strong>
                                         <strong>
@@ -296,7 +297,7 @@
                                     </strong>
                                 </span>-->
                             </p>
-                            <p id="speakerTitle" style="font-size: Medium;">
+                            <p style="font-size: Medium;" id="speakerTitle">
                                 <!--<span  style="font-size: small;">
                                     <strong>
                                         <strong>JavaScript architect, PayPal</strong>
@@ -309,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="speakerBio" style="margin-top:5px">Douglas Crockford discovered the JSON (JavaScript Object Notation) data
+                <div style="margin-top:5px" id="speakerBio">Douglas Crockford discovered the JSON (JavaScript Object Notation) data
                     format whilebeing the CTO of State Software, created the JSLint debugging
                     tool, andis the author of the highly-referenced JavaScript: The Good Parts.</div>
                 <ul id="speakerSessionsList" data-role="listview" data-inset="true" data-divider-theme="d">
@@ -427,7 +428,7 @@
                     </ul>
                 </div>
                 <h3>My Favorites</h3>
-                <a href="#page0" data-transition="slide" data-role="button" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">
+                <a href="#page0" data-transition="slide" data-role="button" data-icon="arrow-l" data-direction="reverse" class="ui-btn-left">
                     Back
                 </a>
             </div>
@@ -436,7 +437,7 @@
                     <li data-theme="c">
                         <a href="#page1" data-transition="slide">
                     <h3>Accessible Design with HTML5</h3><p>Raj Lal</p>
-                        <a mID="0" href="#" data-theme="e"  class="showRating" ></a></a>
+                        <a mID="0" href="#" data-theme="e" class="showRating"></a></a>
                     </li>
                     <li data-theme="c">
                         <a href="#page1" data-transition="slide">
@@ -496,7 +497,7 @@
         <!-- Survey -->
         <div id="page11" data-role="page">
             <div data-theme="a" data-role="header">
-                <a data-theme="b" href="#page6" data-transition="slidedown" data-role="button" class="ui-btn-right">
+                <a href="#page6" data-transition="slidedown" data-theme="b" data-role="button" class="ui-btn-right">
                     Done
                 </a>
                 <h3>Session Survey</h3>
@@ -539,12 +540,12 @@
             </div>
         </div>
 		<!-- About -->
-<div data-role="page" id="page12">
+<div id="page12" data-role="page">
     <div data-theme="a" data-role="header">
         <h3>
             4D Summit 2012
         </h3>
-		<a href="#page0" data-transition="slide" data-role="button"  data-icon="arrow-l"   class="ui-btn-left">
+		<a href="#page0" data-transition="slide" data-role="button" data-icon="arrow-l" class="ui-btn-left">
            Home
         </a>
     </div>
@@ -562,11 +563,11 @@
             </p>
             <p style="text-align: center;" data-mce-style="text-align: center">
                 October 23 - 27, 2012
-                <br/>JS.everywhere( ) +&nbsp;Wakanday <br/>on October 26 - 27, 2012
+                <br/>JS.everywhere() + Wakanday <br/>on October 26 - 27, 2012
             </p>
             <p style="text-align: center;" data-mce-style="text-align: center;">
                 <strong>
-                    Contacat Infomation:
+                    Contact Infomation:
                 </strong>
 				<br/>emoeller@4d.com
                 <br/>+1-408-557-4643
@@ -584,7 +585,7 @@
                 <a href="http://www.4d.com/company/events/summit2012/travel.html" data-mce-href="http://www.4d.com/company/events/summit2012/travel.html">
                     Travel Info
                 </a>
-                <br data-mce-bogus="1">
+                <br data-mce-bogus="1"/>
             </p>
         </div>
     </div>

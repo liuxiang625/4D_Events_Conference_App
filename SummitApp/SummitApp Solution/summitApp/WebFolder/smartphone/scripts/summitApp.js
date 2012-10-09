@@ -1,4 +1,14 @@
 ﻿
+var pageFirstInit = true;
+$(document).live('pageinit',function(event){//Force the app to go home after force refresh the page on browser
+	if(pageFirstInit){
+		$.mobile.changePage($('#page0'));
+		pageFirstInit = false;
+	}	
+})
+
+
+
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
@@ -9,7 +19,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+	
 		$(document).bind("pagechange", onPageChange);
+		//$(document).bind("pagebeforeload", onPageLoad);
+		
+		function onPageLoad(event, data) {
+			var toPageId = data.toPage.attr("id");
+			console.log("Current Page ID: " + toPageId);
+		}
+		
 		function onPageChange(event, data) {
 			var toPageId = data.toPage.attr("id");
 			console.log("Current Page ID: " + toPageId);
@@ -23,25 +41,25 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 
 
-		var localStorageAvailable = true;
-		if (typeof(localStorage) =='undefined') {
-    		alert('Local storage not supported by this browser.');
-    		localStorageAvailable = false;
-  		}
-  		
-  		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
-        {
-            var listViewItem = localStorage.getItem($.mobile.activePage[0].id);
-            $('.listViewContainer:visible').empty();
-            $('.listViewContainer:visible').append(listViewItem);
-            //listViewItem.listview();
-            $('.listViewContainer:visible').listview('refresh');
-        }
+//		var localStorageAvailable = true;
+//		if (typeof(localStorage) =='undefined') {
+//    		alert('Local storage not supported by this browser.');
+//    		localStorageAvailable = false;
+//  		}
+//  		
+//  		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
+//        {
+//            var listViewItem = localStorage.getItem($.mobile.activePage[0].id);
+//            $('.listViewContainer:visible').empty();
+//            $('.listViewContainer:visible').append(listViewItem);
+//            //listViewItem.listview();
+//            $('.listViewContainer:visible').listview('refresh');
+//        }
 		//preload all sponsor pics:
 		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
 		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
 		$.each(allSponsorsImageArray, function (i, val) {
-  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
+  			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
 		});
 		$.each(allSponsorsImageArray, function (i, val) {
   			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
@@ -52,6 +70,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			eventCollections:{},
 			available:false
 		};
+		//Retrive data from local storage;
+//		if (localStorage.getItem('allEventsCollection') != null) allEventsCollection = localStorage.getItem('allEventsCollection');
 		var sesssionCollection = {
 			sessionEntityCollection:{},
 			available:false
@@ -61,11 +81,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    autoExpand: "sessions",
 		    onSuccess: function(eventsCollectionEvent) {
 		    	allEventsCollection.eventCollections = eventsCollectionEvent.entityCollection;
-		            allEventsCollection.available= true;
+		        allEventsCollection.available= true;
+		        //if (localStorageAvailable) localStorage.setItem("allEventsCollection", allEventsCollection);
+		            
 		    }
 		});
-		$(".loadDays").live('click', function() { //tap event handler of Event listitem
+		$(".loadDays").live('vclick', function() { //tap event handler of Event listitem
 		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
+		    $.blockUI({
+		    	 message: null,
+		    	  overlayCSS: {
+		    	  	 opacity: 0
+		    	  }
+		    });
 		    if (allEventsCollection.available && allEventsCollection.eventCollections.length > 0) {
 		        allEventsCollection.eventCollections.query("name = :1 | name %% :1", this.id, {
 		            autoExpand: "sessions",
@@ -81,7 +109,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            startDate.setDate(startDate.getDate() + 1);
 		                            $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots"  data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p></li>');
 		                        }
-		                        if (localStorageAvailable) localStorage.setItem("page1", $('#daysListView').html());
+		                        //if (localStorageAvailable) localStorage.setItem("page1", $('#daysListView').html());
 		                        var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
 		                        sessionsCollectionRel.orderBy("startTime", {
 		                            onSuccess: function(event) { // handle anything special here
@@ -95,6 +123,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                $.mobile.changePage("#page1", {
 		                    transition: "slide"
 		                });
+		                $.unblockUI();
 		            }
 		        });
 		    }
@@ -152,7 +181,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            $('#' + idToAddTags + " p").text(tagsSet[key]);
 		                        }
 		                    }
-		                    if (localStorageAvailable) localStorage.setItem("page3", $('#timSlotListView').html());
+		                    //if (localStorageAvailable) localStorage.setItem("page3", $('#timSlotListView').html());
 		                    if ($('#timSlotListView').hasClass('ui-listview')) $('#timSlotListView').listview('refresh');
 		                    $.mobile.changePage("#page3", {transition: "slide"});
 
@@ -174,7 +203,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            }
 		                        });
 		                        if ($('#sessionsListView').hasClass('ui-listview')) $('#sessionsListView').listview('refresh');
-		                        if (localStorageAvailable) localStorage.setItem("page5", $('#sessionsListView').html());
+		                        //if (localStorageAvailable) localStorage.setItem("page5", $('#sessionsListView').html());
 		                        $.mobile.changePage("#page5", {transition: "slide"});
 		                    },
 		                    onError: function(error) {
@@ -248,6 +277,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			return '<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
 
 		}
+		
+		$(".allSponsorImage").live('click', function() {
+			$.mobile.changePage("#page8", {
+		            transition: "slide",
+		            reverse: false
+		        });
+		});
+		
 //		$('.goBack').live('tap', function() {
 //		    if ($('#daysListView li').size() > 1) {
 //		        $.mobile.changePage("#page1", {
