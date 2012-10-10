@@ -244,12 +244,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
 		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
+		                	autoExpand: "allSpeakers",
 		                    onSuccess: function(sessionsInTimeEvent) {
 		                        $('#sessionsListView').empty();
 		                        var sessionsInTimeCollection = sessionsInTimeEvent.entityCollection;
 		                        sessionsInTimeCollection.forEach({
 		                            onSuccess: function(sessionsEvent) {
-		                                $('#sessionsListView').append(constructSessionListItem(sessionsEvent.entity));
+		                            	entity = sessionsEvent.entity;
+		                            	var sessionSpeakerName = " "; 
+		                            	var speakersCollection = entity.allSpeakers.relEntityCollection;
+										if(speakersCollection.length > 0){
+											speakersCollection.forEach({
+	               							 onSuccess: function(speakerEvent) {
+	                    						(sessionSpeakerName == "")?sessionSpeakerName += ( speakerEvent.entity.name.getValue()):sessionSpeakerName += (', ' + speakerEvent.entity.name.getValue());
+	                    						console.log('SpeakerName: ' + sessionSpeakerName +'single name: ' + speakerEvent.entity.name.getValue())
+	                						 },
+	                 						atTheEnd: function(end) {
+	                 							$('#sessionsListView').append('<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>');
+	                 						}
+	            						});
+									}
+		                                //$('#sessionsListView').append(constructSessionListItem(sessionsEvent.entity));
 		                            }
 		                        });
 		                        if ($('#sessionsListView').hasClass('ui-listview')) $('#sessionsListView').listview('refresh');
@@ -291,7 +306,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        onSuccess: function(sessionDetailEvent) {
 		            var session = sessionDetailEvent.entity;
 		            var sessionName = session.name.getValue();
-		            var speakerName = session.presenterName.getValue();
 		            var speakersCollection = session.allSpeakers.relEntityCollection;
 		            //console.log(session.allSpeakers.relEntityCollection);
 		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
@@ -372,11 +386,22 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        }
 		    }
 		}
-		function constructSessionListItem (entity) {
-			if(entity.presenterName) var sessionSpeakerName = entity.presenterName.getValue();
-			return '<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
+//		function constructSessionListItem (entity) {
+//			var speakersCollection = entity.allSpeakers.relEntityCollection;
+//			var sessionSpeakerName = ""; 
+//			if(speakersCollection.length > 0){
+//				speakersCollection.forEach({
+//	                onSuccess: function(speakerEvent) {
+//	                    sessionSpeakerName.concat(' ' + speakerEvent.entity.name.getValue());
+//	                },
+//	                 atTheEnd: function(end) {
+//	                 	return '<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
+//	                 }
+//	            });
+//			}
 
-		}
+
+//		}
 		
 		$(".allSponsorImage").live('click', function() {
 			$.mobile.changePage("#page8", {

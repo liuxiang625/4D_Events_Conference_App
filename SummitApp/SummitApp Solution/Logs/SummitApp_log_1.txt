@@ -1241,3 +1241,11 @@
 2012-10-10 11:21:29 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 402 ms)
 2012-10-10 11:21:29 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
 2012-10-10 11:21:29 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 9 ms)
+2012-10-10 16:53:57 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-10 16:53:58 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 403 ms)
+2012-10-10 16:53:58 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-10 16:53:58 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 10 ms)
+2012-10-10 16:54:26 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-10 16:54:26 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 402 ms)
+2012-10-10 16:54:26 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-10 16:54:26 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 7 ms)
