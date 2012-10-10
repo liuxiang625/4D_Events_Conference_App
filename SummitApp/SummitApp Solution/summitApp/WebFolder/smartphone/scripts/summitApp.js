@@ -1,7 +1,7 @@
 ﻿
 var pageNotInit = true;
 $(document).live('pageinit',function(event){//Force the app to go home after force refresh the page on browser
-	if(pageFirstInit){
+	if(pageNotInit){
 		$.mobile.changePage($('#page0'));
 		pageNotInit = false;
 	}	
@@ -253,10 +253,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
 		    ds.Session.find("ID = :1", this.id, {
+		    	autoExpand: "allSpeakers",
 		        onSuccess: function(sessionDetailEvent) {
 		            var session = sessionDetailEvent.entity;
 		            var sessionName = session.name.getValue();
 		            var speakerName = session.presenterName.getValue();
+		            var speakersCollection = session.allSpeakers.relEntityCollection;
+		            //console.log(session.allSpeakers.relEntityCollection);
 		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
 		            //$('#sessionDetailPageHead h3').text(sessionName);
 		            $('#sessionDetail h3').text(sessionName);
@@ -264,7 +267,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $('.sessionDetailParagraph').append('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
 		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
 		            $('#speakersListView').empty();
-		            $('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speakerName +'"  href="#page7" data-transition="slide">Speaker: ' + speakerName + '</a></li>');
+		            
+		   			//Apppend speakers to the listview
+		   			 speakersCollection.forEach({ 
+	                         	onSuccess: function(speakerEvent) {
+	                         		var speaker = speakerEvent.entity; 
+	                            	$('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speaker.name.getValue() +'"  href="#page7" data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a></li>');
+	                            }
+	                         })
+		   			
 		   			clickedButton.removeClass("ui-btn-active ui-state-persist");         
 					//Assume there is one speaker per session;
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
@@ -281,7 +292,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 							 $('#speakerSessionsList').empty();
 							 $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
 							 sessionsCollectionRel = speaker.sessions.relEntityCollection;
-							 sessionsCollectionRel.forEach({ // browse PTO reqeusts
+							 sessionsCollectionRel.forEach({ 
 	                         	onSuccess: function(sessionEvent) {
 	                         		var sessionOfCurrentSpeaker = sessionEvent.entity; 
 	                            	$('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
@@ -297,7 +308,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		});
 		
 		$(".likeCurrentSession").live('touchstart mousedown', function() {
-			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'b'}).trigger('refresh');
+			//var clickedButton = $(this);
+			//clickedButton.hasClass("ui-btn-active")?clickedButton.removeClass("ui-btn-active ui-state-persist"):clickedButton.addClass("ui-btn-active");
+		    
+		    
+		    
+			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'z'});
+			$(this).trigger('refresh');
 		});
 
 		function getKeyForValue(jsonObjet, value) {
@@ -337,7 +354,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //		})
 
 		 function formatDate(date) { // ultility to formate date to mm/dd/yyyy
-		    return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear()
+		 
+		    if (date) return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear()
 		};
 
 		function getTheDay(date) {
