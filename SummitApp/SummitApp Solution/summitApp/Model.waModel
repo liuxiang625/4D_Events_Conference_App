@@ -50,6 +50,30 @@
 
 	<attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/>
 
+	<methods name="searchSessionsAndSpeakesByString" applyTo="dataClass" scope="public" from="guidedModel.Event.methods.searchSessionsAndSpeakesByString"/>
+
+</dataClasses>
+
+<dataClasses name="Presenters" className="Presenters" collectionName="PresentersCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="198" Y="663"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+	<attributes name="speaker" kind="relatedEntity" scope="public" type="Speaker" path="Speaker"/>
+
+	<attributes name="sessionName" kind="alias" scope="public" type="string" path="session.name"/>
+
+	<attributes name="speakerName" kind="alias" scope="public" type="string" path="speaker.name"/>
+
 </dataClasses>
 
 <dataClasses name="Question" className="Question" collectionName="QuestionCollection" scope="public">
@@ -110,9 +134,11 @@
 
 	<attributes name="presenterName" kind="alias" scope="public" type="string" path="presenter.name"/>
 
-	<attributes name="allPresenters" scope="public" reversePath="true" path="session" type="PresentersCollection" kind="relatedEntities"/>
+	<attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="session"/>
 
-	<attributes name="allSpeakers" scope="public" reversePath="false" path="allPresenters.speaker" type="Speaker" kind="relatedEntities"/>
+	<attributes name="allSpeakers" kind="relatedEntities" scope="public" type="SpeakerCollection" path="allPresenters.speaker"/>
+
+	<methods name="searchSessionByString" applyTo="dataClass" scope="publicOnServer" from="guidedModel.Session.methods.searchSessionByString"/>
 
 </dataClasses>
 
@@ -140,7 +166,7 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="529" Y="530"/>
+			<position ____objectunic="true" X="550" Y="584"/>
 </panel>
 </extraProperties>
 
@@ -160,9 +186,11 @@
 
 	<attributes name="speakerPicURL" kind="storage" scope="public" type="string"/>
 
-	<attributes name="allPresenters" scope="public" reversePath="true" path="speaker" type="PresentersCollection" kind="relatedEntities"/>
+	<attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="speaker"/>
 
-	<attributes name="allSessions" scope="public" type="Session" kind="relatedEntities" reversePath="false" path="allPresenters.session"/>
+	<attributes name="allSessions" kind="relatedEntities" scope="public" type="SessionCollection" path="allPresenters.session"/>
+
+	<methods name="searchSpeakerByString" applyTo="dataClass" from="guidedModel.Speaker.methods.searchSpeakerByString" scope="publicOnServer"/>
 
 </dataClasses>
 
@@ -189,30 +217,6 @@
 	<attributes name="contactInfo" kind="storage" scope="public" type="string"/>
 
 	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" path="Session"/>
-
-</dataClasses>
-
-<dataClasses collectionName="PresentersCollection" className="Presenters" uuid="0299189FA421854791EEB14F5F659CA1" tablePos="1">
-
-	<extraProperties ____objectunic="true" panelColor="#70CCC2">
-
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
-
-			<position ____objectunic="true" X="279" Y="619"/>
-
-		</panel>
-
-	</extraProperties>
-
-	<attributes name="ID" kind="storage" type="long" uuid="512A3173E59A9542B2CC4A932C400F25" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
-
-	<attributes name="session" scope="public" uuid="A830BED8AFE33645B068681C0599E260" fieldPos="2" path="Session" type="Session" kind="relatedEntity"/>
-
-	<attributes name="speaker" scope="public" uuid="4A10BEBA0BC35344A42A78F4AFC82B00" fieldPos="3" path="Speaker" type="Speaker" kind="relatedEntity"/>
-
-	<attributes name="sessionName" scope="public" path="session.name" type="string" kind="alias"/>
-
-	<attributes name="speakerName" scope="public" path="speaker.name" type="string" kind="alias"/>
 
 </dataClasses>
 </EntityModelCatalog>

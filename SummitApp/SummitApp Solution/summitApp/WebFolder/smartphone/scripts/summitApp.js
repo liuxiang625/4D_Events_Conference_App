@@ -20,18 +20,40 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 	
-		$(document).bind("pagechange", onPageChange);
+		$('#searchInput').keyup(function(event) {
+			//alert(this.value);
+			ds.Event.searchSessionsAndSpeakesByString(this.value,{
+				onSuccess: function(searchEvent) {
+					var searchResult = searchEvent.result;
+					var sessionsFound = searchResult['sessionsFound'];
+					$('#searhResultListView').empty();
+					$('#searhResultListView').append('<li role="heading" data-role="list-divider">'+ sessionsFound.length +' Sessions found</li>');
+					sessionsFound.forEach(function(element){
+		                 if(!element.isActivity)$('#searhResultListView').append('<li data-theme="c"><a  id="'+element.ID +'" class="loadSessionDetail" data-transition="slide"><p style="font-family:Arial;font-size: 18;">'+ element.startTime +'- ' + element.endTime +', '+ formatDate(new Date(element.sessionDate)) +'</p><h1>'+ element.name + '</h1><p style="font-family:Arial;font-size: 18;">Room: ' + element.room +  '</p></a></li>');
+					}) 
+					//if ($('#searhResultListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
+					var speakersFound = searchResult['speakersFound'];
+					$('#searhResultListView').append('<li role="heading" data-role="list-divider">'+ speakersFound.length +' Speakers found</li>');
+					speakersFound.forEach(function(element){
+		                 if(!element.isActivity)$('#searhResultListView').append('<li data-theme="c"><a  id="'+element.ID +'" class="loadSessionDetail" data-transition="slide"><h1>'+ element.name + '</h1><p style="font-family:Arial;font-size: 18;">' + element.title +  ',    ' + element.company + '</p></a></li>');
+					}) 
+					if ($('#searhResultListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
+					//console.log(sessionsFound);
+				}
+			})
+		});
+		//$(document).bind("pagechange", onPageChange);
 		//$(document).bind("pagebeforeload", onPageLoad);
 		
-		function onPageLoad(event, data) {
-			var toPageId = data.toPage.attr("id");
-			console.log("Current Page ID: " + toPageId);
-		}
-		
-		function onPageChange(event, data) {
-			var toPageId = data.toPage.attr("id");
-			console.log("Current Page ID: " + toPageId);
-		}
+//		function onPageLoad(event, data) {
+//			var toPageId = data.toPage.attr("id");
+//			console.log("Current Page ID: " + toPageId);
+//		}
+//		
+//		function onPageChange(event, data) {
+//			var toPageId = data.toPage.attr("id");
+//			console.log("Current Page ID: " + toPageId);
+//		}
 		var dayDescription = {
 			'10/23/2012':'4D Summit Pre-Class',
 			'10/24/2012':'4D Summit keynotes  breakout sessions',
@@ -243,7 +265,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		     }
 		});
 		
-		$(".loadSessionDetail").live('touchstart mousedown', function() { //on() is not working in this context
+		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
 			$.blockUI({
 		    	 message: null,
 		    	  overlayCSS: {
