@@ -20,7 +20,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 	
-		$('#searchInput').keyup(function(event) {
+		$('#searchInput').live('keyup',function(event) {
 			//alert(this.value);
 			ds.Event.searchSessionsAndSpeakesByString(this.value,{
 				onSuccess: function(searchEvent) {
@@ -35,7 +35,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					var speakersFound = searchResult['speakersFound'];
 					$('#searhResultListView').append('<li role="heading" data-role="list-divider">'+ speakersFound.length +' Speakers found</li>');
 					speakersFound.forEach(function(element){
-		                 if(!element.isActivity)$('#searhResultListView').append('<li data-theme="c"><a  id="'+element.ID +'" class="loadSessionDetail" data-transition="slide"><h1>'+ element.name + '</h1><p style="font-family:Arial;font-size: 18;">' + element.title +  ',    ' + element.company + '</p></a></li>');
+		                 if(!element.isActivity)$('#searhResultListView').append('<li data-theme="c"><a  id="'+element.name +'" class="loadSpeakerProfile" data-transition="slide"><h1>'+ element.name + '</h1><p style="font-family:Arial;font-size: 18;">' + element.title +  ',    ' + element.company + '</p></a></li>');
 					}) 
 					if ($('#searhResultListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
 					//console.log(sessionsFound);
@@ -266,6 +266,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		});
 		
 		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
+			//var location= $('#backToSessions').attr("href");//get link of back button on session detail page.
+			if ($('#sessionsListView').children().size() == 0) {
+				 $("#backToSessions").removeAttr('href');
+ 				 $('#backToSessions').addClass('goPrevious');
+ 				 //$("#backToSessions").text('back');
+
+			}
+			else {
+				$("#backToSessions").removeClass('goPrevious');
+				$("#backToSessions").attr("href", '#page5');
+				  //$("#backToSessions").text('Sessions');
+			}
 			$.blockUI({
 		    	 message: null,
 		    	  overlayCSS: {
@@ -294,7 +306,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		   			 speakersCollection.forEach({ 
 	                         	onSuccess: function(speakerEvent) {
 	                         		var speaker = speakerEvent.entity; 
-	                            	$('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speaker.name.getValue() +'"  href="#page7" data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a></li>');
+	                            	$('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speaker.name.getValue() +'"  class="loadSpeakerProfile"  data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a></li>');
 	                            }
 	                         })
 		   			
@@ -303,31 +315,45 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
 		            $.unblockUI();
 		            $.mobile.changePage("#page6", {transition: "slide"});
-		            ds.Speaker.find("name = :1", speakerName, {
-		            	autoExpand: "sessions",
-		            	onSuccess: function(speakerEvent) {
-		            		var speaker = speakerEvent.entity;
-		            		 $('#speakerName').text(speaker.name.getValue());
-		            		 $('#speakerTitle').text(speaker.title.getValue()+', '+speaker.company.getValue());
-		            		 (speaker.speakerBio.getValue())?$('#speakerBio').text(speaker.speakerBio.getValue()):$('#speakerBio').text("No speaker biography yet");
-		            		 (speaker.speakerPicURL.getValue())?('#speakerPic').attr("src",speaker.speakerPicURL.getValue()):$('#speakerPic').attr("src","styles/images/profilePicPlaceHolder.gif");
-							 $('#speakerSessionsList').empty();
-							 $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
-							 sessionsCollectionRel = speaker.sessions.relEntityCollection;
-							 sessionsCollectionRel.forEach({ 
-	                         	onSuccess: function(sessionEvent) {
-	                         		var sessionOfCurrentSpeaker = sessionEvent.entity; 
-	                            	$('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
-	                            }
-	                         })
-							 if($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
-		            	}
-		            	
-		            });
 
 		        }
 		    });
 		});
+		
+		$('.loadSpeakerProfile').live('tap', function() {
+			var speakerName = this.id;
+	    ds.Speaker.find("name = :1", speakerName, {
+	        autoExpand: "allSessions",
+	        onSuccess: function(speakerEvent) {
+	            $.blockUI({
+	                message: null,
+	                overlayCSS: {
+	                    opacity: 0
+	                }
+	            });
+	            var speaker = speakerEvent.entity;
+	            $('#speakerName').text(speaker.name.getValue());
+	            $('#speakerTitle').text(speaker.title.getValue() + ', ' + speaker.company.getValue());
+	            (speaker.speakerBio.getValue()) ? $('#speakerBio').text(speaker.speakerBio.getValue()) : $('#speakerBio').text("No speaker biography yet");
+	            (speaker.speakerPicURL.getValue()) ? ('#speakerPic').attr("src", speaker.speakerPicURL.getValue()) : $('#speakerPic').attr("src", "styles/images/profilePicPlaceHolder.gif");
+	            $('#speakerSessionsList').empty();
+	            $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
+	            sessionsCollectionRel = speaker.allSessions.relEntityCollection;
+	            sessionsCollectionRel.forEach({
+	                onSuccess: function(sessionEvent) {
+	                    var sessionOfCurrentSpeaker = sessionEvent.entity;
+	                    $('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
+	                }
+	            })
+	            if ($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
+	            $.mobile.changePage("#page7", {
+	                transition: "slide"
+	            });
+	            $.unblockUI();
+	        }
+
+	    });
+	});
 		
 		$(".likeCurrentSession").live('touchstart mousedown', function() {
 			//var clickedButton = $(this);
@@ -359,6 +385,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        });
 		});
 		
+		$(".goPrevious").live('tap', function() {//go to previous page in history
+				history.back();
+				return false;
+		});
 //		$('.goBack').live('tap', function() {
 //		    if ($('#daysListView li').size() > 1) {
 //		        $.mobile.changePage("#page1", {
@@ -381,7 +411,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		};
 
 		function getTheDay(date) {
-
 		    weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 		    return weekday[date.getDay()];
 		}
