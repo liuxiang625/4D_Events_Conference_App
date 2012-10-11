@@ -63,11 +63,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 
 
-//		var localStorageAvailable = true;
-//		if (typeof(localStorage) =='undefined') {
-//    		alert('Local storage not supported by this browser.');
-//    		localStorageAvailable = false;
-//  		}
+		var localStorageAvailable = true;
+		if (typeof(localStorage) =='undefined') {
+    		Console.log('Local storage not supported by this browser.');
+    		localStorageAvailable = false;
+  		}
 //  		
 //  		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
 //        {
@@ -257,7 +257,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 											speakersCollection.forEach({
 	               							 onSuccess: function(speakerEvent) {
 	                    						(sessionSpeakerName == "")?sessionSpeakerName += ( speakerEvent.entity.name.getValue()):sessionSpeakerName += (', ' + speakerEvent.entity.name.getValue());
-	                    						console.log('SpeakerName: ' + sessionSpeakerName +'single name: ' + speakerEvent.entity.name.getValue())
+	                    						//console.log('SpeakerName: ' + sessionSpeakerName +'single name: ' + speakerEvent.entity.name.getValue())
 	                						 },
 	                 						atTheEnd: function(end) {
 	                 							$('#sessionsListView').append('<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>');
@@ -282,7 +282,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
 			//var location= $('#backToSessions').attr("href");//get link of back button on session detail page.
-			if ($('#sessionsListView').children().size() == 0) {
+			if ($('#sessionsListView').children().size() == 0 | $('#sessionsListView li div div a').toArray().indexOf(this) == -1) {
 				 $("#backToSessions").removeAttr('href');
  				 $('#backToSessions').addClass('goPrevious');
  				 //$("#backToSessions").text('back');
@@ -335,6 +335,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		});
 		
 		$('.loadSpeakerProfile').live('tap', function() {
+				var clickedButton = $(this);
+		    clickedButton.addClass("ui-btn-active");
 			var speakerName = this.id;
 	    ds.Speaker.find("name = :1", speakerName, {
 	        autoExpand: "allSessions",
@@ -360,6 +362,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                }
 	            })
 	            if ($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
+	            clickedButton.removeClass("ui-btn-active ui-state-persist"); 
 	            $.mobile.changePage("#page7", {
 	                transition: "slide"
 	            });
@@ -369,14 +372,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	    });
 	});
 		
-		$(".likeCurrentSession").live('touchstart mousedown', function() {
-			//var clickedButton = $(this);
-			//clickedButton.hasClass("ui-btn-active")?clickedButton.removeClass("ui-btn-active ui-state-persist"):clickedButton.addClass("ui-btn-active");
+		$(".likeCurrentSession").live('tap', function() {
+			var clickedButton = $(this);
+			clickedButton.hasClass("ui-btn-active")?clickedButton.removeClass("ui-btn-active ui-state-persist"):clickedButton.addClass("ui-btn-active ui-state-persist");
 		    
 		    
 		    
-			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'z'});
-			$(this).trigger('refresh');
+//			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'z'});
+//			$(this).trigger('refresh');
 		});
 
 		function getKeyForValue(jsonObjet, value) {

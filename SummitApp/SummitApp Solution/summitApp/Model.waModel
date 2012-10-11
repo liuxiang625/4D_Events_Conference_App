@@ -1,1 +1,232 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog><dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC" collation_locale="en"/><dataClasses name="Answer" className="Answer" collectionName="AnswerCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#76923C"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="824" Y="454"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/><attributes name="question" kind="relatedEntity" scope="public" type="Question" path="Question"/><attributes name="comment" kind="storage" scope="public" type="string"/><attributes name="rate" kind="storage" scope="public" type="long"/><attributes name="answer" kind="storage" scope="public" type="string"/><key name="ID"/></dataClasses><dataClasses name="Event" className="Event" collectionName="EventCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#B7DDE8"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="25" Y="20"/></panel></extraProperties><attributes name="ID" kind="storage" scope="publicOnServer" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="name" kind="storage" scope="public" type="string"/><attributes name="location" kind="storage" scope="public" type="string"/><attributes name="startDate" kind="storage" scope="public" type="date"/><attributes name="endDate" kind="storage" scope="public" type="date"/><attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="event"/><attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/><methods name="searchSessionsAndSpeakesByString" applyTo="dataClass" scope="public" from="guidedModel.Event.methods.searchSessionsAndSpeakesByString"/><key name="ID"/></dataClasses><dataClasses name="Presenters" className="Presenters" collectionName="PresentersCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#70CCC2"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="198" Y="663"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/><attributes name="speaker" kind="relatedEntity" scope="public" type="Speaker" path="Speaker"/><attributes name="sessionName" kind="alias" scope="public" type="string" path="session.name"/><attributes name="speakerName" kind="alias" scope="public" type="string" path="speaker.name"/><key name="ID"/></dataClasses><dataClasses name="Question" className="Question" collectionName="QuestionCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#D7E3BC"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="750" Y="247"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="sessionSurvey" kind="relatedEntity" scope="public" type="SessionSurvey" path="SessionSurvey"/><attributes name="question" kind="storage" scope="public" type="string"/><attributes name="answers" kind="relatedEntities" scope="public" type="AnswerCollection" reversePath="true" path="question"/><key name="ID"/></dataClasses><dataClasses name="Session" className="Session" collectionName="SessionCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#B8CCE4"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="387" Y="21"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="name" kind="storage" scope="public" type="string"/><attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/><attributes name="room" kind="storage" scope="public" type="string"/><attributes name="startTime" kind="storage" scope="public" type="string"/><attributes name="sessionSurveys" kind="relatedEntities" scope="public" type="SessionSurveyCollection" reversePath="true" path="session"/><attributes name="sessionDate" kind="storage" scope="public" type="date"/><attributes name="isSponsored" kind="storage" scope="public" type="bool"/><attributes name="endTime" kind="storage" scope="public" type="string"/><attributes name="isActivity" kind="storage" scope="public" type="bool"/><attributes name="tags" kind="storage" scope="public" type="string"/><attributes name="description" kind="storage" scope="public" type="string"/><attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="session"/><attributes name="allSpeakers" kind="relatedEntities" scope="public" type="SpeakerCollection" path="allPresenters.speaker"/><methods name="searchSessionByString" applyTo="dataClass" scope="publicOnServer" from="guidedModel.Session.methods.searchSessionByString"/><key name="ID"/></dataClasses><dataClasses name="SessionSurvey" className="SessionSurvey" collectionName="SessionSurveyCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#BFBFBF"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="735" Y="34"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/><attributes name="questions" kind="relatedEntities" scope="public" type="QuestionCollection" reversePath="true" path="sessionSurvey"/><key name="ID"/></dataClasses><dataClasses name="Speaker" className="Speaker" collectionName="SpeakerCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#B2A2C7"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="550" Y="584"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="name" kind="storage" scope="public" type="string"/><attributes name="title" kind="storage" scope="public" type="string"/><attributes name="company" kind="storage" scope="public" type="string"/><attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/><attributes name="speakerBio" kind="storage" scope="public" type="string"/><attributes name="speakerPicURL" kind="storage" scope="public" type="string"/><attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="speaker"/><attributes name="allSessions" kind="relatedEntities" scope="public" type="SessionCollection" path="allPresenters.session"/><methods name="searchSpeakerByString" applyTo="dataClass" scope="publicOnServer" from="guidedModel.Speaker.methods.searchSpeakerByString"/><key name="ID"/></dataClasses><dataClasses name="Sponsor" className="Sponsor" collectionName="SponsorCollection" scope="public"><extraProperties ____objectunic="true" panelColor="#8DB3E2"><panel ____objectunic="true" isOpen="true" pathVisible="true"><position ____objectunic="true" X="10" Y="373"/></panel></extraProperties><attributes name="ID" kind="storage" scope="public" indexed="true" unique="true" autosequence="true" type="long" indexKind="btree"/><attributes name="name" kind="storage" scope="public" type="string"/><attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/><attributes name="sponsorClass" kind="storage" scope="public" type="string"/><attributes name="description" kind="storage" scope="public" type="string"/><attributes name="contactInfo" kind="storage" scope="public" type="string"/><attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" path="Session"/><key name="ID"/></dataClasses></EntityModelCatalog>
+﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
+
+<dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
+
+<dataClasses name="Answer" className="Answer" collectionName="AnswerCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#76923C">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="824" Y="454"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+	<attributes name="question" kind="relatedEntity" scope="public" type="Question" path="Question"/>
+
+	<attributes name="comment" kind="storage" scope="public" type="string"/>
+
+	<attributes name="rate" kind="storage" scope="public" type="long"/>
+
+	<attributes name="answer" kind="storage" scope="public" type="string"/>
+
+</dataClasses>
+
+<dataClasses name="Event" className="Event" collectionName="EventCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#B7DDE8">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="25" Y="20"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="publicOnServer" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" type="string"/>
+
+	<attributes name="location" kind="storage" scope="public" type="string"/>
+
+	<attributes name="startDate" kind="storage" scope="public" type="date"/>
+
+	<attributes name="endDate" kind="storage" scope="public" type="date"/>
+
+	<attributes name="sessions" kind="relatedEntities" scope="public" type="SessionCollection" reversePath="true" path="event"/>
+
+	<attributes name="sponsors" kind="relatedEntities" scope="public" type="SponsorCollection" reversePath="true" path="event"/>
+
+	<methods name="searchSessionsAndSpeakesByString" applyTo="dataClass" scope="public" from="guidedModel.Event.methods.searchSessionsAndSpeakesByString"/>
+
+</dataClasses>
+
+<dataClasses name="Presenters" className="Presenters" collectionName="PresentersCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="243" Y="634"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+	<attributes name="speaker" kind="relatedEntity" scope="public" type="Speaker" path="Speaker"/>
+
+	<attributes name="sessionName" kind="alias" scope="public" type="string" path="session.name"/>
+
+	<attributes name="speakerName" kind="alias" scope="public" type="string" path="speaker.name"/>
+
+</dataClasses>
+
+<dataClasses name="Question" className="Question" collectionName="QuestionCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#D7E3BC">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="750" Y="247"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="sessionSurvey" kind="relatedEntity" scope="public" type="SessionSurvey" path="SessionSurvey"/>
+
+	<attributes name="question" kind="storage" scope="public" type="string"/>
+
+	<attributes name="answers" kind="relatedEntities" scope="public" type="AnswerCollection" reversePath="true" path="question"/>
+
+</dataClasses>
+
+<dataClasses name="Session" className="Session" collectionName="SessionCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#B8CCE4">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="387" Y="21"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" type="string"/>
+
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
+
+	<attributes name="room" kind="storage" scope="public" type="string"/>
+
+	<attributes name="startTime" kind="storage" scope="public" type="string"/>
+
+	<attributes name="sessionSurveys" kind="relatedEntities" scope="public" type="SessionSurveyCollection" reversePath="true" path="session"/>
+
+	<attributes name="sessionDate" kind="storage" scope="public" type="date"/>
+
+	<attributes name="isSponsored" kind="storage" scope="public" type="bool"/>
+
+	<attributes name="endTime" kind="storage" scope="public" type="string"/>
+
+	<attributes name="isActivity" kind="storage" scope="public" type="bool"/>
+
+	<attributes name="tags" kind="storage" scope="public" type="string"/>
+
+	<attributes name="description" kind="storage" scope="public" type="string"/>
+
+	<attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="session"/>
+
+	<attributes name="allSpeakers" kind="relatedEntities" scope="public" type="SpeakerCollection" path="allPresenters.speaker"/>
+
+	<methods name="searchSessionByString" applyTo="dataClass" scope="publicOnServer" from="guidedModel.Session.methods.searchSessionByString"/>
+
+</dataClasses>
+
+<dataClasses name="SessionSurvey" className="SessionSurvey" collectionName="SessionSurveyCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="735" Y="34"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="session" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+	<attributes name="questions" kind="relatedEntities" scope="public" type="QuestionCollection" reversePath="true" path="sessionSurvey"/>
+
+</dataClasses>
+
+<dataClasses name="Speaker" className="Speaker" collectionName="SpeakerCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#B2A2C7">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="514" Y="538"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" type="string"/>
+
+	<attributes name="title" kind="storage" scope="public" type="string"/>
+
+	<attributes name="company" kind="storage" scope="public" type="string"/>
+
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
+
+	<attributes name="speakerBio" kind="storage" scope="public" type="string"/>
+
+	<attributes name="speakerPicURL" kind="storage" scope="public" type="string"/>
+
+	<attributes name="allPresenters" kind="relatedEntities" scope="public" type="PresentersCollection" reversePath="true" path="speaker"/>
+
+	<attributes name="allSessions" kind="relatedEntities" scope="public" type="SessionCollection" path="allPresenters.session"/>
+
+	<methods name="searchSpeakerByString" applyTo="dataClass" scope="publicOnServer" from="guidedModel.Speaker.methods.searchSpeakerByString"/>
+
+</dataClasses>
+
+<dataClasses name="Sponsor" className="Sponsor" collectionName="SponsorCollection" scope="public">
+
+	<extraProperties ____objectunic="true" panelColor="#8DB3E2">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="10" Y="373"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" indexKind="btree" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" type="string"/>
+
+	<attributes name="event" kind="relatedEntity" scope="public" type="Event" path="Event"/>
+
+	<attributes name="sponsorClass" kind="storage" scope="public" type="string"/>
+
+	<attributes name="description" kind="storage" scope="public" type="string"/>
+
+	<attributes name="contactInfo" kind="storage" scope="public" type="string"/>
+
+	<attributes name="sponsoredPresentation" kind="relatedEntity" scope="public" type="Session" path="Session"/>
+
+</dataClasses>
+</EntityModelCatalog>
