@@ -7,6 +7,16 @@ $(document).live('pageinit',function(event){//Force the app to go home after for
 	}	
 });
 
+		// Init golobal variables		
+		var allEventsCollection = {
+			eventCollections:{},
+			available:false
+		};
+
+		var sesssionCollection = {
+			sessionEntityCollection:{},
+			available:false
+		};
 
 WAF.onAfterInit = function onAfterInit() {// @lock
 
@@ -47,21 +57,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					}) 
 					if ($('#searhResultListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
 					//console.log(sessionsFound);
-				}
+				},
+				onError: function(error) {
+		        	alert(error['error'][0].message + "  Please refresh page");
+		        }
 			})
 		});
-		//$(document).bind("pagechange", onPageChange);
-		//$(document).bind("pagebeforeload", onPageLoad);
-		
-//		function onPageLoad(event, data) {
-//			var toPageId = data.toPage.attr("id");
-//			console.log("Current Page ID: " + toPageId);
-//		}
-//		
-//		function onPageChange(event, data) {
-//			var toPageId = data.toPage.attr("id");
-//			console.log("Current Page ID: " + toPageId);
-//		}
+
 		var dayDescription = {
 			'10/23/2012':'4D Summit Pre-Class',
 			'10/24/2012':'4D Summit keynotes  breakout sessions',
@@ -76,43 +78,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
     		Console.log('Local storage not supported by this browser.');
     		localStorageAvailable = false;
   		}
-//  		
-//  		if (localStorage.getItem($.mobile.activePage[0].id) != null & $.mobile.activePage[0].id != 'page0' )
-//        {
-//            var listViewItem = localStorage.getItem($.mobile.activePage[0].id);
-//            $('.listViewContainer:visible').empty();
-//            $('.listViewContainer:visible').append(listViewItem);
-//            //listViewItem.listview();
-//            $('.listViewContainer:visible').listview('refresh');
-//        }
+
 		//preload all sponsor pics:
-		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
-		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
-		$.each(allSponsorsImageArray, function (i, val) {
-  			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
-		});
-		$.each(allSponsorsImageArray, function (i, val) {
-  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
-		});
+//		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
+//		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
+//		$.each(allSponsorsImageArray, function (i, val) {
+//  			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
+//		});
+//		$.each(allSponsorsImageArray, function (i, val) {
+//  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
+//		});
 
-		// Init golobal variables		
-		var allEventsCollection = {
-			eventCollections:{},
-			available:false
-		};
 
-		var sesssionCollection = {
-			sessionEntityCollection:{},
-			available:false
-		};
 		var sessionIDSet = {};
 		ds.Event.all({
 		    autoExpand: "sessions",
 		    onSuccess: function(eventsCollectionEvent) {
 		    	allEventsCollection.eventCollections = eventsCollectionEvent.entityCollection;
-		        allEventsCollection.available= true;
-		        //if (localStorageAvailable) localStorage.setItem("allEventsCollection", allEventsCollection);
-		            
+		        allEventsCollection.available= true;		            
 		    }
 		});
 		
@@ -124,12 +107,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
 		    var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
-//		    setTimeout(function() { 
-//            	$.unblockUI({ 
-//                	onUnblock: function(){ alert('Load next page failed'); } 
-//            	}); 
-//        	}, 2000);
-		    //Block UI while loading next page. 
 		    $.blockUI({
 		    	 message: null,
 		    	  overlayCSS: {
@@ -157,10 +134,20 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            onSuccess: function(event) { // handle anything special here
 		                                sesssionCollection.sessionEntityCollection = event.entityCollection;
 		                                sesssionCollection.available = true;
-		                            }
+		                            },
+									onError: function(error) {
+		        						alert(error['error'][0].message + "      Please refresh page");
+		        						clickedButton.removeClass("ui-btn-active ui-state-persist");
+		        						$.unblockUI();
+		        					}
 		                        });
 		                        if ($('#daysListView').hasClass('ui-listview')) $('#daysListView').listview('refresh');
-		                    }
+		                    },
+							onError: function(error) {
+		        				alert(error['error'][0].message + "      Please refresh page");
+		        				clickedButton.removeClass("ui-btn-active ui-state-persist");
+		        				$.unblockUI();
+		       				}
 		                });
 		                clickedButton.removeClass("ui-btn-active ui-state-persist");
 		                $.mobile.changePage("#page1", {
@@ -168,7 +155,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                });
 		                $.unblockUI();
 		               
-		            }
+		            },
+					onError: function(error) {
+		        		alert(error['error'][0].message + "  Please refresh page");
+		        	}
 		        });
 		    }
 		});
@@ -239,7 +229,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    $.unblockUI();
 		                    $.mobile.changePage("#page3", {transition: "slide"});
 
-		                }
+		                },
+						onError: function(error) {
+		        			alert(error['error'][0].message + "  Please refresh page");
+		        		}
 		            });
 
 		        }
@@ -273,11 +266,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                						 },
 	                 						atTheEnd: function(end) {
 	                 							$('#sessionsListView').append('<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>');
-	                 						}
+	                 						},
+											onError: function(error) {
+		        								alert(error['error'][0].message + "  Please refresh page");
+		        							}
 	            						});
 									}
 		                                //$('#sessionsListView').append(constructSessionListItem(sessionsEvent.entity));
-		                            }
+		                            },
+				onError: function(error) {
+		        	alert(error['error'][0].message + "  Please refresh page");
+		        }
 		                        });
 		                        if ($('#sessionsListView').hasClass('ui-listview')) $('#sessionsListView').listview('refresh');
 		                        //if (localStorageAvailable) localStorage.setItem("page5", $('#sessionsListView').html());
@@ -286,7 +285,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        $.mobile.changePage("#page5", {transition: "slide"});
 		                    },
 		                    onError: function(error) {
-		                    	console.log(error['error'][0].message);
+		                    	console.log(error['error'][0].message + "  Please refresh page");
 		                    }
 		                });
 		     }
@@ -346,7 +345,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                         	onSuccess: function(speakerEvent) {
 	                         		var speaker = speakerEvent.entity; 
 	                            	$('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speaker.name.getValue() +'"  class="loadSpeakerProfile"  data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a></li>');
-	                            }
+	                            },
+				onError: function(error) {
+		        	alert(error['error'][0].message + "  Please refresh page");
+		        }
 	                         })
 		   			
 		   			         
@@ -355,6 +357,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $.unblockUI();
 		            $.mobile.changePage("#page6", {transition: "slide"});
 
+		        },
+				onError: function(error) {
+		        	alert(error['error'][0].message+ "  Please refresh page");
 		        }
 		    });
 		});
@@ -384,7 +389,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                onSuccess: function(sessionEvent) {
 	                    var sessionOfCurrentSpeaker = sessionEvent.entity;
 	                    $('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></a></li>');
-	                }
+	                },
+				onError: function(error) {
+		        	alert(error['error'][0].message + "  Please refresh page");
+		        }
 	            })
 	            if ($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
 	            clickedButton.removeClass("ui-btn-active ui-state-persist"); 
@@ -392,7 +400,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                transition: "slide"
 	            });
 	            $.unblockUI();
-	        }
+	        },
+				onError: function(error) {
+		        	alert(error['error'][0].message + "  Please refresh page");
+		        }
 
 	    });
 	});
@@ -457,38 +468,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    if ($('#starredSessionsListView').hasClass('ui-listview')) $('#starredSessionsListView').listview('refresh');
 
 		});
-
-		
-//		$('#page9').live('pageshow', function(e, data) {
-//		    //if (data.toPage.toString().indexOf('#page9') != -1) {
-//		    	//if ($('#starredSessionsListView').hasClass('ui-listview')) 
-//		    	//$('#starredSessionsListView').listview('refresh');
-//		    //}
-//		});
-//		
-		function getKeyForValue(jsonObjet, value) {
+	
+	function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
 		        if (jsonObjet.hasOwnProperty(key) && typeof(key) !== 'function') {
 		            if (jsonObjet[key] == value) return key;
 		        }
 		    }
 		}
-//		function constructSessionListItem (entity) {
-//			var speakersCollection = entity.allSpeakers.relEntityCollection;
-//			var sessionSpeakerName = ""; 
-//			if(speakersCollection.length > 0){
-//				speakersCollection.forEach({
-//	                onSuccess: function(speakerEvent) {
-//	                    sessionSpeakerName.concat(' ' + speakerEvent.entity.name.getValue());
-//	                },
-//	                 atTheEnd: function(end) {
-//	                 	return '<li data-theme="c"><a  id="'+entity.ID.getValue() +'" class="loadSessionDetail" data-transition="slide"><h1>'+ entity.name.getValue() + '</h1><p style="font-family:Arial;font-size: 18;">Presenter: ' + sessionSpeakerName + '<br/>Room: ' + entity.room.getValue() + '<br/>Tags: ' + entity.tags.getValue() + '<br/>Description: '+ entity.description.getValue() +'</p></a></li>';
-//	                 }
-//	            });
-//			}
-
-
-//		}
 		
 		$(".allSponsorImage").live('click', function() {
 			$.mobile.changePage("#page8", {
@@ -501,21 +488,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				history.back();
 				return false;
 		});
-//		$('.goBack').live('tap', function() {
-//		    if ($('#daysListView li').size() > 1) {
-//		        $.mobile.changePage("#page1", {
-//		            transition: "slide",
-//		            reverse: true
-//		        });
-//		    }
-//		    else {
-//		        $.mobile.changePage("#page0", {
-//		            transition: "slide",
-//		            reverse: true
-//		        });
-//		    }
-
-//		})
 
 		 function formatDate(date) { // ultility to formate date to mm/dd/yyyy
 		 
