@@ -326,7 +326,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $('#sessionDetail h3').text(sessionName);
 		            $('#sessionDetail p').text(sessionDetail);
 		            var $starButton = $('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>');
-		            if (likedSessions.indexOf($('#' + session.ID.getValue())[0].outerHTML) != -1) $starButton.addClass("ui-btn-active ui-state-persist");//star session if alreay stared prevoiusly
+		            //if (likedSessions.indexOf($('#' + session.ID.getValue())[0].outerHTML) != -1) 
+
+		            for (var starredSessionsCount in likedSessions) {
+		            		if ($(likedSessions[starredSessionsCount])[0].id == session.ID.getValue()) {
+		            		$starButton.addClass("ui-btn-active ui-state-persist");//star session if alreay prevoiusly stared 
+		            		break
+		            	}
+		            }
+		            
 		            $('.sessionDetailParagraph').append($starButton).trigger('create');
 		            //Star session if is already liked
 		            
@@ -393,18 +401,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			var clickedButton = $(this);
 			var sessionButtonsList = $('.loadSessionDetail');
 			var buttonItemForLikedSession;
-			for (var sessionCount in sessionButtonsList) {
-				if (sessionButtonsList.hasOwnProperty(sessionCount) && sessionButtonsList[sessionCount].id == this.id) {
+			var buttonID = (this.id)?this.id:clickedButton.attr("mid");
+			for (var sessionCount in sessionButtonsList) {//find button of target session in the saved liked session list 
+				if (sessionButtonsList.hasOwnProperty(sessionCount) && sessionButtonsList[sessionCount].id == buttonID) {
 					
 					buttonItemForLikedSession = sessionButtonsList[sessionCount].outerHTML;
-					console.log(buttonItemForLikedSession);
 				}
 			}
 			//var buttonItemForLikedSession = $('#' + this.id).parent().html();
-			if (clickedButton.hasClass("ui-btn-active")) { //check if session is already starred
+			if (clickedButton.hasClass("ui-btn-active") | clickedButton.attr("mid")) { //check if session is already starred
 				clickedButton.removeClass("ui-btn-active ui-state-persist");
 		    	likedSessions.removeByValue(buttonItemForLikedSession);
 		    	if (localStorageAvailable) localStorage.setItem("likedSessions", JSON.stringify(likedSessions));
+		    	if (clickedButton.attr("mid")) {
+		    		$("#starredSessionsListView li a ").each(function(n,item){
+		    			if (item.id == clickedButton.attr("mid")) {
+		    				$(item).effect("fade", {}, 500, function(){
+                    		$(item).remove();
+                			});
+		    			}
+		    		})
+		    	}
 		    }
 		    else {
 		    	clickedButton.addClass("ui-btn-active ui-state-persist");
@@ -434,20 +451,21 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        for (var starredElement in likedSessions) {
 		        	if (likedSessions.hasOwnProperty(starredElement)) {
 		        		//console.log(likedSessions[starredElement]);
-						$('#starredSessionsListView').append('<li data-theme="c">'+ likedSessions[starredElement]+' <a mID="'+ $(likedSessions[starredElement]).id +'" href="#" class="likeCurrentSession"></a></li>');
+						$('#starredSessionsListView').append('<li data-theme="c">'+ likedSessions[starredElement]+' <a mID="'+ $(likedSessions[starredElement])[0].id +'" href="#" class="likeCurrentSession"></a></li>');
 		        	}
 		        }
-		        //if ($('#starredSessionsListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
+		    if ($('#starredSessionsListView').hasClass('ui-listview')) $('#starredSessionsListView').listview('refresh');
 
 		});
 
 		
-		$('#page9').live('pageshow', function(e, data) {
-		    //if (data.toPage.toString().indexOf('#page9') != -1) {
-		    	//if ($('#starredSessionsListView').hasClass('ui-listview')) 
-		    	$('#searhResultListView').listview('refresh');
-		    //}
-		});
+//		$('#page9').live('pageshow', function(e, data) {
+//		    //if (data.toPage.toString().indexOf('#page9') != -1) {
+//		    	//if ($('#starredSessionsListView').hasClass('ui-listview')) 
+//		    	//$('#starredSessionsListView').listview('refresh');
+//		    //}
+//		});
+//		
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
 		        if (jsonObjet.hasOwnProperty(key) && typeof(key) !== 'function') {
