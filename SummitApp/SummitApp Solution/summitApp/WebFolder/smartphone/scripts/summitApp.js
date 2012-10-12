@@ -80,14 +80,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
   		}
 
 		//preload all sponsor pics:
-//		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
-//		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
-//		$.each(allSponsorsImageArray, function (i, val) {
-//  			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
-//		});
-//		$.each(allSponsorsImageArray, function (i, val) {
-//  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
-//		});
+		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
+		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
+		$.each(allSponsorsImageArray, function (i, val) {
+  			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
+		});
+		$.each(allSponsorsImageArray, function (i, val) {
+  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
+		});
 
 
 		var sessionIDSet = {};
