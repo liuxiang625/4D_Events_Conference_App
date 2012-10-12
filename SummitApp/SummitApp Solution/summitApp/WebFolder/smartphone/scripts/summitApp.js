@@ -5,8 +5,7 @@ $(document).live('pageinit',function(event){//Force the app to go home after for
 		$.mobile.changePage($('#page0'));
 		pageNotInit = false;
 	}	
-})
-
+});
 
 
 WAF.onAfterInit = function onAfterInit() {// @lock
@@ -19,6 +18,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		
+		Array.prototype.removeByValue = function(val) {
+		    for (var i = 0; i < this.length; i++) {
+		        if (this[i] == val) {
+		            this.splice(i, 1);
+		            break;
+		        }
+		    }
+		};
 	
 		$('#searchInput').live('keyup',function(event) {
 			//alert(this.value);
@@ -86,14 +94,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$.each(allSponsorsImageArray, function (i, val) {
   			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
 		});
-		//$.mobile.changePage($("#page0"), "none");
-		
+
+		// Init golobal variables		
 		var allEventsCollection = {
 			eventCollections:{},
 			available:false
 		};
-		//Retrive data from local storage;
-//		if (localStorage.getItem('allEventsCollection') != null) allEventsCollection = localStorage.getItem('allEventsCollection');
+
 		var sesssionCollection = {
 			sessionEntityCollection:{},
 			available:false
@@ -108,7 +115,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            
 		    }
 		});
-		$(".loadDays").live('touchstart mousedown', function() { //tap event handler of Event listitem
+		
+		var likedSessions = [];		
+		//Retrive data from local storage;
+		if (localStorage.getItem('likedSessions') != null) likedSessions = JSON.parse(localStorage.getItem('likedSessions')) ;
+		if (!$.isArray(likedSessions)) likedSessions = [];
+		$(".loadDays").live('tap', function() { //tap event handler of Event listitem
 		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
 		    var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
@@ -161,7 +173,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    }
 		});
 		
-		    $(".loadTimsSlots").live('touchstart mousedown', function() {
+		    $(".loadTimsSlots").live('tap', function() {
 		    	$.blockUI({
 		    		message: null,
 		    	  		overlayCSS: {
@@ -201,7 +213,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            $('#timSlotListView').append('<li role="heading" data-role="list-divider" ><h3>' + sessionTime + '  ' + sessionItem.name.getValue() + '</h3></li>');
 		                        }
 		                        else {
-		                            $('#timSlotListView').append('<li data-theme="c" ><a class="loadSessions" id="' + sessionItem.ID.getValue() + '" class=""  data-transition="slide" >' + '<h3>' + sessionTime + '</h3><p class="' + sessionTime + '">' + sessionFirstTag + '</p></li>');
+		                            $('#timSlotListView').append('<li data-theme="c" ><a class="loadSessions" id="' + sessionItem.ID.getValue() + '" class=""  data-transition="slide" >' + '<h3>' + sessionTime + '</h3><p class="' + sessionTime + '">' + sessionFirstTag + '</p></a></li>');
 		                            if (typeof tagsSet[sessionTime] === "undefined") tagsSet[sessionTime] = "";
 		                            var seperator;
 		                            tagsSet[sessionTime].length > 0 ? seperator = ',' : seperator = "";
@@ -232,7 +244,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 		        }
 		    });
-		$(".loadSessions").live('touchstart mousedown', function() {
+		$(".loadSessions").live('tap', function() {
 			$.blockUI({
 		    	 message: null,
 		    	  overlayCSS: {
@@ -304,6 +316,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    ds.Session.find("ID = :1", this.id, {
 		    	autoExpand: "allSpeakers",
 		        onSuccess: function(sessionDetailEvent) {
+		        	clickedButton.removeClass("ui-btn-active ui-state-persist");
 		            var session = sessionDetailEvent.entity;
 		            var sessionName = session.name.getValue();
 		            var speakersCollection = session.allSpeakers.relEntityCollection;
@@ -312,7 +325,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            //$('#sessionDetailPageHead h3').text(sessionName);
 		            $('#sessionDetail h3').text(sessionName);
 		            $('#sessionDetail p').text(sessionDetail);
-		            $('.sessionDetailParagraph').append('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>').trigger('create');
+		            var $starButton = $('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>');
+		            if (likedSessions.indexOf($('#' + session.ID.getValue())[0].outerHTML) != -1) $starButton.addClass("ui-btn-active ui-state-persist");//star session if alreay stared prevoiusly
+		            $('.sessionDetailParagraph').append($starButton).trigger('create');
+		            //Star session if is already liked
+		            
 		            $('#sessionDetail #sessionDescription ').text(session.description.getValue());
 		            $('#speakersListView').empty();
 		            
@@ -324,7 +341,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	                            }
 	                         })
 		   			
-		   			clickedButton.removeClass("ui-btn-active ui-state-persist");         
+		   			         
 					//Assume there is one speaker per session;
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
 		            $.unblockUI();
@@ -358,7 +375,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	            sessionsCollectionRel.forEach({
 	                onSuccess: function(sessionEvent) {
 	                    var sessionOfCurrentSpeaker = sessionEvent.entity;
-	                    $('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></li>');
+	                    $('#speakerSessionsList').append('<li data-theme="c">' + '<a id="' + sessionOfCurrentSpeaker.ID.getValue() + '" class="loadSessionDetail" href="#page6" data-transition="slide">' + '<h3>' + sessionOfCurrentSpeaker.name.getValue() + '</h3></a></li>');
 	                }
 	            })
 	            if ($('#speakerSessionsList').hasClass('ui-listview')) $('#speakerSessionsList').listview('refresh');
@@ -374,14 +391,63 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		$(".likeCurrentSession").live('tap', function() {
 			var clickedButton = $(this);
-			clickedButton.hasClass("ui-btn-active")?clickedButton.removeClass("ui-btn-active ui-state-persist"):clickedButton.addClass("ui-btn-active ui-state-persist");
-		    
-		    
+			var sessionButtonsList = $('.loadSessionDetail');
+			var buttonItemForLikedSession;
+			for (var sessionCount in sessionButtonsList) {
+				if (sessionButtonsList.hasOwnProperty(sessionCount) && sessionButtonsList[sessionCount].id == this.id) {
+					
+					buttonItemForLikedSession = sessionButtonsList[sessionCount].outerHTML;
+					console.log(buttonItemForLikedSession);
+				}
+			}
+			//var buttonItemForLikedSession = $('#' + this.id).parent().html();
+			if (clickedButton.hasClass("ui-btn-active")) { //check if session is already starred
+				clickedButton.removeClass("ui-btn-active ui-state-persist");
+		    	likedSessions.removeByValue(buttonItemForLikedSession);
+		    	if (localStorageAvailable) localStorage.setItem("likedSessions", JSON.stringify(likedSessions));
+		    }
+		    else {
+		    	clickedButton.addClass("ui-btn-active ui-state-persist");
+		    	if (likedSessions.indexOf(buttonItemForLikedSession) == -1)likedSessions.push(buttonItemForLikedSession);
+		    	if (localStorageAvailable) localStorage.setItem("likedSessions", JSON.stringify(likedSessions));
+		    }
 		    
 //			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'z'});
 //			$(this).trigger('refresh');
 		});
+		
+		//Generate favorite session list
+//		$(document).live('pagebeforechange', function(e, data) {
+//		    if (data.toPage.toString().indexOf('#page9') != -1) {
+//		        $('#starredSessionsListView').empty();
+//		        for (var starredElement in likedSessions) {
+//		        	if (likedSessions.hasOwnProperty(starredElement)) {
+//		        		//console.log(likedSessions[starredElement]);
+//						$('#starredSessionsListView').append('<li data-theme="c">'+ likedSessions[starredElement]+' <a mID="'+ $(likedSessions[starredElement]).id +'" href="#" class="likeCurrentSession"></a></li>');
+//		        	}
+//		        }
+//		    }
+//		});
+		
+		$('#page9').live('pagebeforeshow',function(event, ui){
+			$('#starredSessionsListView').empty();
+		        for (var starredElement in likedSessions) {
+		        	if (likedSessions.hasOwnProperty(starredElement)) {
+		        		//console.log(likedSessions[starredElement]);
+						$('#starredSessionsListView').append('<li data-theme="c">'+ likedSessions[starredElement]+' <a mID="'+ $(likedSessions[starredElement]).id +'" href="#" class="likeCurrentSession"></a></li>');
+		        	}
+		        }
+		        //if ($('#starredSessionsListView').hasClass('ui-listview')) $('#searhResultListView').listview('refresh');
 
+		});
+
+		
+		$('#page9').live('pageshow', function(e, data) {
+		    //if (data.toPage.toString().indexOf('#page9') != -1) {
+		    	//if ($('#starredSessionsListView').hasClass('ui-listview')) 
+		    	$('#searhResultListView').listview('refresh');
+		    //}
+		});
 		function getKeyForValue(jsonObjet, value) {
 		    for (var key in jsonObjet) {
 		        if (jsonObjet.hasOwnProperty(key) && typeof(key) !== 'function') {
