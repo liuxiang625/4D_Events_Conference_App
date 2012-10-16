@@ -246,6 +246,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    clickedButton.addClass("ui-btn-active");
 			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
+		                console.log(sessionIDSet);
 		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
 		                	autoExpand: "allSpeakers",
 		                    onSuccess: function(sessionsInTimeEvent) {
@@ -377,7 +378,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	            $('#speakerName').text(speaker.name.getValue());
 	            $('#speakerTitle').text(speaker.title.getValue() + ', ' + speaker.company.getValue());
 	            (speaker.speakerBio.getValue()) ? $('#speakerBio').text(speaker.speakerBio.getValue()) : $('#speakerBio').text("No speaker biography yet");
-	            (speaker.speakerPicURL.getValue()) ? ('#speakerPic').attr("src", speaker.speakerPicURL.getValue()) : $('#speakerPic').attr("src", "styles/images/profilePicPlaceHolder.gif");
+	            (speaker.speakerPicURL.getValue()) ? $('#speakerPic').attr("src", speaker.speakerPicURL.getValue()) : $('#speakerPic').attr("src", "styles/images/profilePicPlaceHolder.gif");
 	            $('#speakerSessionsList').empty();
 	            $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
 	            sessionsCollectionRel = speaker.allSessions.relEntityCollection;
@@ -471,6 +472,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        }
 		    }
 		}
+		
+		$('#loadEvaluation').live('tap',function(){
+			
+		});
 		
 		$(".allSponsorImage").live('click', function() {
 			$.mobile.changePage("#page8", {

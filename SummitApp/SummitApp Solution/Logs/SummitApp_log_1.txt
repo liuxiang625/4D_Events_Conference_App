@@ -1629,3 +1629,41 @@
 2012-10-15 10:14:13 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
 2012-10-15 10:14:13 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
 2012-10-15 10:14:13 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 158 ms)
+2012-10-15 17:42:50 [com.wakanda-software.SummitApp] INFO - Stopping the solution
+2012-10-15 17:42:50 [com.wakanda-software.SummitApp.summitApp] INFO - Stopping the project
+2012-10-15 17:42:51 [com.wakanda-software.SummitApp.summitApp] INFO - Project stopped (duration: 1065 ms)
+2012-10-15 17:42:51 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Stopping the project
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project stopped (duration: 2061 ms)
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp] INFO - Solution stopped (duration: 3127 ms)
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp] INFO - Closing the solution
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the project
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 404 ms)
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.summitApp] INFO - Project closed (duration: 406 ms)
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Closing the project
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project closed (duration: 1 ms)
+2012-10-15 17:42:54 [com.wakanda-software.SummitApp] INFO - Solution closed (duration: 814 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Opening the solution
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Users and groups directory opened (duration: 41 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 14 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 28 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Opening the project
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project opened (duration: 8 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 106 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Starting the solution
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the project
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the HTTP server
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - HTTP server started (duration: 25 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Project started (duration: 74 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the project
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the HTTP server
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - HTTP server started (duration: 28 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project started (duration: 71 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Executing the bootstrap(s)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.summitApp] INFO - Bootstrap(s) executed (duration: 10 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
+2012-10-16 10:22:38 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 166 ms)
