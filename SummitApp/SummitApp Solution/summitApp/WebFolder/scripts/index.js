@@ -28,14 +28,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 				Array.prototype.removeByValue = function(val) {
-		    for (var i = 0; i < this.length; i++) {
-		        if (this[i] == val) {
-		            this.splice(i, 1);
-		            break;
-		        }
-		    }
+				    for (var i = 0; i < this.length; i++) {
+				        if (this[i] == val) {
+				            this.splice(i, 1);
+				            break;
+				        }
+				    }
 	};// @lock
 
+
+	var CookieDate = new Date;
+	CookieDate.setFullYear(CookieDate.getFullYear( ) +10);
+	if(document.cookie.indexOf("SummitAPPID") == -1) {
+		document.cookie = 'SummitAPPID = ' + uniqueid() + ';expires=' + CookieDate.toGMTString() + ';';
+	}
+	var beginIndex = document.cookie.indexOf("SummitAPPID")+12;
+	var endIndex = beginIndex + 32;
+	var coockieID = document.cookie.substring(beginIndex,endIndex);
+	alert(document.cookie);
 	
 		$('#searchInput').live('keyup',function(event) {
 			//alert(this.value);
@@ -101,8 +111,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Retrive data from local storage;
 		if (localStorage.getItem('likedSessions') != null) likedSessions = JSON.parse(localStorage.getItem('likedSessions')) ;
 		if (!$.isArray(likedSessions)) likedSessions = [];
+		
+		var sessionSurveyArrayForSubmission = {};
+		
+		
+		//Load days for tapped event
 		$(".loadDays").live('tap', function() { //tap event handler of Event listitem
-		    //daysPageGeneration(eventsCollectionEvent.entityCollection, this.id);
 		    var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
 		    $.blockUI({
@@ -246,7 +260,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    clickedButton.addClass("ui-btn-active");
 			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
-		                console.log(sessionIDSet);
+		                //console.log(sessionIDSet);
 		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
 		                	autoExpand: "allSpeakers",
 		                    onSuccess: function(sessionsInTimeEvent) {
@@ -311,12 +325,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
 		    ds.Session.find("ID = :1", this.id, {
-		    	autoExpand: "allSpeakers",
+		    	autoExpand: "allSpeakers, sessionSurvey.questions",
 		        onSuccess: function(sessionDetailEvent) {
 		        	clickedButton.removeClass("ui-btn-active ui-state-persist");
 		            var session = sessionDetailEvent.entity;
 		            var sessionName = session.name.getValue();
 		            var speakersCollection = session.allSpeakers.relEntityCollection;
+		            var sessionSurvey = session.sessionSurvey.relEntity;
 		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
 		            //$('#sessionDetailPageHead h3').text(sessionName);
 		            $('#sessionDetail h3').text(sessionName);
@@ -338,18 +353,38 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $('#speakersListView').empty();
 		            
 		   			//Apppend speakers to the listview
-		   			 speakersCollection.forEach({ 
-	                         	onSuccess: function(speakerEvent) {
-	                         		var speaker = speakerEvent.entity; 
-	                            	$('#speakersListView').append('<li data-theme="c">' + '<a id="'+ speaker.name.getValue() +'"  class="loadSpeakerProfile"  data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a></li>');
-	                            },
-				onError: function(error) {
-		        	alert(error['error'][0].message + "  Please refresh page");
-		        }
-	                         })
+		   			 speakersCollection.forEach({
+		   			     onSuccess: function(speakerEvent) {
+		   			         var speaker = speakerEvent.entity;
+		   			         $('#speakersListView').append('<li data-theme="c">' + '<a id="' + speaker.name.getValue() + '"  class="loadSpeakerProfile"  data-transition="slide">Speaker: ' + speaker.name.getValue() + '</a > </li>');
+		   			     },
+		   			     onError: function(error) {
+		   			         alert(error['error'][0].message + "  Please refresh page");
+		   			     }
+		   			 });
 		   			
+		   			// Load session survey
+		   			var surveyQuestionsCollection = sessionSurvey.questions.relEntityCollection;
+		   			$('#surveyListView').empty();
+		   			$('#surveyListView').attr('sessionID', session.ID.getValue())
+		   			surveyQuestionsCollection.forEach({
+		   				onSuccess: function(questionEvent) {
+	                    	var questionEntity = questionEvent.entity;
+	                    	var questionID = questionEntity.ID.getValue();
+							if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
+							if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
+
+	                	},
+	                	atTheEnd: function(end) {
+							if ($('#surveyListView').hasClass('ui-listview')) $('#surveyListView').listview('refresh');
+							$('.rateit').rateit();
+							
+	                 	},
+	                	onError: function(error) {
+		        			alert(error['error'][0].message + "  Please refresh page");
+		        		}
+		        	});
 		   			         
-					//Assume there is one speaker per session;
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
 		            $.unblockUI();
 		            $.mobile.changePage("#page6", {transition: "slide"});
@@ -498,9 +533,61 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 		    return weekday[date.getDay()];
 		}
-
+		
+		function generateSurveyQuestion (questionEntity) {
+			//console.log(questionEntity.question.getValue());
+			var questionID = questionEntity.ID.getValue();
+			if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
+			if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
+			//$('#surveyListView li div div').rateit();
+		}
+		
+		//Cancel and clear survey
+		$('#cancelSurveySubmit').live('tap',function(){
+			sessionSurveyArrayForSubmission = {};
+			$('.rateit').rateit('value',0);
+			console.log(sessionSurveyArrayForSubmission);
+		});
+		
+		//Submit Survey by calling server side datastore class and pass the survey result object;
+		$('#submitSurvey').live('tap',function(){
+			ds.SessionSurvey.submitSurveryAnswers(sessionSurveyArrayForSubmission);
+			sessionSurveyArrayForSubmission = {};
+			$('.rateit').rateit('value',0);
+			//console.log(sessionSurveyArrayForSubmission);
+		});
+		
+		
+		$(".rateit").live('rated', function (event, value) {
+//			 var survyeAnswer = {
+//			 		rateValue: value,
+//			 		questionID: this.id,
+//			 		sessionID: $('#surveyListView').attr('sessionID')
+//			 }
+			sessionSurveyArrayForSubmission.sessionID = $('#surveyListView').attr('sessionID');
+			sessionSurveyArrayForSubmission.userCookieID = coockieID;
+			sessionSurveyArrayForSubmission[this.id] = value;
+			//if(!sessionSurveyArrayForSubmission[this.id]) sessionSurveyArrayForSubmission.push(survyeAnswer);
+			console.log( this.id + 'added ' +sessionSurveyArrayForSubmission);
+		});
 		$('#allSponsors').cycle();
 		$('#summitSponsors').cycle();
+		
+		//Generates UniqueID for cookie and localstorage
+		function uniqueid(){
+		    // always start with a letter (for DOM friendlyness)
+		    var idstr=String.fromCharCode(Math.floor((Math.random()*25)+65));
+		    do {                
+		        // between numbers and characters (48 is 0 and 90 is Z (42-48 = 90)
+		        var ascicode=Math.floor((Math.random()*42)+48);
+		        if (ascicode<58 || ascicode>64){
+		            // exclude all chars between : (58) and @ (64)
+		            idstr+=String.fromCharCode(ascicode);    
+		        }                
+		    } while (idstr.length<32);
+
+		    return (idstr);
+		}
 	};
 
 // @region eventManager// @startlock

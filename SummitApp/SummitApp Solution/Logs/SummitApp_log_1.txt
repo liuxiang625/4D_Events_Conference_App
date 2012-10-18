@@ -1711,3 +1711,55 @@
 2012-10-16 18:00:31 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 404 ms)
 2012-10-16 18:00:31 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
 2012-10-16 18:00:31 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 7 ms)
+2012-10-16 18:01:00 [com.wakanda-software.SummitApp] INFO - Stopping the solution
+2012-10-16 18:01:00 [com.wakanda-software.SummitApp.summitApp] INFO - Stopping the project
+2012-10-16 18:01:02 [com.wakanda-software.SummitApp.summitApp] INFO - Project stopped (duration: 2059 ms)
+2012-10-16 18:01:02 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Stopping the project
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project stopped (duration: 2058 ms)
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp] INFO - Solution stopped (duration: 4117 ms)
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp] INFO - Closing the solution
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the project
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 404 ms)
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.summitApp] INFO - Project closed (duration: 405 ms)
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Closing the project
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project closed (duration: 0 ms)
+2012-10-16 18:01:05 [com.wakanda-software.SummitApp] INFO - Solution closed (duration: 811 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Opening the solution
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Users and groups directory opened (duration: 11 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 18 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Opening the project
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project opened (duration: 6 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 63 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Starting the solution
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the project
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the HTTP server
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - HTTP server started (duration: 27 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Project started (duration: 69 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the project
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the HTTP server
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - HTTP server started (duration: 30 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project started (duration: 72 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Executing the bootstrap(s)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.summitApp] INFO - Bootstrap(s) executed (duration: 10 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 11 ms)
+2012-10-17 09:40:08 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 164 ms)
+2012-10-17 17:44:03 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-17 17:44:04 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 304 ms)
+2012-10-17 17:44:04 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-17 17:44:04 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 11 ms)
+2012-10-17 17:44:25 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":[{"sessionID":"10","12":4.5}]}, HTTP connection handler
+2012-10-17 17:44:25 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[{"sessionID":"10","12":4.5}]}, HTTP connection handler
+2012-10-17 17:49:41 [com.wakanda-software.SummitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-17 17:49:41 [com.wakanda-software.SummitApp.summitApp.iasv] ERROR - [1033] call to 'optimize' function failed, HTTP connection handler
+2012-10-17 17:50:18 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":[{"sessionID":"14","userCookieID":"VSU13FXFHDCEG45IBMA4GEV69M8JOIBD","12":4.5,"11":5,"10":5,"9":4.5,"8":4.5}]}, HTTP connection handler
+2012-10-17 17:50:18 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[{"sessionID":"14","userCookieID":"VSU13FXFHDCEG45IBMA4GEV69M8JOIBD","12":4.5,"11":5,"10":5,"9":4.5,"8":4.5}]}, HTTP connection handler
+2012-10-17 18:05:25 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":[{"sessionID":"10","userCookieID":"EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O","12":5,"11":4.5,"10":4.5}]}, HTTP connection handler
+2012-10-17 18:05:25 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[{"sessionID":"10","userCookieID":"EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O","12":5,"11":4.5,"10":4.5}]}, HTTP connection handler
+2012-10-17 18:05:57 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":[{"sessionID":"14","userCookieID":"EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O","12":5,"11":5,"10":4.5}]}, HTTP connection handler
+2012-10-17 18:05:57 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[{"sessionID":"14","userCookieID":"EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O","12":5,"11":5,"10":4.5}]}, HTTP connection handler

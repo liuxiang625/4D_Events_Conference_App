@@ -1,6 +1,16 @@
 ﻿
 guidedModel =// @startlock
 {
+	SessionSurvey :
+	{
+		methods :
+		{// @endlock
+			submitSurveryAnswers:function(sessionSurveyArrayForSubmission)
+			{// @lock
+				console.log(sessionSurveyArrayForSubmission);
+			}// @startlock
+		}
+	},
 	Speaker :
 	{
 		methods :

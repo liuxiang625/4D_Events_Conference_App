@@ -21,7 +21,7 @@
 		<meta name="WAF.config.loadJS" content="/scripts/jquery.blockUI.js"/>
 		<meta name="WAF.config.loadJS" content="/scripts/index.js"/>
 		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
-		<meta id="waf-interface-css" name="WAF.config.loadCSS" content="styles/index.css"/>
+		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 </head>
     
     <body id="waf-body" data-workspace-width="320" data-workspace-orientation="portrait" data-workspace-height="480" data-workspace-device="Apple iPhone" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="cupertino" data-platform="desktop" data-lib="WAF" data-apple-meta-tags-status-bar="default" class="cupertino" style="visibility:hidden;">
@@ -466,41 +466,65 @@
         <!-- Survey -->
         <div id="page11" data-role="page">
             <div data-theme="a" data-role="header">
-                <a href="#page6" data-transition="slidedown" data-theme="b" data-role="button" class="ui-btn-right">
-                    Done
+                <a id="submitSurvey" href="#page6" data-transition="slidedown" data-theme="b" data-role="button" class="ui-btn-right">
+                    Save
                 </a>
                 <h3>Session Survey</h3>
-                <a href="#page6" data-transition="slidedown" data-role="button" class="ui-btn-left">
+                <a id="cancelSurveySubmit" href="#page6" data-transition="slidedown" data-role="button" class="ui-btn-left">
                     Cancel
                 </a>
             </div>
-            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
-                <h3>Presentation Content
-                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
-                    <fieldset data-role="controlgroup">
-                        <label for="textarea1"></label>
-                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
-                    </fieldset>
-                </h3>
-            </div>
-            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
-                <h3>Presentation Delivery
-                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
-                    <fieldset data-role="controlgroup">
-                        <label for="textarea1"></label>
-                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
-                    </fieldset>
-                </h3>
-            </div>
-            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
-                <h3>Presentation Usefulness
-                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
-                    <fieldset data-role="controlgroup">
-                        <label for="textarea1"></label>
-                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
-                    </fieldset>
-                </h3>
-            </div>
+			<ul  id="surveyListView" sessionID="" data-role="listview" data-inset="false">
+            	<li>
+					<div style="margin-left:auto;margin-right:auto;align:center;text-align:center;">
+	                	<h3>Presentation Content</h3>
+						<div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+					</div>
+                </li>
+                <li>
+	                <h3>Presentation Delivery
+	                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+	                </h3>
+                </li>
+                <li>
+	                <h3>Presentation Usefulness
+	                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+	                </h3>
+                </li>
+				<li>
+	                <h3>Addtional Comments</h3>
+					<fieldset data-role="controlgroup">
+	                        <label for="textarea1"></label>
+	                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
+	                </fieldset>
+                </li>
+            </ul>
+			<!--<div id="evaluationDiv">
+	            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
+	                <h3>Presentation Content
+	                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+	                    
+	                </h3>
+	            </div>
+	            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
+	                <h3>Presentation Delivery
+	                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+	                    <fieldset data-role="controlgroup">
+	                        <label for="textarea1"></label>
+	                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
+	                    </fieldset>
+	                </h3>
+	            </div>
+	            <div style="height:100px;width:250px;margin-left:auto;margin-right:auto;align:center;text-align:center;">
+	                <h3>Presentation Usefulness
+	                    <div data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div>
+	                    <fieldset data-role="controlgroup">
+	                        <label for="textarea1"></label>
+	                        <textarea placeholder="Comments" name="" id="textarea1" data-mini="true"></textarea>
+	                    </fieldset>
+	                </h3>
+	            </div>
+			</div>-->
         </div>
 		<!-- About -->
 <div id="page12" data-role="page">
