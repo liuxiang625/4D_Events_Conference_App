@@ -44,8 +44,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	}
 	var beginIndex = document.cookie.indexOf("SummitAPPID")+12;
 	var endIndex = beginIndex + 32;
-	var coockieID = document.cookie.substring(beginIndex,endIndex);
-	alert(document.cookie);
+	var cookieID = document.cookie.substring(beginIndex,endIndex);
 	
 		$('#searchInput').live('keyup',function(event) {
 			//alert(this.value);
@@ -325,7 +324,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			var clickedButton = $(this);
 		    clickedButton.addClass("ui-btn-active");
 		    ds.Session.find("ID = :1", this.id, {
-		    	autoExpand: "allSpeakers, sessionSurvey.questions",
+		    	autoExpand: "allSpeakers, sessionSurvey.questions, sessionSurvey.answers",
 		        onSuccess: function(sessionDetailEvent) {
 		        	clickedButton.removeClass("ui-btn-active ui-state-persist");
 		            var session = sessionDetailEvent.entity;
@@ -333,7 +332,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            var speakersCollection = session.allSpeakers.relEntityCollection;
 		            var sessionSurvey = session.sessionSurvey.relEntity;
 		            var sessionDetail = formatDate(session.sessionDate.getValue()) + ", " + session.startTime.getValue() + "- " + session.endTime.getValue() + ", " + session.room.getValue();
-		            //$('#sessionDetailPageHead h3').text(sessionName);
+		   			var surveyQuestionsCollection = sessionSurvey.questions.relEntityCollection;
+		   			var surveyAnswersCollection = sessionSurvey.answers.relEntityCollection;         
+					//$('#sessionDetailPageHead h3').text(sessionName);
 		            $('#sessionDetail h3').text(sessionName);
 		            $('#sessionDetail p').text(sessionDetail);
 		            var $starButton = $('<a id="' + session.ID.getValue() + '" data-role="button" data-inline="true" data-iconpos="notext" data-icon="star" class="likeCurrentSession" ></a>');
@@ -364,26 +365,47 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		   			 });
 		   			
 		   			// Load session survey
-		   			var surveyQuestionsCollection = sessionSurvey.questions.relEntityCollection;
-		   			$('#surveyListView').empty();
-		   			$('#surveyListView').attr('sessionID', session.ID.getValue())
-		   			surveyQuestionsCollection.forEach({
-		   				onSuccess: function(questionEvent) {
-	                    	var questionEntity = questionEvent.entity;
-	                    	var questionID = questionEntity.ID.getValue();
-							if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
-							if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
+		   			
+//		   			if(surveyAnswersCollection.query('ID = :1 and sessionName = :2', cookieID, sessionName).length == 0) {
+					ds.Answer.query('userCookieID = :1 and sessionName = :2',{params:[cookieID, sessionName],
+						onSuccess: function(answersEvent) {
+		   			         if(answersEvent.entityCollection.length == 0){
+		   			         	$('#surveyListView').empty();
+					   			$('#surveyListView').attr('sessionID', session.ID.getValue());
+					   			$('#loadEvaluation').show();
+					   			surveyQuestionsCollection.forEach({
+					   				onSuccess: function(questionEvent) {
+				                    	var questionEntity = questionEvent.entity;
+				                    	var questionID = questionEntity.ID.getValue();
+										if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
+										if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
 
-	                	},
-	                	atTheEnd: function(end) {
-							if ($('#surveyListView').hasClass('ui-listview')) $('#surveyListView').listview('refresh');
-							$('.rateit').rateit();
-							
-	                 	},
-	                	onError: function(error) {
-		        			alert(error['error'][0].message + "  Please refresh page");
-		        		}
-		        	});
+				                	},
+				                	atTheEnd: function(end) {
+										if ($('#surveyListView').hasClass('ui-listview')) $('#surveyListView').listview('refresh');
+										$('.rateit').rateit();
+										$('.rateit').rateit('resetable',false)
+										
+				                 	},
+				                	onError: function(error) {
+					        			alert(error['error'][0].message + "  Please refresh page");
+					        		}
+					        	});
+		   			         }
+		   			         else {
+		   			         	$('#loadEvaluation').hide();
+		   			         }
+		   			     },
+		   			     onError: function(error) {
+		   			         alert(error['error'][0].message + "  Please refresh page");
+		   			     }	
+					});
+					
+		   			
+//		        	}
+//		        	else {
+//		        		
+//		        	}
 		   			         
 		            if($('#speakersListView').hasClass('ui-listview')) $('#speakersListView').listview('refresh');
 		            $.unblockUI();
@@ -538,7 +560,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			//console.log(questionEntity.question.getValue());
 			var questionID = questionEntity.ID.getValue();
 			if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
-			if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
+			if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea class="answerInText" placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
 			//$('#surveyListView li div div').rateit();
 		}
 		
@@ -551,9 +573,26 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		//Submit Survey by calling server side datastore class and pass the survey result object;
 		$('#submitSurvey').live('tap',function(){
-			ds.SessionSurvey.submitSurveryAnswers(sessionSurveyArrayForSubmission);
-			sessionSurveyArrayForSubmission = {};
-			$('.rateit').rateit('value',0);
+			var surveyCompleted = true;
+			var rateElementArray = $(".rateit");
+			for (var rateElementID=0; rateElementID<rateElementArray.length; rateElementID++) {
+				if (rateElementArray.rateit('value') == 0 ) {
+					alert('Please complete all questions to sumbit!');
+					surveyCompleted = false;
+					break;
+				}
+				else {
+					rateElementArray.splice(0,1);
+				}
+			}
+			if (surveyCompleted) {
+				ds.SessionSurvey.submitSurveryAnswers(sessionSurveyArrayForSubmission);
+				sessionSurveyArrayForSubmission = {};
+				$('.rateit').rateit('value',0);
+				$.mobile.changePage("#page6", {
+		                    transition: "slidedown"
+		        });
+		     }
 			//console.log(sessionSurveyArrayForSubmission);
 		});
 		
@@ -565,7 +604,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 //			 		sessionID: $('#surveyListView').attr('sessionID')
 //			 }
 			sessionSurveyArrayForSubmission.sessionID = $('#surveyListView').attr('sessionID');
-			sessionSurveyArrayForSubmission.userCookieID = coockieID;
+			sessionSurveyArrayForSubmission.userCookieID = cookieID;
 			sessionSurveyArrayForSubmission[this.id] = value;
 			//if(!sessionSurveyArrayForSubmission[this.id]) sessionSurveyArrayForSubmission.push(survyeAnswer);
 			console.log( this.id + 'added ' +sessionSurveyArrayForSubmission);
