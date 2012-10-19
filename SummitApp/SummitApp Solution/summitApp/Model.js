@@ -27,13 +27,18 @@ guidedModel =// @startlock
 						//console.log(obj + '   ' +sessionSurveyArrayForSubmission[obj]);
 						var questionID = obj;
 						//var answer = sessionSurveyArrayForSubmission[obj];
-						var newAnswer = ds.Answer.createEntity();
-						newAnswer.question = ds.Question.find('ID = :1',questionID);
-						newAnswer.sessionSurvey = newAnswer.question.sessionSurvey;
-						newAnswer.session = ds.Session.find('ID = :1',sessionSurveyArrayForSubmission['sessionID']);
-						newAnswer.userCookieID = sessionSurveyArrayForSubmission['userCookieID'];
-						newAnswer.question.isRating?newAnswer.rate = sessionSurveyArrayForSubmission[obj]:newAnswer.answer = sessionSurveyArrayForSubmission[obj];
-						newAnswer.save();
+						try {
+							var newAnswer = ds.Answer.createEntity();
+							newAnswer.question = ds.Question.find('ID = :1',questionID);
+							newAnswer.sessionSurvey = newAnswer.question.sessionSurvey;
+							newAnswer.session = ds.Session.find('ID = :1',sessionSurveyArrayForSubmission['sessionID']);
+							newAnswer.userCookieID = sessionSurveyArrayForSubmission['userCookieID'];
+							newAnswer.question.isRating?newAnswer.rate = sessionSurveyArrayForSubmission[obj]:newAnswer.answer = sessionSurveyArrayForSubmission[obj];
+							newAnswer.save();
+						}
+						catch (e) {     //if you cannot create it, then error out
+                			return {error: 5, errorMessage: ' Evaluation submittion failed'};
+            			}
 					}
 				}
 				console.log(newAnswer.userCookieID);

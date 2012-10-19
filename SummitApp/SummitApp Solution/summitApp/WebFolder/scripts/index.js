@@ -259,7 +259,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    clickedButton.addClass("ui-btn-active");
 			if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0 && sessionIDSet.hasOwnProperty(this.id)) {
 		                $('#sessionsPageHead h3').text(sessionIDSet[this.id]);
-		                //console.log(sessionIDSet);
 		                sesssionCollection.sessionEntityCollection.query("ID in :1", sessionIDSet[sessionIDSet[this.id]], {
 		                	autoExpand: "allSpeakers",
 		                    onSuccess: function(sessionsInTimeEvent) {
@@ -296,24 +295,21 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                        $.mobile.changePage("#page5", {transition: "slide"});
 		                    },
 		                    onError: function(error) {
-		                    	console.log(error['error'][0].message + "  Please refresh page");
+		                    	alert(error['error'][0].message + "  Please refresh page");
 		                    }
 		                });
 		     }
 		});
 		
 		$(".loadSessionDetail").live('tap', function() { //on() is not working in this context
-			//var location= $('#backToSessions').attr("href");//get link of back button on session detail page.
 			if ($('#sessionsListView').children().size() == 0 | $('#sessionsListView li div div a').toArray().indexOf(this) == -1) {
 				 $("#backToSessions").removeAttr('href');
  				 $('#backToSessions').addClass('goPrevious');
- 				 //$("#backToSessions").text('back');
 
 			}
 			else {
 				$("#backToSessions").removeClass('goPrevious');
 				$("#backToSessions").attr("href", '#page5');
-				  //$("#backToSessions").text('Sessions');
 			}
 			$.blockUI({
 		    	 message: null,
@@ -493,23 +489,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    	if (likedSessions.indexOf(buttonItemForLikedSession) == -1)likedSessions.push(buttonItemForLikedSession);
 		    	if (localStorageAvailable) localStorage.setItem("likedSessions", JSON.stringify(likedSessions));
 		    }
-		    
-//			($(this).attr('data-theme') != "e")?$(this).buttonMarkup({theme: 'e'}):$(this).buttonMarkup({theme: 'z'});
-//			$(this).trigger('refresh');
 		});
 		
-		//Generate favorite session list
-//		$(document).live('pagebeforechange', function(e, data) {
-//		    if (data.toPage.toString().indexOf('#page9') != -1) {
-//		        $('#starredSessionsListView').empty();
-//		        for (var starredElement in likedSessions) {
-//		        	if (likedSessions.hasOwnProperty(starredElement)) {
-//		        		//console.log(likedSessions[starredElement]);
-//						$('#starredSessionsListView').append('<li data-theme="c">'+ likedSessions[starredElement]+' <a mID="'+ $(likedSessions[starredElement]).id +'" href="#" class="likeCurrentSession"></a></li>');
-//		        	}
-//		        }
-//		    }
-//		});
 		
 		$('#page9').live('pagebeforeshow',function(event, ui){
 			$('#starredSessionsListView').empty();
@@ -557,7 +538,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 		
 		function generateSurveyQuestion (questionEntity) {
-			//console.log(questionEntity.question.getValue());
 			var questionID = questionEntity.ID.getValue();
 			if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
 			if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea class="answerInText" placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
@@ -568,51 +548,43 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$('#cancelSurveySubmit').live('tap',function(){
 			sessionSurveyArrayForSubmission = {};
 			$('.rateit').rateit('value',0);
-			console.log(sessionSurveyArrayForSubmission);
 		});
 		
 		//Submit Survey by calling server side datastore class and pass the survey result object;
-		$('#submitSurvey').live('tap',function(){
-			var surveyCompleted = true;
-			var rateElementArray = $(".rateit");
-			for (var rateElementID=0; rateElementID<rateElementArray.length; rateElementID++) {
-				if (rateElementArray.rateit('value') == 0 ) {
-					alert('Please complete all questions to sumbit!');
-					surveyCompleted = false;
-					break;
-				}
-				else {
-					rateElementArray.splice(0,1);
-				}
-			}
-			if (surveyCompleted) {
-				ds.SessionSurvey.submitSurveryAnswers(sessionSurveyArrayForSubmission);
-				sessionSurveyArrayForSubmission = {};
-				$('.rateit').rateit('value',0);
-				$.mobile.changePage("#page6", {
+		$('#submitSurvey').live('tap',function(event){
+			var sessionSurveyArrayForSubmissionLength = 0;
+			$.each(sessionSurveyArrayForSubmission, function(k, v) { sessionSurveyArrayForSubmissionLength++; });
+			
+			if (sessionSurveyArrayForSubmissionLength > 11 ) {// all 10 required questions are answered.
+				ds.SessionSurvey.submitSurveryAnswers(sessionSurveyArrayForSubmission,{
+					onSuccess:function(result){
+						$('#loadEvaluation').hide();
+						sessionSurveyArrayForSubmission = {};
+						$('.rateit').rateit('value',0);
+						$.mobile.changePage("#page6", {
 		                    transition: "slidedown"
-		        });
+		        		});
+					},
+					onError: function(error) {
+		        		alert(error['error'][0].message);
+		        	}
+				});
 		     }
-			//console.log(sessionSurveyArrayForSubmission);
+		     else {
+		     	alert('Please complete all questions to sumbit!');	
+		     }
 		});
 		
 		
 		$(".rateit").live('rated', function (event, value) {
-//			 var survyeAnswer = {
-//			 		rateValue: value,
-//			 		questionID: this.id,
-//			 		sessionID: $('#surveyListView').attr('sessionID')
-//			 }
 			sessionSurveyArrayForSubmission.sessionID = $('#surveyListView').attr('sessionID');
 			sessionSurveyArrayForSubmission.userCookieID = cookieID;
 			sessionSurveyArrayForSubmission[this.id] = value;
-			//if(!sessionSurveyArrayForSubmission[this.id]) sessionSurveyArrayForSubmission.push(survyeAnswer);
-			console.log( this.id + 'added ' +sessionSurveyArrayForSubmission);
 		});
 		$('#allSponsors').cycle();
 		$('#summitSponsors').cycle();
 		
-		//Generates UniqueID for cookie and localstorage
+		//Utility: Generates UniqueID for cookie and localstorage
 		function uniqueid(){
 		    // always start with a letter (for DOM friendlyness)
 		    var idstr=String.fromCharCode(Math.floor((Math.random()*25)+65));
@@ -633,3 +605,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
 };// @endlock
+//Error code: 801
+//xtoolbox
+//task 36611, name: 'HTTP connection handler'
+//  Please refresh page
