@@ -211,7 +211,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    if (sessionDate == currentDate & sessionTimes.indexOf(sessionTime) == -1) {
 		                        sessionTimes.push(sessionTime);
 		                        if (sessionItem.isActivity.getValue()) {
-		                            $('#timSlotListView').append('<li role="heading" data-role="list-divider" ><h3>' + sessionTime + '  ' + sessionItem.name.getValue() + '</h3></li>');
+		                            $('#timSlotListView').append('<li role="heading" data-role="list-divider" ><h3 style="white-space:normal">' + sessionTime + '  ' + sessionItem.name.getValue() + ' at ' + sessionItem.room.getValue() + '</h3></li>');
 		                        }
 		                        else {
 		                            $('#timSlotListView').append('<li data-theme="c" ><a class="loadSessions" id="' + sessionItem.ID.getValue() + '" class=""  data-transition="slide" >' + '<h3>' + sessionTime + '</h3><p class="' + sessionTime + '">' + sessionFirstTag + '</p></a></li>');
@@ -430,7 +430,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	            var speaker = speakerEvent.entity;
 	            $('#speakerName').text(speaker.name.getValue());
 	            $('#speakerTitle').text(speaker.title.getValue() + ', ' + speaker.company.getValue());
-	            (speaker.speakerBio.getValue()) ? $('#speakerBio').text(speaker.speakerBio.getValue()) : $('#speakerBio').text("No speaker biography yet");
+	            (speaker.speakerBio.getValue()) ? $('#speakerBio').text(speaker.speakerBio.getValue()) : $('#speakerBio').hide();
 	            (speaker.speakerPicURL.getValue()) ? $('#speakerPic').attr("src", speaker.speakerPicURL.getValue()) : $('#speakerPic').attr("src", "styles/images/profilePicPlaceHolder.gif");
 	            $('#speakerSessionsList').empty();
 	            $('#speakerSessionsList').append('<li role="heading" data-role="list-divider">Sessions</li>');
@@ -571,7 +571,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				});
 		     }
 		     else {
-		     	alert('Please complete all questions to sumbit!');	
+		     	alert('Please complete all questions to sumbit!');
+		     	event.preventDefault();	
 		     }
 		});
 		
