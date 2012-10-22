@@ -92,7 +92,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$.each(allSponsorsImageArray, function (i, val) {
   			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
 		});
-		$.each(allSponsorsImageArray, function (i, val) {
+		$.each(summitSponsorsImageArray, function (i, val) {
   			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
 		});
 
@@ -191,6 +191,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            $('#timSlotListView').empty();
 		            var sessionTimes = [];
 		            var tagsSet = {};
+		            var sessionsSet = {};
 		            $('#dayPageHead h3').text(currentDate);
 		            sesssionCollection.sessionEntityCollection.forEach({
 		                onSuccess: function(sessionRelevent) {
@@ -198,6 +199,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    var sessionDate = formatDate(sessionItem.sessionDate.getValue());
 		                    var sessionTime = sessionItem.startTime.getValue() + "- " + sessionItem.endTime.getValue();
 		                    var sessionFirstTag = "";
+		                    sessionsSet[sessionItem.ID.getValue()] = sessionItem.name.getValue();
 		                    if (sessionItem.tags.getValue()) {
 		                        sessionFirstTag = sessionItem.tags.getValue().match(/,/) ? sessionItem.tags.getValue().split(',')[0] : sessionItem.tags.getValue();
 		                        if (sessionTimes.indexOf(sessionTime) != -1) {
@@ -231,7 +233,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    for (var key in tagsSet) {
 		                        if (key.match(/\d{1,2}[:-]\d{2}([:-]\d{2,3})*/)) {
 		                            var idToAddTags = getKeyForValue(tagsSet, key);
-		                            $('#' + idToAddTags + " p").text(tagsSet[key]);
+		                            if(tagsSet[key].indexOf(",") != -1) {
+		                            	$('#' + idToAddTags + " p").text(tagsSet[key]);
+		                            }
+		                            else {
+		                            	$('#' + idToAddTags + " p").text(sessionsSet[idToAddTags]);
+		                            	console.log(sessionsSet[idToAddTags]);
+		                            }
 		                        }
 		                    }
 		                    //if (localStorageAvailable) localStorage.setItem("page3", $('#timSlotListView').html());
