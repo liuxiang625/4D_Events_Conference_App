@@ -2289,3 +2289,9 @@
 2012-10-22 09:12:58 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
 2012-10-22 09:12:58 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
 2012-10-22 09:12:58 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 163 ms)
+2012-10-22 15:29:20 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-22 15:29:20 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 305 ms)
+2012-10-22 15:29:20 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-22 15:29:20 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 11 ms)
+2012-10-22 21:38:31 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O"]}, HTTP connection handler
+2012-10-22 21:38:31 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["EM0BGHNENOPMMWYCNAI8RVCHX4SLV21O"]}, HTTP connection handler

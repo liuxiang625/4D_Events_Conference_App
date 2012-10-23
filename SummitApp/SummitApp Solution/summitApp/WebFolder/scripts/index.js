@@ -87,14 +87,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
   		}
 
 		//preload all sponsor pics:
-		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png'];// Array of images:
-		var summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
+		var allSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png', 'styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png','styles/images/Sponsors/pubnub.png','styles/images/Sponsors/logo-mozilla-firefox.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/logo-telerik.png', 'styles/images/Sponsors/logo-kendo.png', 'styles/images/Sponsors/oreilly.png', 'styles/images/Sponsors/qcon-transparent-background.png', 'styles/images/Sponsors/looprecur.png', 'styles/images/Sponsors/logo-agile-diagnosis.png', 'styles/images/Sponsors/logo-cue.png', 'styles/images/Sponsors/logo-W3C.png',   ];// Array of images:
+		var summitSponsorsImageArray = ['styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png','styles/images/Sponsors/pubnub.png','styles/images/Sponsors/logo-mozilla-firefox.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/logo-telerik.png', 'styles/images/Sponsors/logo-kendo.png', 'styles/images/Sponsors/oreilly.png', 'styles/images/Sponsors/qcon-transparent-background.png', 'styles/images/Sponsors/looprecur.png', 'styles/images/Sponsors/logo-agile-diagnosis.png', 'styles/images/Sponsors/logo-cue.png', 'styles/images/Sponsors/logo-W3C.png'];
 		$.each(allSponsorsImageArray, function (i, val) {
   			$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#allSponsors');
 		});
-		$.each(summitSponsorsImageArray, function (i, val) {
-  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#summitSponsors');
-		});
+//		$.each(summitSponsorsImageArray, function (i, val) {
+//  			$('<img/>').attr('src', val).attr('width',150).attr('height',60).appendTo('#eventSponsors');
+//		});
+//		$('#eventSponsors').cycle();
 
 
 		var sessionIDSet = {};
@@ -126,7 +127,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    });
 		    if (allEventsCollection.available && allEventsCollection.eventCollections.length > 0) {
 		        allEventsCollection.eventCollections.query("name = :1 | name %% :1", this.id, {
-		            autoExpand: "sessions",
+		            autoExpand: "sessions, sponsors",
 		            onSuccess: function(event) {
 		                event.entityCollection.forEach({
 		                    onSuccess: function(eventItemEvent) {
@@ -139,6 +140,31 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            startDate.setDate(startDate.getDate() + 1);
 		                            $('#daysListView').append('<li data-theme="c"><a id="' + formatDate(startDate) + '" class="loadTimsSlots" href="#" data-transition="slide">' + '<h3>' + getTheDay(startDate) + " " + formatDate(startDate) + '</h3><p>'+dayDescription[formatDate(startDate)] +'</p></li>');
 		                        }
+		                        //Get Sponsors collection watch for performance
+		                        $('#eventSponsors').empty();
+		                        if (eventItemEvent.entity.name.getValue().indexOf('4D') != -1){
+		                        	summitSponsorsImageArray = ['styles/images/Sponsors/sponsor-logo-hm.png','styles/images/Sponsors/sponsor-logo-paypal.png',  'styles/images/Sponsors/sponsor-logo-objsys.png'];
+		                        //var sponsorsCollectionRel = eventItemEvent.entity.sponsors.relEntityCollection;
+		                        
+//		                        sponsorsCollectionRel.forEach({  //toArray() returns all 19 instead of 3 wile  sponsorsCollectionRel.length us 3, need verification
+//		                        	onSuccess: function(sponsorEvent) {
+//		                        		//console.log(sponsorEvent.entity);
+//		                        		$('<img/>').attr('src', sponsorEvent.entity.imageURL.getValue()).attr('width',150).attr('height',60).appendTo('#eventSponsors');
+//		                        	},
+//		                        	atTheEnd: function(end) {
+//		                        		$('#eventSponsors').cycle();
+//		                        	}
+//		                        	
+//		                        });
+		                        }
+		                        else {
+		                        	summitSponsorsImageArray = ['styles/images/Sponsors/ebay.png', 'styles/images/Sponsors/redhat.png', 'styles/images/Sponsors/openshift.png','styles/images/Sponsors/pubnub.png','styles/images/Sponsors/logo-mozilla-firefox.png', 'styles/images/Sponsors/logo-mongolab.png', 'styles/images/Sponsors/logo-telerik.png', 'styles/images/Sponsors/logo-kendo.png', 'styles/images/Sponsors/oreilly.png', 'styles/images/Sponsors/qcon-transparent-background.png', 'styles/images/Sponsors/looprecur.png', 'styles/images/Sponsors/logo-agile-diagnosis.png', 'styles/images/Sponsors/logo-cue.png', 'styles/images/Sponsors/logo-W3C.png'];
+		                        }
+		         				$.each(summitSponsorsImageArray, function (i, val) {
+  								$('<img/>').attr('class','allSponsorImage').attr('src', val).attr('width',150).attr('height',60).appendTo('#eventSponsors');
+								});
+								$('#eventSponsors').cycle();
+		                        
 		                        //if (localStorageAvailable) localStorage.setItem("page1", $('#daysListView').html());
 		                        var sessionsCollectionRel = eventItemEvent.entity.sessions.relEntityCollection;
 		                        sessionsCollectionRel.orderBy("startTime", {
@@ -184,10 +210,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        var currentDate = this.id;
 		        var clickedButton = $(this);
 		    	clickedButton.addClass("ui-btn-active");
-//		        if (currentDate == "JS.everywhere") currentDate = '10/26/2012';
-//		        else if (currentDate == "Wakanday") currentDate = '10/27/2012'
 		        if ( sesssionCollection.available && sesssionCollection.sessionEntityCollection.length > 0) {
-		            //Check if listView is initialized, if not listview('refresh') causes error.
 		            $('#timSlotListView').empty();
 		            var sessionTimes = [];
 		            var tagsSet = {};
@@ -233,7 +256,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                    for (var key in tagsSet) {
 		                        if (key.match(/\d{1,2}[:-]\d{2}([:-]\d{2,3})*/)) {
 		                            var idToAddTags = getKeyForValue(tagsSet, key);
-		                            if(tagsSet[key].indexOf(",") != -1) {
+		                            if(tagsSet[key].indexOf(",") != -1) {// check if there is only one tage available, if so show session name instead.
 		                            	$('#' + idToAddTags + " p").text(tagsSet[key]);
 		                            }
 		                            else {
@@ -369,9 +392,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		   			 });
 		   			
 		   			// Load session survey
-		   			
-//		   			if(surveyAnswersCollection.query('ID = :1 and sessionName = :2', cookieID, sessionName).length == 0) {
-					ds.Answer.query('userCookieID = :1 and sessionName = :2',{params:[cookieID, sessionName],
+		   			//Needs further work on query with quote in name, hardcode for now.(might be bug as well)
+//					if(sessionName.indexOf("'")) sessionName = sessionName.replace(/'/g, "\\\'");
+					ds.Answer.query("userCookieID = :1 and sessionName = :2",{params:[cookieID, sessionName],
 						onSuccess: function(answersEvent) {
 		   			         if(answersEvent.entityCollection.length == 0){
 		   			         	$('#surveyListView').empty();
@@ -530,6 +553,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        });
 		});
 		
+		$(".sponsorImage").live('click', function() {
+			var imageName = this.src.match(/(styles\/images\/Sponsors\/[^.]*\S*)/);
+			ds.Sponsor.find('imageURL = :1)', imageName[1],{
+				onSuccess: function(sponsorEvent) {
+					//console.log(sponsorEvent.entity);
+					window.location.href = sponsorEvent.entity.contactInfo.getValue();
+				}
+			});
+		});
+		
+		
 		$(".goPrevious").live('tap', function() {//go to previous page in history
 				history.back();
 				return false;
@@ -591,7 +625,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			sessionSurveyArrayForSubmission[this.id] = value;
 		});
 		$('#allSponsors').cycle();
-		$('#summitSponsors').cycle();
+		
 		
 		//Utility: Generates UniqueID for cookie and localstorage
 		function uniqueid(){
