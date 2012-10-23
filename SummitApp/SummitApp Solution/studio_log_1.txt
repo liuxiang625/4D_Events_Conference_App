@@ -6505,3 +6505,180 @@
 2012-10-18 17:21:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
 2012-10-18 17:21:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
 2012-10-18 17:21:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2012-10-23 12:02:56 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,0
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,1
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,2
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,3
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,4
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,5
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,6
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,length
+2012-10-23 12:03:07 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-array">
+   	  [
+   	  <span class="syntaxColor-string">"11"</span>, <span class="syntaxColor-string">"39"</span>, <span class="syntaxColor-string">"13"</span>, <span class="syntaxColor-string">"61"</span>, <span class="syntaxColor-string">"36"</span>, <span class="syntaxColor-string">"10"</span>, <span class="syntaxColor-string">"9"</span>]
+   	</span>
+   	
+2012-10-23 12:03:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:03:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:38 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:04:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:38 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:04:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,0
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,1
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,2
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,3
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,4
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,5
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,length
+2012-10-23 12:04:43 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-array">
+   	  [
+   	  <span class="syntaxColor-string">"11"</span>, <span class="syntaxColor-string">"39"</span>, <span class="syntaxColor-string">"13"</span>, <span class="syntaxColor-string">"61"</span>, <span class="syntaxColor-string">"36"</span>, <span class="syntaxColor-string">"9"</span>]
+   	</span>
+   	
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:04:51 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,0
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,1
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,2
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,3
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,4
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,5
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,6
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,length
+2012-10-23 12:05:05 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-array">
+   	  [
+   	  <span class="syntaxColor-string">"11"</span>, <span class="syntaxColor-string">"39"</span>, <span class="syntaxColor-string">"13"</span>, <span class="syntaxColor-string">"61"</span>, <span class="syntaxColor-string">"36"</span>, <span class="syntaxColor-string">"9"</span>, <span class="syntaxColor-string">"8"</span>]
+   	</span>
+   	
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:20 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:29 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleinfo,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,0
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,1
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,2
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,3
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,4
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,5
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : Bottom> waStudio_tools_toCrossFireValue_forEachObjectProperty ,length
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-array">
+   	  [
+   	  <span class="syntaxColor-string">"11"</span>, <span class="syntaxColor-string">"39"</span>, <span class="syntaxColor-string">"13"</span>, <span class="syntaxColor-string">"61"</span>, <span class="syntaxColor-string">"36"</span>, <span class="syntaxColor-string">"9"</span>]
+   	</span>
+   	
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:30 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)

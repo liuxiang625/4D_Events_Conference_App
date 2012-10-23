@@ -74,6 +74,16 @@ guidedModel =// @startlock
 	{
 		methods :
 		{// @endlock
+			syncSessionFavoritedItems:function(favoritedSessionIDArray, userCookieID )
+			{// @lock
+				console.log(favoritedSessionIDArray);
+				for ( var favoritedSessionID in favoritedSessionIDArray) {
+					var newSessionFavoritedItem = ds.SessionFavoritedItem.createEntity();
+					newSessionFavoritedItem.userCookieID = userCookieID;
+					newSessionFavoritedItem.favoritedSession = ds.Session.find("ID = :1" , favoritedSessionIDArray[favoritedSessionID]);
+					newSessionFavoritedItem.save();
+				}
+			},// @lock
 			searchSessionByString:function(queryString)
 			{// @lock
 				var sessionsFound = ds.Session.query("name = :1", queryString);

@@ -261,7 +261,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		                            }
 		                            else {
 		                            	$('#' + idToAddTags + " p").text(sessionsSet[idToAddTags]);
-		                            	console.log(sessionsSet[idToAddTags]);
 		                            }
 		                        }
 		                    }
@@ -520,6 +519,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    	if (likedSessions.indexOf(buttonItemForLikedSession) == -1)likedSessions.push(buttonItemForLikedSession);
 		    	if (localStorageAvailable) localStorage.setItem("likedSessions", JSON.stringify(likedSessions));
 		    }
+		    
+		    //Sync likedsessions with server
+		    var likedSessionItemArray = [];
+		    for (var likedSessionID in likedSessions) {
+		    	if(typeof likedSessions[likedSessionID] != 'function') {
+		    		likedSessionItemArray.push($(likedSessions[likedSessionID])[0].id);
+		    	}
+		    }
+		    ds.Session.syncSessionFavoritedItems(likedSessionItemArray, cookieID);
 		});
 		
 		
