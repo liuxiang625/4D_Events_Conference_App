@@ -2335,3 +2335,7 @@
 2012-10-23 12:05:04 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[["11","39","13","61","36","9","8"]]}, HTTP connection handler
 2012-10-23 12:05:29 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":[["11","39","13","61","36","9"]]}, HTTP connection handler
 2012-10-23 12:05:29 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":[["11","39","13","61","36","9"]]}, HTTP connection handler
+2012-10-23 12:17:22 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 405 ms)
+2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 9 ms)

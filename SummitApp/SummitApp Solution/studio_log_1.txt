@@ -6682,3 +6682,166 @@
 2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
 2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
 2012-10-23 12:05:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:22 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:22 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:22 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:22 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:23 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:17:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:17:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:20:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:21 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:21 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:24 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:24 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:24 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:24 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:31 [JSDEBUGGER] INFO - WARNING : Breakpoints: Scope unknown: ,[object Object]
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:39:37 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349096064stackSize: 0", }
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 4)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 1)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 4)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349096064,0,1,100001
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - WARNING : path undefined
+2012-10-23 12:39:38 [JSDEBUGGER] INFO - WARNING : path undefined
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Bottom> evaluate ,4349096064,0,this,1
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 1)
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatching message event,[object Object],from crossfireClient_onevaluated_consoleListener :
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consolelog,event internally:,[object Object],(request_seq: 3)
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-object">
+   	  {
+   	  length:&nbsp;<span class="syntaxColor-number">105</span>, name:&nbsp;<span class="syntaxColor-object">EntityAttribute {}</span>, event:&nbsp;<span class="syntaxColor-object">EntityAttribute {}</span>, <strong style="font-weight:bold">15 more</strong>}
+   	</span>
+   	
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consolelog,event internally:,[object Object],(request_seq: 3)
+2012-10-23 12:39:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 1)
+2012-10-23 12:40:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:01 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:01 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 12:40:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:30 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:30 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 14:25:30 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:30 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2012-10-23 14:25:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
