@@ -76,12 +76,31 @@ guidedModel =// @startlock
 		{// @endlock
 			syncSessionFavoritedItems:function(favoritedSessionIDArray, userCookieID )
 			{// @lock
-				
+				//Delete all items that exist for this userCookieID
+				var sessionFavoritedItemsToDelete =  ds.SessionFavoritedItem.query("userCookieID = :1",userCookieID);
+				sessionFavoritedItemsToDelete.forEach(
+    				function( item ) {
+    				console.log("item to remove: " + item.favoritedSessionName);
+        			item.remove();
+			    });
+			    
+			    //Create new items with new array of sessionIDs
 				for ( var favoritedSessionID in favoritedSessionIDArray) {
+					//console.log("Session going to save" + favoritedSessionIDArray[favoritedSessionID]);
 					var newSessionFavoritedItem = ds.SessionFavoritedItem.createEntity();
-					newSessionFavoritedItem.userCookieID = userCookieID;
-					newSessionFavoritedItem.favoritedSession = ds.Session.find("ID = :1" , favoritedSessionIDArray[favoritedSessionID]);
-					newSessionFavoritedItem.save();
+					var favoritedSession  = ds.Session.find("ID = :1" , favoritedSessionIDArray[favoritedSessionID]);
+					var session = currentSession();
+					var token = session.promoteWith("Admin");
+					//if (!favoritedSession.allSessionFavoritedItems.query("userCookieID = :1 & favoritedSessionName = :2",userCookieID,favoritedSession.name)) {
+						//if(favoritedSession.allSessionFavoritedItems.find("userCookieID = :1",userCookieID))favoritedSession.allSessionFavoritedItems.find("userCookieID = :1",userCookieID).remove();
+						newSessionFavoritedItem.userCookieID = userCookieID;
+						newSessionFavoritedItem.favoritedSession = favoritedSession;
+						newSessionFavoritedItem.save();
+					//}
+					favoritedSession.sessionsFavoritedCount = favoritedSession.allSessionFavoritedItems.count();
+					favoritedSession.save();
+					console.log(favoritedSession.name + ": " + favoritedSession.allSessionFavoritedItems.count());
+					session.unPromote(token);					
 				}
 
 			},// @lock

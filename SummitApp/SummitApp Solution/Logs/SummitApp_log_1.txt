@@ -2339,3 +2339,371 @@
 2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 405 ms)
 2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
 2012-10-23 12:17:23 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 9 ms)
+2012-10-23 14:27:01 [com.wakanda-software.SummitApp.summitApp] INFO - Closing the database
+2012-10-23 14:27:02 [com.wakanda-software.SummitApp.summitApp] INFO - Database closed (duration: 405 ms)
+2012-10-23 14:27:02 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-10-23 14:27:02 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 11 ms)
+2012-10-23 14:33:43 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:33:43 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:33:51 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:33:51 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:33:59 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:33:59 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:34:49 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:34:49 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:35:34 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:35:34 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:49:08 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:49:08 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed11"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed11"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed39"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed39"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed13"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed13"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed61"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed61"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed36"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed36"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed9"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed9"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed8"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed8"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed10"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed10"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:54:35 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed11"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed11"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed39"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed39"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed13"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed13"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed61"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed61"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed36"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed36"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed9"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed9"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed10"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed10"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed58"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed58"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed59"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed59"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed90"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed90"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed5"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed5"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session removed6"]}, HTTP connection handler
+2012-10-23 14:56:47 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session removed6"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:57:30 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save36"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 14:59:15 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 14:59:49 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 14:59:49 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 15:01:14 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Optimization Part Deux: The Next Level"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Optimization Part Deux: The Next Level"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save11"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save39"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save13"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save61"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save9"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save10"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save58"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save59"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save90"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save5"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["4D-Wakanda Communication: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["4D-Wakanda Communication: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save6"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save8"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save65"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Session going to save20"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Session going to save20"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 15:17:21 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Marketing Roundtable"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Marketing Roundtable"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 15:18:54 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Marketing Roundtable"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Marketing Roundtable"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Browser Versions Are Dead"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Impact Marketing for Small Business"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Phoenix: 20 Years at Lawrence Livermore National Lab "]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Test your JavaScript, Break the build, Be a hero!"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: JS Everywhere: The Full JavaScript Stack"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: The Mozilla App Ecosystem"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Synchronization from the Master"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Benchmark your Storage System Performance"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["item to remove: Web Basics(static, semi-dynamic, dynamic)"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Web Basics(static, semi-dynamic, dynamic): 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Benchmark your Storage System Performance: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Synchronization from the Master: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Building Spatial Web Services with MongoDB + NodeJS in Less than 30 Minutes: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Macros for Developer Productivity: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["The Mozilla App Ecosystem: 2"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["JS Everywhere: The Full JavaScript Stack: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Test your JavaScript, Break the build, Be a hero!: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Phoenix: 20 Years at Lawrence Livermore National Lab : 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Impact Marketing for Small Business: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
