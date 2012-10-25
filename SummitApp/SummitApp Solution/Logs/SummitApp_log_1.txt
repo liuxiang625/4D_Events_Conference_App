@@ -2707,3 +2707,441 @@
 2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Browser Versions Are Dead: 1"]}, HTTP connection handler
 2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
 2012-10-23 15:20:26 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Marketing Roundtable: 1"]}, HTTP connection handler
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Opening the solution
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Opening the users and groups directory
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Users and groups directory opened (duration: 26 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Opening the project
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Opening the database
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Database opened (duration: 18 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Project opened (duration: 40 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Opening the project
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Project opened (duration: 15 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Solution opened (duration: 133 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Starting the solution
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Starting the project
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Starting the HTTP server
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - HTTP server started (duration: 21 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Project started (duration: 167 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Starting the project
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Starting the HTTP server
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - HTTP server started (duration: 47 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Project started (duration: 106 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Executing the bootstrap(s)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.summitApp] INFO - Bootstrap(s) executed (duration: 6 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 22 ms)
+2012-10-23 22:57:38 [com.wakanda-software.summitApp] INFO - Solution started (duration: 303 ms)
+2012-10-23 23:37:48 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GBTL0QUG72TLTY7AQ670JUSF5YSL8FEX"]}, HTTP connection handler
+2012-10-23 23:37:48 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GBTL0QUG72TLTY7AQ670JUSF5YSL8FEX"]}, HTTP connection handler
+2012-10-23 23:40:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-23 23:40:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-23 23:40:02 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-23 23:40:02 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-23 23:40:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["AH73DBJMAQ04VBNUUHHQL66MTB42UUUK"]}, HTTP connection handler
+2012-10-23 23:40:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["AH73DBJMAQ04VBNUUHHQL66MTB42UUUK"]}, HTTP connection handler
+2012-10-23 23:40:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["AH73DBJMAQ04VBNUUHHQL66MTB42UUUK"]}, HTTP connection handler
+2012-10-23 23:40:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["AH73DBJMAQ04VBNUUHHQL66MTB42UUUK"]}, HTTP connection handler
+2012-10-23 23:40:26 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Pre-Class continues: 1"]}, HTTP connection handler
+2012-10-23 23:40:26 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Pre-Class continues: 1"]}, HTTP connection handler
+2012-10-23 23:40:30 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YDKL15CMX6OPNH0JYJ6NX7L1LBS2XDFV"]}, HTTP connection handler
+2012-10-23 23:40:30 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YDKL15CMX6OPNH0JYJ6NX7L1LBS2XDFV"]}, HTTP connection handler
+2012-10-23 23:40:31 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-23 23:40:31 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-23 23:40:40 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L48PN991VB7IVX238ATVCPNI75G5MRTU"]}, HTTP connection handler
+2012-10-23 23:40:40 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L48PN991VB7IVX238ATVCPNI75G5MRTU"]}, HTTP connection handler
+2012-10-23 23:40:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-23 23:40:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-23 23:41:04 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["T102XKHE0WTLBFTJ8P2502D8RYGSEC5Y"]}, HTTP connection handler
+2012-10-23 23:41:04 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["T102XKHE0WTLBFTJ8P2502D8RYGSEC5Y"]}, HTTP connection handler
+2012-10-23 23:41:06 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FN4V4YRUAWKJ0OQI287IF5VQOTH1YA2C"]}, HTTP connection handler
+2012-10-23 23:41:06 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FN4V4YRUAWKJ0OQI287IF5VQOTH1YA2C"]}, HTTP connection handler
+2012-10-23 23:41:29 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["K81S9FR0OV7B70NXS2C0KSI2PJIMEYYE"]}, HTTP connection handler
+2012-10-23 23:41:29 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["K81S9FR0OV7B70NXS2C0KSI2PJIMEYYE"]}, HTTP connection handler
+2012-10-23 23:41:37 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L48PN991VB7IVX238ATVCPNI75G5MRTU"]}, HTTP connection handler
+2012-10-23 23:41:37 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L48PN991VB7IVX238ATVCPNI75G5MRTU"]}, HTTP connection handler
+2012-10-23 23:41:45 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["AJ3L9K7A4E1R9S7O4M5YEAKJ5P6HDMGH"]}, HTTP connection handler
+2012-10-23 23:41:45 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["AJ3L9K7A4E1R9S7O4M5YEAKJ5P6HDMGH"]}, HTTP connection handler
+2012-10-23 23:41:57 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-23 23:41:57 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-23 23:41:58 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KMBDK0F7RMFPIIUIUG5FQI4FDCXXEJ2R"]}, HTTP connection handler
+2012-10-23 23:41:58 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KMBDK0F7RMFPIIUIUG5FQI4FDCXXEJ2R"]}, HTTP connection handler
+2012-10-23 23:42:03 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 1"]}, HTTP connection handler
+2012-10-23 23:42:03 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 1"]}, HTTP connection handler
+2012-10-23 23:42:09 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FB6NF9VC6EAIGCWAF1J0CH9NJAKFXN1Q"]}, HTTP connection handler
+2012-10-23 23:42:09 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FB6NF9VC6EAIGCWAF1J0CH9NJAKFXN1Q"]}, HTTP connection handler
+2012-10-23 23:42:10 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YLF58YDNMJB7QCGJQ8EBKCERAMDRKG6C"]}, HTTP connection handler
+2012-10-23 23:42:10 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YLF58YDNMJB7QCGJQ8EBKCERAMDRKG6C"]}, HTTP connection handler
+2012-10-23 23:42:18 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["T102XKHE0WTLBFTJ8P2502D8RYGSEC5Y"]}, HTTP connection handler
+2012-10-23 23:42:18 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["T102XKHE0WTLBFTJ8P2502D8RYGSEC5Y"]}, HTTP connection handler
+2012-10-23 23:42:24 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FN4V4YRUAWKJ0OQI287IF5VQOTH1YA2C"]}, HTTP connection handler
+2012-10-23 23:42:24 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FN4V4YRUAWKJ0OQI287IF5VQOTH1YA2C"]}, HTTP connection handler
+2012-10-23 23:42:30 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:42:30 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:42:33 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-23 23:42:33 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-23 23:42:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V9R77QNXX7UVWEPY7B5DY004HG36S0QD"]}, HTTP connection handler
+2012-10-23 23:42:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V9R77QNXX7UVWEPY7B5DY004HG36S0QD"]}, HTTP connection handler
+2012-10-23 23:43:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KMBDK0F7RMFPIIUIUG5FQI4FDCXXEJ2R"]}, HTTP connection handler
+2012-10-23 23:43:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KMBDK0F7RMFPIIUIUG5FQI4FDCXXEJ2R"]}, HTTP connection handler
+2012-10-23 23:43:02 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FB6NF9VC6EAIGCWAF1J0CH9NJAKFXN1Q"]}, HTTP connection handler
+2012-10-23 23:43:02 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FB6NF9VC6EAIGCWAF1J0CH9NJAKFXN1Q"]}, HTTP connection handler
+2012-10-23 23:43:12 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:43:12 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:43:22 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-23 23:43:22 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-23 23:43:49 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["HAJ7RCMJF77TYV4UDH3VNOEVC85FVNXD"]}, HTTP connection handler
+2012-10-23 23:43:49 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["HAJ7RCMJF77TYV4UDH3VNOEVC85FVNXD"]}, HTTP connection handler
+2012-10-23 23:43:52 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V9R77QNXX7UVWEPY7B5DY004HG36S0QD"]}, HTTP connection handler
+2012-10-23 23:43:52 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V9R77QNXX7UVWEPY7B5DY004HG36S0QD"]}, HTTP connection handler
+2012-10-23 23:44:39 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:44:39 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["XXVX6RRDYNPATXJTRNHEXGC1K3NQM95O"]}, HTTP connection handler
+2012-10-23 23:45:01 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-23 23:45:01 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-23 23:45:21 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-23 23:45:21 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-23 23:47:41 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VPVLTYEHXWTVYKE953KGPFJS5CRILQG4"]}, HTTP connection handler
+2012-10-23 23:47:41 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VPVLTYEHXWTVYKE953KGPFJS5CRILQG4"]}, HTTP connection handler
+2012-10-23 23:53:25 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:53:25 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:54:29 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:54:29 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:55:59 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:55:59 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:57:14 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:57:14 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["G1VVAL412UNCMJ4F4NB2M7RQOX7G93AM"]}, HTTP connection handler
+2012-10-23 23:59:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["R6FM0AQ8HEPHGAJMJHMB5A00JGMVOO94"]}, HTTP connection handler
+2012-10-23 23:59:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["R6FM0AQ8HEPHGAJMJHMB5A00JGMVOO94"]}, HTTP connection handler
+2012-10-23 23:59:15 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 2"]}, HTTP connection handler
+2012-10-23 23:59:15 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 2"]}, HTTP connection handler
+2012-10-23 23:59:18 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Pre-Class: Web & Mobile for 4D"]}, HTTP connection handler
+2012-10-23 23:59:18 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Pre-Class: Web & Mobile for 4D"]}, HTTP connection handler
+2012-10-24 00:02:49 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["R6FM0AQ8HEPHGAJMJHMB5A00JGMVOO94"]}, HTTP connection handler
+2012-10-24 00:02:49 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["R6FM0AQ8HEPHGAJMJHMB5A00JGMVOO94"]}, HTTP connection handler
+2012-10-24 00:14:12 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["The Mozilla App Ecosystem: 3"]}, HTTP connection handler
+2012-10-24 00:14:12 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["The Mozilla App Ecosystem: 3"]}, HTTP connection handler
+2012-10-24 00:18:30 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YOBDTY45EC8EYD5I4QNX64PABRR71QGY"]}, HTTP connection handler
+2012-10-24 00:18:30 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YOBDTY45EC8EYD5I4QNX64PABRR71QGY"]}, HTTP connection handler
+2012-10-24 00:20:01 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YOBDTY45EC8EYD5I4QNX64PABRR71QGY"]}, HTTP connection handler
+2012-10-24 00:20:01 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YOBDTY45EC8EYD5I4QNX64PABRR71QGY"]}, HTTP connection handler
+2012-10-24 02:47:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:47:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:48:35 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:48:35 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:49:15 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:49:15 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:50:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 02:50:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["FJ3OJNJSMKDAHQ49I4FOEPJWQV0KHVB2"]}, HTTP connection handler
+2012-10-24 15:00:41 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-24 15:00:41 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
+2012-10-24 15:01:48 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["4D-Wakanda Communication: 1"]}, HTTP connection handler
+2012-10-24 15:01:48 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["4D-Wakanda Communication: 1"]}, HTTP connection handler
+2012-10-24 15:01:52 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-24 15:01:52 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-24 15:02:27 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 3"]}, HTTP connection handler
+2012-10-24 15:02:27 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Pre-Class: Web & Mobile for 4D: 3"]}, HTTP connection handler
+2012-10-24 15:02:28 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Pre-Class: Web & Mobile for 4D"]}, HTTP connection handler
+2012-10-24 15:02:28 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Pre-Class: Web & Mobile for 4D"]}, HTTP connection handler
+2012-10-24 15:18:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Datasources from the Master: 1"]}, HTTP connection handler
+2012-10-24 15:18:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Datasources from the Master: 1"]}, HTTP connection handler
+2012-10-24 15:19:02 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["4D-Wakanda Communication: 2"]}, HTTP connection handler
+2012-10-24 15:19:02 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["4D-Wakanda Communication: 2"]}, HTTP connection handler
+2012-10-24 15:53:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["C59NVI8Q6W874KSG032UE83PWJ9MY6KV"]}, HTTP connection handler
+2012-10-24 15:53:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["C59NVI8Q6W874KSG032UE83PWJ9MY6KV"]}, HTTP connection handler
+2012-10-24 17:59:46 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 17:59:46 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 18:01:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-24 18:01:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-24 18:01:17 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 18:01:17 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 18:02:37 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-24 18:02:37 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-24 18:03:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 18:03:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 18:03:22 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-24 18:03:22 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-24 18:03:28 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OM88T1LB3KM7G4SUA1CL3U51PX1RCUAY"]}, HTTP connection handler
+2012-10-24 18:03:28 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OM88T1LB3KM7G4SUA1CL3U51PX1RCUAY"]}, HTTP connection handler
+2012-10-24 18:03:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-24 18:03:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: 4D-Wakanda Communication"]}, HTTP connection handler
+2012-10-24 18:03:39 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-24 18:03:39 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
+2012-10-24 18:03:44 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 18:03:44 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 18:04:04 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Macros for Developer Productivity: 2"]}, HTTP connection handler
+2012-10-24 18:04:04 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Macros for Developer Productivity: 2"]}, HTTP connection handler
+2012-10-24 18:04:21 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UJ2C6YBNNQ26C4P00GVY6T387QQPSRWT"]}, HTTP connection handler
+2012-10-24 18:04:21 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UJ2C6YBNNQ26C4P00GVY6T387QQPSRWT"]}, HTTP connection handler
+2012-10-24 18:04:22 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:04:22 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:04:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:04:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:04:47 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:04:47 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:05:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:05:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:05:58 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 18:05:58 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 18:06:09 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["BN1FJGXB3DQBK7LEU2S099JE0AMK4ING"]}, HTTP connection handler
+2012-10-24 18:06:09 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["BN1FJGXB3DQBK7LEU2S099JE0AMK4ING"]}, HTTP connection handler
+2012-10-24 18:06:21 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:06:21 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:06:40 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:06:40 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:06:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:06:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:07:14 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:07:14 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:09:45 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 18:09:45 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 18:13:44 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Macros for Developer Productivity: 3"]}, HTTP connection handler
+2012-10-24 18:13:44 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Macros for Developer Productivity: 3"]}, HTTP connection handler
+2012-10-24 18:14:18 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:18 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:18 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:18 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:20 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:20 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:14:39 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OVVIB0AHBLHYRUE0DSA55343XBS9AN1A"]}, HTTP connection handler
+2012-10-24 18:14:39 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OVVIB0AHBLHYRUE0DSA55343XBS9AN1A"]}, HTTP connection handler
+2012-10-24 18:15:29 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:15:29 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:08 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:08 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:33 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:33 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:51 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:16:51 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:17:14 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 18:17:14 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 18:17:32 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-24 18:17:32 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Monitoring 4D Server with Enterprise Tools: 1"]}, HTTP connection handler
+2012-10-24 18:17:44 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-24 18:17:44 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Monitoring 4D Server with Enterprise Tools"]}, HTTP connection handler
+2012-10-24 18:17:59 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:17:59 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:19:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:19:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:20:42 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:20:42 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:21:17 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 18:21:17 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 18:22:01 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-24 18:22:01 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-24 18:22:10 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IFYLKVPN59Q52M84VG8A1R01PORB8CBH"]}, HTTP connection handler
+2012-10-24 18:22:10 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IFYLKVPN59Q52M84VG8A1R01PORB8CBH"]}, HTTP connection handler
+2012-10-24 18:23:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:23:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 18:43:28 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GOS6SWRT0O2PA0DAWR4CUOEFWU8QNYWV"]}, HTTP connection handler
+2012-10-24 18:43:28 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GOS6SWRT0O2PA0DAWR4CUOEFWU8QNYWV"]}, HTTP connection handler
+2012-10-24 18:46:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["DP6KODGXW7GOXJMQLIDF6MP50RME0VGN"]}, HTTP connection handler
+2012-10-24 18:46:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["DP6KODGXW7GOXJMQLIDF6MP50RME0VGN"]}, HTTP connection handler
+2012-10-24 18:48:15 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["HOA5WSBTH1H9MTRU3NRGXHG9G54VF37Y"]}, HTTP connection handler
+2012-10-24 18:48:15 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["HOA5WSBTH1H9MTRU3NRGXHG9G54VF37Y"]}, HTTP connection handler
+2012-10-24 18:48:52 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["HOA5WSBTH1H9MTRU3NRGXHG9G54VF37Y"]}, HTTP connection handler
+2012-10-24 18:48:52 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["HOA5WSBTH1H9MTRU3NRGXHG9G54VF37Y"]}, HTTP connection handler
+2012-10-24 18:48:53 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["O1G664BW2TRCOS1H9X1NIGAPKMM9YJQG"]}, HTTP connection handler
+2012-10-24 18:48:53 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["O1G664BW2TRCOS1H9X1NIGAPKMM9YJQG"]}, HTTP connection handler
+2012-10-24 18:49:42 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 18:49:42 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 18:51:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["W97WGCA3QDST4VVIY8E07S3SBFEDNW5N"]}, HTTP connection handler
+2012-10-24 18:51:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["W97WGCA3QDST4VVIY8E07S3SBFEDNW5N"]}, HTTP connection handler
+2012-10-24 18:57:04 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 18:57:04 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 18:58:50 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-24 18:58:50 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
+2012-10-24 19:00:27 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-24 19:00:27 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-24 19:04:15 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 19:04:15 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 19:05:03 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 19:05:03 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 19:05:31 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 19:05:31 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 19:05:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-24 19:05:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-24 19:05:55 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-24 19:05:55 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GOJC67WDTJIFSVVIN3UCNR3VEVENIJOH"]}, HTTP connection handler
+2012-10-24 19:06:09 [com.wakanda-software.summitApp.summitApp] INFO - {"data":[""]}, HTTP connection handler
+2012-10-24 19:06:09 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":[""]}, HTTP connection handler
+2012-10-24 19:06:14 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 19:06:14 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 19:06:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 19:06:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 19:06:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 19:06:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 19:07:17 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 19:07:17 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 19:13:41 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 19:13:41 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 19:14:28 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["A Tale of Scale: 1"]}, HTTP connection handler
+2012-10-24 19:14:28 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["A Tale of Scale: 1"]}, HTTP connection handler
+2012-10-24 19:14:31 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: A Tale of Scale"]}, HTTP connection handler
+2012-10-24 19:14:31 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: A Tale of Scale"]}, HTTP connection handler
+2012-10-24 19:17:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 19:17:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 19:18:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 19:18:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 19:44:13 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 19:44:13 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 19:45:15 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 19:45:15 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 19:46:07 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 19:46:07 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 20:10:30 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["SGILIB6REMT51K6L057L7DTTT03AQR5T"]}, HTTP connection handler
+2012-10-24 20:10:30 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["SGILIB6REMT51K6L057L7DTTT03AQR5T"]}, HTTP connection handler
+2012-10-24 20:11:03 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OM88T1LB3KM7G4SUA1CL3U51PX1RCUAY"]}, HTTP connection handler
+2012-10-24 20:11:03 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OM88T1LB3KM7G4SUA1CL3U51PX1RCUAY"]}, HTTP connection handler
+2012-10-24 20:32:59 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 20:32:59 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 20:34:26 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 20:34:26 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 20:40:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-24 20:40:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-24 20:40:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-24 20:40:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["S83MWJAGLTL80N08ATO2JNJ5P8TAD4X2"]}, HTTP connection handler
+2012-10-24 21:26:21 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 21:26:21 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 21:30:25 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 21:30:25 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 21:30:39 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:30:39 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:31:13 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:31:13 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:31:45 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:31:45 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 21:33:41 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 21:33:41 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 21:34:44 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 21:34:44 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 21:35:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["MWMWYLKDJABOD9ALGGKC8HD67QUXP9FS"]}, HTTP connection handler
+2012-10-24 21:35:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["MWMWYLKDJABOD9ALGGKC8HD67QUXP9FS"]}, HTTP connection handler
+2012-10-24 21:39:07 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WOCPHQAT89VCTEKBDNIUU0RSMA92CJ96"]}, HTTP connection handler
+2012-10-24 21:39:07 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WOCPHQAT89VCTEKBDNIUU0RSMA92CJ96"]}, HTTP connection handler
+2012-10-24 21:39:23 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-24 21:39:23 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YT4NSUKY0LVH2YN6E39QUP2UMTJJWN9A"]}, HTTP connection handler
+2012-10-24 21:40:06 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 21:40:06 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 21:41:29 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 21:41:29 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 21:41:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WOCPHQAT89VCTEKBDNIUU0RSMA92CJ96"]}, HTTP connection handler
+2012-10-24 21:41:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WOCPHQAT89VCTEKBDNIUU0RSMA92CJ96"]}, HTTP connection handler
+2012-10-24 21:47:55 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 21:47:55 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-24 21:49:16 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 21:49:16 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 21:50:59 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 21:50:59 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 22:10:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 22:10:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 22:33:47 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 22:33:47 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["KTR6F6PGTDW6KQUX92DRC93A9K13M2LT"]}, HTTP connection handler
+2012-10-24 22:34:48 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["YDKL15CMX6OPNH0JYJ6NX7L1LBS2XDFV"]}, HTTP connection handler
+2012-10-24 22:34:48 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["YDKL15CMX6OPNH0JYJ6NX7L1LBS2XDFV"]}, HTTP connection handler
+2012-10-24 22:35:46 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 22:35:46 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 22:36:30 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 22:36:30 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JWO5NY8GGUBTCX4D5PR4RGYHEW0OJ9BI"]}, HTTP connection handler
+2012-10-24 22:36:58 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["Essential Web Security for 4D: 1"]}, HTTP connection handler
+2012-10-24 22:36:58 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["Essential Web Security for 4D: 1"]}, HTTP connection handler
+2012-10-24 22:36:58 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Essential Web Security for 4D"]}, HTTP connection handler
+2012-10-24 22:36:58 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Essential Web Security for 4D"]}, HTTP connection handler
+2012-10-24 22:37:01 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Essential Web Security for 4D"]}, HTTP connection handler
+2012-10-24 22:37:01 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Essential Web Security for 4D"]}, HTTP connection handler
+2012-10-24 22:38:58 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-24 22:38:58 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
+2012-10-24 22:39:33 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 22:39:33 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 22:40:26 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 22:40:26 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["L2VIMK1FKKXQL3QROSF8AUESULKGI9S3"]}, HTTP connection handler
+2012-10-24 22:41:20 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 22:41:20 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["V6PINQQAJ093CRTJ7SDEKYLJ5JUXIC7W"]}, HTTP connection handler
+2012-10-24 22:42:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 22:42:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["QQ7JO4A9U8CJ2SFP45TFDM7KQIYJOR4W"]}, HTTP connection handler
+2012-10-24 22:42:11 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 22:42:11 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-24 22:42:14 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["GPPJTSJM5ER7RJFXPRF4W7LGUP0EJAKA"]}, HTTP connection handler
+2012-10-24 22:42:14 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["GPPJTSJM5ER7RJFXPRF4W7LGUP0EJAKA"]}, HTTP connection handler
+2012-10-24 22:44:42 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 22:44:42 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WR0HGM2U8NHLNICYMGKEJODQEC613IO8"]}, HTTP connection handler
+2012-10-24 22:45:27 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 22:45:27 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["WEMTE1ACT5TP4JDKWA4WEDK1KMBBL8JW"]}, HTTP connection handler
+2012-10-24 22:50:34 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 22:50:34 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-24 22:50:53 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 22:50:53 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 22:50:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 22:50:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 22:51:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 22:51:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-24 23:11:23 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 23:11:23 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-24 23:25:05 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 23:25:05 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 23:25:53 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 23:25:53 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["A33NT6K7U8MQEDEC9177BSVBQRV4RWWC"]}, HTTP connection handler
+2012-10-24 23:35:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["BN1FJGXB3DQBK7LEU2S099JE0AMK4ING"]}, HTTP connection handler
+2012-10-24 23:35:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["BN1FJGXB3DQBK7LEU2S099JE0AMK4ING"]}, HTTP connection handler
+2012-10-24 23:48:04 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["W40EK7OHCP9XAAT1WIH6XSOKNGJGCE7Q"]}, HTTP connection handler
+2012-10-24 23:48:04 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["W40EK7OHCP9XAAT1WIH6XSOKNGJGCE7Q"]}, HTTP connection handler
+2012-10-24 23:48:40 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["H8EE5W2GFX6WVGNQCIMUL9Q1YCJ5OSAO"]}, HTTP connection handler
+2012-10-24 23:48:40 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["H8EE5W2GFX6WVGNQCIMUL9Q1YCJ5OSAO"]}, HTTP connection handler
+2012-10-24 23:48:43 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["QIVYLFYYJ1QRAUB3JOPPJV1BRFY5I1P6"]}, HTTP connection handler
+2012-10-24 23:48:43 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["QIVYLFYYJ1QRAUB3JOPPJV1BRFY5I1P6"]}, HTTP connection handler
+2012-10-24 23:48:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["W40EK7OHCP9XAAT1WIH6XSOKNGJGCE7Q"]}, HTTP connection handler
+2012-10-24 23:48:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["W40EK7OHCP9XAAT1WIH6XSOKNGJGCE7Q"]}, HTTP connection handler
+2012-10-24 23:48:58 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 23:48:58 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["X83UV79CN8U2SHJ41PH5QRFA893M0DO9"]}, HTTP connection handler
+2012-10-24 23:52:35 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["MQLRK8E15RQ1RUD8PFXW3RYTH79GW95J"]}, HTTP connection handler
+2012-10-24 23:52:35 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["MQLRK8E15RQ1RUD8PFXW3RYTH79GW95J"]}, HTTP connection handler
+2012-10-24 23:55:04 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["DP6KODGXW7GOXJMQLIDF6MP50RME0VGN"]}, HTTP connection handler
+2012-10-24 23:55:04 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["DP6KODGXW7GOXJMQLIDF6MP50RME0VGN"]}, HTTP connection handler
+2012-10-25 00:04:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-25 00:04:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["OLFUMSV3MQENJ6X1XNYP5Q89DCAKOFYF"]}, HTTP connection handler
+2012-10-25 00:05:36 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-25 00:05:36 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["JKU4SVQU7A4MTGK6MB4TQO0001BXC5LE"]}, HTTP connection handler
+2012-10-25 00:05:54 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-25 00:05:54 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["VHEV2XW4ONY184M5AX2L1U8PJMJW1OK9"]}, HTTP connection handler
+2012-10-25 00:07:13 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-25 00:07:13 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-25 00:08:25 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-25 00:08:25 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["IMNWFHFU9PSQTS2YU69LK9S3X7CB13RU"]}, HTTP connection handler
+2012-10-25 00:28:33 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["RTNG0RTCK5T6YVFCIRL7X8XELBMJ91TI"]}, HTTP connection handler
+2012-10-25 00:28:33 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["RTNG0RTCK5T6YVFCIRL7X8XELBMJ91TI"]}, HTTP connection handler
+2012-10-25 00:34:43 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-25 00:34:43 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["NDYI2VOAU4HLJSOITTVX4LRE56H4DHBP"]}, HTTP connection handler
+2012-10-25 04:56:47 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["XLXYI6L5A95FJTJ9SXAWVWEA6U8R46HT"]}, HTTP connection handler
+2012-10-25 04:56:47 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["XLXYI6L5A95FJTJ9SXAWVWEA6U8R46HT"]}, HTTP connection handler
+2012-10-25 06:30:06 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["PRP39BJTXAI8LWLMGM43AQ4OKR5FMR9H"]}, HTTP connection handler
+2012-10-25 06:30:06 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["PRP39BJTXAI8LWLMGM43AQ4OKR5FMR9H"]}, HTTP connection handler
+2012-10-25 11:03:22 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-25 11:03:22 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'ua.toLowerCase'), HTTP connection handler
+2012-10-25 14:23:47 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:23:47 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:25:50 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:25:50 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:26:55 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:26:55 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:28:32 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:28:32 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:30:09 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:30:09 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["UEOT1H7RI5T01OOJRLMOD1KW9O4K1PN8"]}, HTTP connection handler
+2012-10-25 14:38:49 [com.wakanda-software.summitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
+2012-10-25 14:38:49 [com.wakanda-software.summitApp.summitApp.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'ua.toLowerCase'), HTTP connection handler
+2012-10-25 15:09:06 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["PayPal Payment Integration: 1"]}, HTTP connection handler
+2012-10-25 15:09:06 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["PayPal Payment Integration: 1"]}, HTTP connection handler
+2012-10-25 15:09:28 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:09:28 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:09:41 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:09:41 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:12:00 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:12:00 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:12:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:12:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:12:40 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-25 15:12:40 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-25 15:13:18 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:13:18 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["item to remove: Macros for Developer Productivity"]}, HTTP connection handler
+2012-10-25 15:15:38 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-25 15:15:38 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-25 15:16:13 [com.wakanda-software.summitApp.summitApp] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler
+2012-10-25 15:16:13 [com.wakanda-software.summitApp.summitApp.console] INFO - {"data":["ITBGD0Q24JTBYG9KTJSDT352DHUWMA7A"]}, HTTP connection handler

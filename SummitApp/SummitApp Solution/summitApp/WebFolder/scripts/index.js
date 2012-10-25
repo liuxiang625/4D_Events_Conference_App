@@ -404,7 +404,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				                    	var questionEntity = questionEvent.entity;
 				                    	var questionID = questionEntity.ID.getValue();
 										if(questionEntity.isRating.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3>' + questionEntity.question.getValue() + '</h3><div id="'+ questionID +'" data-rateit-starwidth="32" data-rateit-starheight="32" data-inline="false" class="rateit bigstars"></div></div></li>');
-										if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
+										if(questionEntity.needsTextInput.getValue()) $('#surveyListView').append('<li><div style="margin-left:auto;margin-right:auto;align:center;text-align:center;"><h3 style="white-space:normal">' + questionEntity.question.getValue() + '</h3><textarea id="answerInText" placeholder="Comments" name="" id="'+ questionID +'" data-mini="false"></textarea></div></li>');
 
 				                	},
 				                	atTheEnd: function(end) {
@@ -603,6 +603,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Submit Survey by calling server side datastore class and pass the survey result object;
 		$('#submitSurvey').live('tap',function(event){
 			var sessionSurveyArrayForSubmissionLength = 0;
+			if($('#answerInText').val()) sessionSurveyArrayForSubmission[18] = $('#answerInText').val();	
 			$.each(sessionSurveyArrayForSubmission, function(k, v) { sessionSurveyArrayForSubmissionLength++; });
 			
 			if (sessionSurveyArrayForSubmissionLength > 11 ) {// all 10 required questions are answered.
