@@ -76,7 +76,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			'10/24/2012':'4D Summit keynotes  breakout sessions',
 			'10/25/2012':'4D Summit keynotes  breakout sessions',
 			'10/26/2012':'JS.everyWhere(2012)',
-			'10/27/2012':'Wakandaay 2012'	
+			'10/27/2012':'Wakanday 2012'	
 		}
 
 
