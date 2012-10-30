@@ -72,6 +72,37 @@ guidedModel =// @startlock
 	},
 	Session :
 	{
+		averageRates :
+		{
+			events :
+			{
+				onLoad:function(attributeName)
+				{// @endlock
+					if(this.answersInputedCount !== 0 ) {
+						var ratesSum = 0;
+						var rateAnswerItemCount = 0;
+						var answers = this.allSurveyAnswerItems;
+						answers.forEach(function( answerItem ) {
+	    					if(answerItem.rate > 0) {
+	    						ratesSum += answerItem.rate;
+	    						rateAnswerItemCount += 1;
+	    					}
+				    	});
+						this.averageRates = ratesSum/ rateAnswerItemCount;
+					}
+				}// @startlock
+			}
+		},
+		answersInputedCount :
+		{
+			events :
+			{
+				onLoad:function(attributeName)
+				{// @endlock
+					this.answersInputedCount = this.allSurveyAnswerItems.length;
+				}// @startlock
+			}
+		},
 		methods :
 		{// @endlock
 			syncSessionFavoritedItems:function(favoritedSessionIDArray, userCookieID )
