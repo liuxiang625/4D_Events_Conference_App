@@ -7,26 +7,9 @@ guidedModel =// @startlock
 		{// @endlock
 			submitSurveryAnswers:function(sessionSurveyArrayForSubmission)
 			{// @lock
-				//console.log(sessionSurveyArrayForSubmission);
-				//var sessionID= sessionSurveyArrayForSubmission['sessionID'];
-				//var userCookieID = sessionSurveyArrayForSubmission['userCookieID'];
 				for (var obj in sessionSurveyArrayForSubmission) {
-//					if (obj == 'sessionID') { 
-//						sessionID = sessionSurveyArrayForSubmission[obj];
-//						break;
-//					}
-//					else if (obj == 'userCookieID') {
-//						userCookieID = sessionSurveyArrayForSubmission[obj];
-//						break;
-//					}
-//					else {
-//						
-//					}
-
 					if (obj != 'sessionID' & obj != 'userCookieID') { 
-						//console.log(obj + '   ' +sessionSurveyArrayForSubmission[obj]);
 						var questionID = obj;
-						//var answer = sessionSurveyArrayForSubmission[obj];
 						try {
 							var newAnswer = ds.Answer.createEntity();
 							newAnswer.question = ds.Question.find('ID = :1',questionID);

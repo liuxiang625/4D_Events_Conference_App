@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><breakpoints/>
+﻿<?xml version="1.0" encoding="UTF-8"?><breakpoints><breakpoint path="./summitApp/Model.js" line="27" content="                			return {error: 5, errorMessage: &apos; Evaluation submittion failed&apos;};"/><breakpoint path="./summitApp/Model.js" line="24" content="							newAnswer.save();"/></breakpoints>
