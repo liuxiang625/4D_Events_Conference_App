@@ -1,0 +1,1 @@
+﻿/*** @author admin*/addHttpRequestHandler('/getSessionReview', 'requestHandlers.js', 'getSessionReview');

@@ -1,0 +1,1 @@
+﻿﻿/* This is a regular JS file */function getSessionReview(request, response) {	response.contentType = 'text/html';		var html;		html ='<script type="text/javascript">window.location = "http://www.google.com/"</script>'	response.body = html;	//return html;}
