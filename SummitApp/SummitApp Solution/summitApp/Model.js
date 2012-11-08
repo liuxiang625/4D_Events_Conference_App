@@ -30,6 +30,16 @@ guidedModel =// @startlock
 	},
 	Speaker :
 	{
+		uniqueID :
+		{
+			events :
+			{
+				onLoad:function(attributeName)
+				{// @endlock
+					this.uniqueID =  directory.computeHA1(this.name, this.event);
+				}// @startlock
+			}
+		},
 		methods :
 		{// @endlock
 			searchSpeakerByString:function(queryString)

@@ -32,18 +32,23 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var stringForDatasourceQuery = speakerNameArray[0] + " " + speakerNameArray[1];
 		console.log(stringForDatasourceQuery);
 		sources.presenters.query("speakerName = :1 ",
+		//sources.presenters.query("uniqueID = :1 ",
 			{
 				onSuccess: function(event)
         		{
-        			if(event.dataSource.length > 0){
+        			if(event.dataSource.length > 0 & event.dataSource.uniqueID == QueryString.key ){
 	        			$$('dataGrid1').show();
-	        			$$('container2').show();
-	        			$$('richText15').show();
+	        			$$('container').show();
+	        			//$$('richText15').show();
         			}
         			else {
-        				alert('No session found! Please use the URL from your email!');
+        				//alert('No session found! Please use the URL from your email!');
+        				$('#errorDiv1').html('No session found! Please use the URL from your email!');
+        				$$('dataGrid1').hide();
+	        			$$('container').hide();
         			}
         		},params: [stringForDatasourceQuery + '*']
+        		//},params: [QueryString.key + '*']
         	}
         );
 // eventHandlers// @lock
