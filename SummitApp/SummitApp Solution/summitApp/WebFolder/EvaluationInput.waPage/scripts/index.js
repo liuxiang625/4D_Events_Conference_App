@@ -35,7 +35,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			ds.SessionSurvey.submitSurveryAnswers(sessionSurveyObjForSubmission,{
 				onSuccess:function(result){
 					$$('textField1').setValue('');
-					sources.session.all();
+					sources.session.serverRefresh();
 					$('#errorDiv2').html("Answers Saved");
 				},
 				onError: function(error) {

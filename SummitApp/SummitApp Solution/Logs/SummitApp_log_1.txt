@@ -5101,3 +5101,5 @@
 2012-11-08 10:17:47 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
 2012-11-08 10:17:47 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
 2012-11-08 10:17:47 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 160 ms)
+2012-11-08 10:36:29 [com.wakanda-software.SummitApp.summitApp] INFO - {"data":["Paper Evaluation"]}, HTTP connection handler
+2012-11-08 10:36:29 [com.wakanda-software.SummitApp.summitApp.console] INFO - {"data":["Paper Evaluation"]}, HTTP connection handler
