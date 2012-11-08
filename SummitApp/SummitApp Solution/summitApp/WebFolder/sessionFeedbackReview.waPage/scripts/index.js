@@ -27,9 +27,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    return query_string;
 		} ();
 		
-		console.log(QueryString.speakerName);
+		console.log(QueryString.speakerName + '*');
 		var speakerNameArray = QueryString.speakerName.split('.');
 		var stringForDatasourceQuery = speakerNameArray[0] + " " + speakerNameArray[1];
+		if (stringForDatasourceQuery === 'Ron DellAquila') stringForDatasourceQuery = "Ron Dell"; //workaround for ron's name format;
 		console.log(stringForDatasourceQuery);
 		sources.presenters.query("speakerName = :1 ",
 		//sources.presenters.query("uniqueID = :1 ",
@@ -59,7 +60,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if($(window).width() > $$('container1').getWidth())$$('container1').setWidth($(window).width());
 		if($(window).height() > $$('container1').getHeight())$$('container1').setHeight($(window).height());
 	};// @lock
-
+	
 // @region eventManager// @startlock
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
