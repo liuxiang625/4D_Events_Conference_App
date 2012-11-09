@@ -5163,3 +5163,27 @@
 2012-11-08 10:56:16 [com.wakanda-software.SummitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
 2012-11-08 10:56:24 [com.wakanda-software.SummitApp.summitApp] INFO - Calling JavaScript request handler, HTTP connection handler
 2012-11-08 10:56:24 [com.wakanda-software.SummitApp.summitApp.JS4D] ERROR - [1] Error: , HTTP connection handler
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Opening the solution
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Opening the users and groups directory
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Users and groups directory opened (duration: 11 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the project
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Opening the database
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Database opened (duration: 8 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Project opened (duration: 18 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Opening the project
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project opened (duration: 5 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Solution opened (duration: 61 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Starting the solution
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the project
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Starting the HTTP server
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - HTTP server started (duration: 26 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Project started (duration: 67 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the project
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Starting the HTTP server
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - HTTP server started (duration: 28 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Project started (duration: 68 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Executing the bootstrap(s)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.summitApp] INFO - Bootstrap(s) executed (duration: 15 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp.ServerAdmin] INFO - Bootstrap(s) executed (duration: 9 ms)
+2012-11-08 15:06:54 [com.wakanda-software.SummitApp] INFO - Solution started (duration: 160 ms)

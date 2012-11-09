@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var dataGrid1 = {};	// @dataGrid
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 	var QueryString = function () {
@@ -54,14 +55,31 @@ WAF.onAfterInit = function onAfterInit() {// @lock
         );
 // eventHandlers// @lock
 
+	dataGrid1.onCellClick = function dataGrid1_onCellClick (event)// @startlock
+	{// @endlock
+		if (event.data.cell.value.length > 80) {
+			$('#dataGrid1').bt(event.data.cell.value, {
+				trigger: 'none',
+				positions: 'top',
+				cssStyles: {fontSize: '16px', fontWeight: 'bold'},
+				width:'800px'
+				});
+			$('#dataGrid1').btOn();
+		} 
+		else {
+			$('#dataGrid1').btOff();
+		}
+	};// @lock
+
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-		
+
 		if($(window).width() > $$('container1').getWidth())$$('container1').setWidth($(window).width());
 		if($(window).height() > $$('container1').getHeight())$$('container1').setHeight($(window).height());
 	};// @lock
 	
 // @region eventManager// @startlock
+	WAF.addListener("dataGrid1", "onCellClick", dataGrid1.onCellClick, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
 };// @endlock
